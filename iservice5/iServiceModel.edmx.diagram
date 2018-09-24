@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9836d8f0e23b4a0baab89d34676fd184" Name="Diagram1">
+        <EntityTypeShape EntityType="iServiceModel.iservice_cars" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_customers" Width="2.25" PointX="1.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_items" Width="2" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_orders" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_orders_items" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_timeline" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iServiceModel.iservice_users" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="iServiceModel.iservice_cars_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="iServiceModel.iservice_orders_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="iServiceModel.iservice_orders_items_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="iServiceModel.iservice_orders_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="iServiceModel.iservice_orders_items_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="iServiceModel.iservice_timeline_fk0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

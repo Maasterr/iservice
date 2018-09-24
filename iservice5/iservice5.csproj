@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,8 +46,45 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sync\Microsoft.Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sync\Microsoft.Synchronization.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Synchronization.Data.SqlServer, Version=3.1.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\sync\Microsoft.Synchronization.Data.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,14 +97,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DataService.cs" />
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVars.cs" />
+    <Compile Include="iservice_db\iservice_cars.cs" />
+    <Compile Include="iservice_db\iservice_company.cs" />
+    <Compile Include="iservice_db\iservice_customers.cs" />
+    <Compile Include="iservice_db\iservice_items.cs" />
+    <Compile Include="iservice_db\iservice_orders.cs" />
+    <Compile Include="Forms\NewCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewCar.Designer.cs">
+      <DependentUpon>NewCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderPage.Designer.cs">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\warehouse.Designer.cs">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\warehouse_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\warehouse_details.Designer.cs">
+      <DependentUpon>warehouse_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\warehouse_works.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\warehouse_works.Designer.cs">
+      <DependentUpon>warehouse_works.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Form1.en.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.ru-UA.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewCar.resx">
+      <DependentUpon>NewCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewCar.ru-UA.resx">
+      <DependentUpon>NewCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderPage.resx">
+      <DependentUpon>OrderPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +183,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Forms\warehouse.resx">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\warehouse_details.resx">
+      <DependentUpon>warehouse_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\warehouse_works.resx">
+      <DependentUpon>warehouse_works.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +208,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iService.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="iservice.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iservice_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>iservice.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Add List_24px.png" />
+    <None Include="Resources\Add File_26px.png" />
+    <None Include="Resources\Save All_18px.png" />
+    <None Include="Resources\Edit File_18px.png" />
+    <None Include="Resources\Add File_18px.png" />
+    <None Include="Resources\Delete File_18px.png" />
+    <None Include="Resources\Print_18px.png" />
+    <None Include="Resources\View_18px.png" />
+    <None Include="Resources\Box_36px.png" />
+    <None Include="Resources\Maintenance_64px.png" />
+    <None Include="Resources\Maintenance_36px.png" />
+    <None Include="Resources\Settings_36px.png" />
+    <None Include="Resources\Profile_36px.png" />
+    <None Include="Resources\Depot_36px.png" />
+    <None Include="Resources\3D Farm_36px.png" />
+    <None Include="Resources\Organization_36px.png" />
+    <None Include="Resources\Services_36px.png" />
+    <None Include="Resources\Permanent Job_36px.png" />
+    <None Include="Resources\Save_36px.png" />
+    <None Include="Resources\Add File_36px.png" />
+    <None Include="Resources\Delete File_36px.png" />
+    <None Include="Resources\Edit File_36px.png" />
+    <None Include="Resources\Print_36px.png" />
+    <None Include="Resources\Timesheet_36px.png" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

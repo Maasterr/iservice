@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище iServiceModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="iservice_cars">
+          <Key>
+            <PropertyRef Name="iservice_cars_id" />
+          </Key>
+          <Property Name="iservice_cars_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_cars_customers_id" Type="int" Nullable="false" />
+          <Property Name="iservice_cars_reg_number" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="iservice_cars_vin_number" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="iservice_cars_brand" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_cars_model" Type="nvarchar" MaxLength="15" />
+          <Property Name="iservice_cars_year" Type="int" />
+          <Property Name="iservice_cars_color" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="iservice_customers">
+          <Key>
+            <PropertyRef Name="iservice_customers_id" />
+          </Key>
+          <Property Name="iservice_customers_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_customers_name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="iservice_customers_surname" Type="nvarchar" MaxLength="30" />
+          <Property Name="iservice_customers_patronymic" Type="nvarchar" MaxLength="30" />
+          <Property Name="iservice_customers_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="iservice_customers_telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_customers_telephone_home" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_customers_date_of_birthday" Type="date" />
+          <Property Name="iservice_customers_email" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_customers_date_of_creation" Type="datetime" />
+        </EntityType>
+        <EntityType Name="iservice_items">
+          <Key>
+            <PropertyRef Name="iservice_items_id" />
+          </Key>
+          <Property Name="iservice_items_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_items_category" Type="int" Nullable="false" />
+          <Property Name="iservice_items_description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="iservice_items_purchase_price_netto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="iservice_items_purchase_price_brutto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="iservice_items_price_netto" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="iservice_items_price_brutto" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iservice_orders">
+          <Key>
+            <PropertyRef Name="iservice_orders_id" />
+          </Key>
+          <Property Name="iservice_orders_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_orders_car_id" Type="int" Nullable="false" />
+          <Property Name="iservice_orders_user_id" Type="int" Nullable="false" />
+          <Property Name="iservice_orders_date_of_creation" Type="date" Nullable="false" />
+          <Property Name="iservice_orders_date_of_last_update" Type="date" />
+          <Property Name="iservice_orders_expiry_date" Type="date" />
+          <Property Name="iservice_orders_status_of_payment" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_orders_status_of_work" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_orders_prepayment" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_orders_total_netto" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_orders_total_brutto" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="iservice_orders_items">
+          <Key>
+            <PropertyRef Name="iservice_orders_items_id" />
+          </Key>
+          <Property Name="iservice_orders_items_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_orders_items_orders_id" Type="int" Nullable="false" />
+          <Property Name="iservice_orders_item_id" Type="int" Nullable="false" />
+          <Property Name="iservice_orders_items_price_netto" Type="nvarchar" MaxLength="15" />
+          <Property Name="iservice_orders_items_price_brutto" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="iservice_timeline">
+          <Key>
+            <PropertyRef Name="iservice_timeline_id" />
+          </Key>
+          <Property Name="iservice_timeline_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_timeline_user_id" Type="int" Nullable="false" />
+          <Property Name="iservice_timeline_start_time" Type="datetime" Nullable="false" />
+          <Property Name="iservice_timeline_end_time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iservice_users">
+          <Key>
+            <PropertyRef Name="iservice_users_id" />
+          </Key>
+          <Property Name="iservice_users_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iservice_users_name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="iservice_users_surname" Type="nvarchar" MaxLength="30" />
+          <Property Name="iservice_users_patronymic" Type="nvarchar" MaxLength="30" />
+          <Property Name="iservice_users_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="iservice_users_telephone" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_users_telephone_home" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_users_date_of_birthday" Type="date" />
+          <Property Name="iservice_users_email" Type="nvarchar" MaxLength="20" />
+          <Property Name="iservice_users_access" Type="nvarchar" MaxLength="15" />
+          <Property Name="iservice_customers_date_of_creation" Type="datetime" />
+        </EntityType>
+        <Association Name="iservice_cars_fk0">
+          <End Role="iservice_customers" Type="Self.iservice_customers" Multiplicity="1" />
+          <End Role="iservice_cars" Type="Self.iservice_cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_customers">
+              <PropertyRef Name="iservice_customers_id" />
+            </Principal>
+            <Dependent Role="iservice_cars">
+              <PropertyRef Name="iservice_cars_customers_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_fk0">
+          <End Role="iservice_cars" Type="Self.iservice_cars" Multiplicity="1" />
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_cars">
+              <PropertyRef Name="iservice_cars_id" />
+            </Principal>
+            <Dependent Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_fk1">
+          <End Role="iservice_users" Type="Self.iservice_users" Multiplicity="1" />
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_users">
+              <PropertyRef Name="iservice_users_id" />
+            </Principal>
+            <Dependent Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_items_fk0">
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="1" />
+          <End Role="iservice_orders_items" Type="Self.iservice_orders_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_id" />
+            </Principal>
+            <Dependent Role="iservice_orders_items">
+              <PropertyRef Name="iservice_orders_items_orders_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_items_fk1">
+          <End Role="iservice_items" Type="Self.iservice_items" Multiplicity="1" />
+          <End Role="iservice_orders_items" Type="Self.iservice_orders_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_items">
+              <PropertyRef Name="iservice_items_id" />
+            </Principal>
+            <Dependent Role="iservice_orders_items">
+              <PropertyRef Name="iservice_orders_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_timeline_fk0">
+          <End Role="iservice_users" Type="Self.iservice_users" Multiplicity="1" />
+          <End Role="iservice_timeline" Type="Self.iservice_timeline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_users">
+              <PropertyRef Name="iservice_users_id" />
+            </Principal>
+            <Dependent Role="iservice_timeline">
+              <PropertyRef Name="iservice_timeline_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище iServiceModelContainer">
+          <EntitySet Name="iservice_cars" EntityType="Self.iservice_cars" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_customers" EntityType="Self.iservice_customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_items" EntityType="Self.iservice_items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_orders" EntityType="Self.iservice_orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_orders_items" EntityType="Self.iservice_orders_items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_timeline" EntityType="Self.iservice_timeline" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iservice_users" EntityType="Self.iservice_users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="iservice_cars_fk0" Association="Self.iservice_cars_fk0">
+            <End Role="iservice_customers" EntitySet="iservice_customers" />
+            <End Role="iservice_cars" EntitySet="iservice_cars" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_fk0" Association="Self.iservice_orders_fk0">
+            <End Role="iservice_cars" EntitySet="iservice_cars" />
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_fk1" Association="Self.iservice_orders_fk1">
+            <End Role="iservice_users" EntitySet="iservice_users" />
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_items_fk0" Association="Self.iservice_orders_items_fk0">
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+            <End Role="iservice_orders_items" EntitySet="iservice_orders_items" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_items_fk1" Association="Self.iservice_orders_items_fk1">
+            <End Role="iservice_items" EntitySet="iservice_items" />
+            <End Role="iservice_orders_items" EntitySet="iservice_orders_items" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_timeline_fk0" Association="Self.iservice_timeline_fk0">
+            <End Role="iservice_users" EntitySet="iservice_users" />
+            <End Role="iservice_timeline" EntitySet="iservice_timeline" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="iServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="iservice_cars">
+          <Key>
+            <PropertyRef Name="iservice_cars_id" />
+          </Key>
+          <Property Name="iservice_cars_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_cars_customers_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_cars_reg_number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_cars_vin_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_cars_brand" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_cars_model" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_cars_year" Type="Int32" />
+          <Property Name="iservice_cars_color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="iservice_customers" Relationship="Self.iservice_cars_fk0" FromRole="iservice_cars" ToRole="iservice_customers" />
+          <NavigationProperty Name="iservice_orders" Relationship="Self.iservice_orders_fk0" FromRole="iservice_cars" ToRole="iservice_orders" />
+        </EntityType>
+        <EntityType Name="iservice_customers">
+          <Key>
+            <PropertyRef Name="iservice_customers_id" />
+          </Key>
+          <Property Name="iservice_customers_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_customers_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_customers_surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_patronymic" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_telephone_home" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_date_of_birthday" Type="DateTime" Precision="0" />
+          <Property Name="iservice_customers_email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_date_of_creation" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="iservice_cars" Relationship="Self.iservice_cars_fk0" FromRole="iservice_customers" ToRole="iservice_cars" />
+        </EntityType>
+        <EntityType Name="iservice_items">
+          <Key>
+            <PropertyRef Name="iservice_items_id" />
+          </Key>
+          <Property Name="iservice_items_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_items_category" Type="Int32" Nullable="false" />
+          <Property Name="iservice_items_description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_items_purchase_price_netto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_items_purchase_price_brutto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_items_price_netto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_items_price_brutto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="iservice_orders_items" Relationship="Self.iservice_orders_items_fk1" FromRole="iservice_items" ToRole="iservice_orders_items" />
+        </EntityType>
+        <EntityType Name="iservice_orders">
+          <Key>
+            <PropertyRef Name="iservice_orders_id" />
+          </Key>
+          <Property Name="iservice_orders_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_orders_car_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_orders_user_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_orders_date_of_creation" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="iservice_orders_date_of_last_update" Type="DateTime" Precision="0" />
+          <Property Name="iservice_orders_expiry_date" Type="DateTime" Precision="0" />
+          <Property Name="iservice_orders_status_of_payment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_orders_status_of_work" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_orders_prepayment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_orders_total_netto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_orders_total_brutto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="iservice_cars" Relationship="Self.iservice_orders_fk0" FromRole="iservice_orders" ToRole="iservice_cars" />
+          <NavigationProperty Name="iservice_users" Relationship="Self.iservice_orders_fk1" FromRole="iservice_orders" ToRole="iservice_users" />
+          <NavigationProperty Name="iservice_orders_items" Relationship="Self.iservice_orders_items_fk0" FromRole="iservice_orders" ToRole="iservice_orders_items" />
+        </EntityType>
+        <EntityType Name="iservice_orders_items">
+          <Key>
+            <PropertyRef Name="iservice_orders_items_id" />
+          </Key>
+          <Property Name="iservice_orders_items_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_orders_items_orders_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_orders_item_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_orders_items_price_netto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_orders_items_price_brutto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="iservice_items" Relationship="Self.iservice_orders_items_fk1" FromRole="iservice_orders_items" ToRole="iservice_items" />
+          <NavigationProperty Name="iservice_orders" Relationship="Self.iservice_orders_items_fk0" FromRole="iservice_orders_items" ToRole="iservice_orders" />
+        </EntityType>
+        <EntityType Name="iservice_timeline">
+          <Key>
+            <PropertyRef Name="iservice_timeline_id" />
+          </Key>
+          <Property Name="iservice_timeline_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_timeline_user_id" Type="Int32" Nullable="false" />
+          <Property Name="iservice_timeline_start_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="iservice_timeline_end_time" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="iservice_users" Relationship="Self.iservice_timeline_fk0" FromRole="iservice_timeline" ToRole="iservice_users" />
+        </EntityType>
+        <EntityType Name="iservice_users">
+          <Key>
+            <PropertyRef Name="iservice_users_id" />
+          </Key>
+          <Property Name="iservice_users_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iservice_users_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="iservice_users_surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_patronymic" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_telephone_home" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_date_of_birthday" Type="DateTime" Precision="0" />
+          <Property Name="iservice_users_email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_users_access" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="iservice_customers_date_of_creation" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="iservice_orders" Relationship="Self.iservice_orders_fk1" FromRole="iservice_users" ToRole="iservice_orders" />
+          <NavigationProperty Name="iservice_timeline" Relationship="Self.iservice_timeline_fk0" FromRole="iservice_users" ToRole="iservice_timeline" />
+        </EntityType>
+        <Association Name="iservice_cars_fk0">
+          <End Role="iservice_customers" Type="Self.iservice_customers" Multiplicity="1" />
+          <End Role="iservice_cars" Type="Self.iservice_cars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_customers">
+              <PropertyRef Name="iservice_customers_id" />
+            </Principal>
+            <Dependent Role="iservice_cars">
+              <PropertyRef Name="iservice_cars_customers_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_fk0">
+          <End Role="iservice_cars" Type="Self.iservice_cars" Multiplicity="1" />
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_cars">
+              <PropertyRef Name="iservice_cars_id" />
+            </Principal>
+            <Dependent Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_items_fk1">
+          <End Role="iservice_items" Type="Self.iservice_items" Multiplicity="1" />
+          <End Role="iservice_orders_items" Type="Self.iservice_orders_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_items">
+              <PropertyRef Name="iservice_items_id" />
+            </Principal>
+            <Dependent Role="iservice_orders_items">
+              <PropertyRef Name="iservice_orders_item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_fk1">
+          <End Role="iservice_users" Type="Self.iservice_users" Multiplicity="1" />
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_users">
+              <PropertyRef Name="iservice_users_id" />
+            </Principal>
+            <Dependent Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_orders_items_fk0">
+          <End Role="iservice_orders" Type="Self.iservice_orders" Multiplicity="1" />
+          <End Role="iservice_orders_items" Type="Self.iservice_orders_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_orders">
+              <PropertyRef Name="iservice_orders_id" />
+            </Principal>
+            <Dependent Role="iservice_orders_items">
+              <PropertyRef Name="iservice_orders_items_orders_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="iservice_timeline_fk0">
+          <End Role="iservice_users" Type="Self.iservice_users" Multiplicity="1" />
+          <End Role="iservice_timeline" Type="Self.iservice_timeline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iservice_users">
+              <PropertyRef Name="iservice_users_id" />
+            </Principal>
+            <Dependent Role="iservice_timeline">
+              <PropertyRef Name="iservice_timeline_user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="iServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="iservice_cars" EntityType="Self.iservice_cars" />
+          <EntitySet Name="iservice_customers" EntityType="Self.iservice_customers" />
+          <EntitySet Name="iservice_items" EntityType="Self.iservice_items" />
+          <EntitySet Name="iservice_orders" EntityType="Self.iservice_orders" />
+          <EntitySet Name="iservice_orders_items" EntityType="Self.iservice_orders_items" />
+          <EntitySet Name="iservice_timeline" EntityType="Self.iservice_timeline" />
+          <EntitySet Name="iservice_users" EntityType="Self.iservice_users" />
+          <AssociationSet Name="iservice_cars_fk0" Association="Self.iservice_cars_fk0">
+            <End Role="iservice_customers" EntitySet="iservice_customers" />
+            <End Role="iservice_cars" EntitySet="iservice_cars" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_fk0" Association="Self.iservice_orders_fk0">
+            <End Role="iservice_cars" EntitySet="iservice_cars" />
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_items_fk1" Association="Self.iservice_orders_items_fk1">
+            <End Role="iservice_items" EntitySet="iservice_items" />
+            <End Role="iservice_orders_items" EntitySet="iservice_orders_items" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_fk1" Association="Self.iservice_orders_fk1">
+            <End Role="iservice_users" EntitySet="iservice_users" />
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_orders_items_fk0" Association="Self.iservice_orders_items_fk0">
+            <End Role="iservice_orders" EntitySet="iservice_orders" />
+            <End Role="iservice_orders_items" EntitySet="iservice_orders_items" />
+          </AssociationSet>
+          <AssociationSet Name="iservice_timeline_fk0" Association="Self.iservice_timeline_fk0">
+            <End Role="iservice_users" EntitySet="iservice_users" />
+            <End Role="iservice_timeline" EntitySet="iservice_timeline" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище iServiceModelContainer" CdmEntityContainer="iServiceEntities">
+          <EntitySetMapping Name="iservice_cars">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_cars">
+              <MappingFragment StoreEntitySet="iservice_cars">
+                <ScalarProperty Name="iservice_cars_id" ColumnName="iservice_cars_id" />
+                <ScalarProperty Name="iservice_cars_customers_id" ColumnName="iservice_cars_customers_id" />
+                <ScalarProperty Name="iservice_cars_reg_number" ColumnName="iservice_cars_reg_number" />
+                <ScalarProperty Name="iservice_cars_vin_number" ColumnName="iservice_cars_vin_number" />
+                <ScalarProperty Name="iservice_cars_brand" ColumnName="iservice_cars_brand" />
+                <ScalarProperty Name="iservice_cars_model" ColumnName="iservice_cars_model" />
+                <ScalarProperty Name="iservice_cars_year" ColumnName="iservice_cars_year" />
+                <ScalarProperty Name="iservice_cars_color" ColumnName="iservice_cars_color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_customers">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_customers">
+              <MappingFragment StoreEntitySet="iservice_customers">
+                <ScalarProperty Name="iservice_customers_id" ColumnName="iservice_customers_id" />
+                <ScalarProperty Name="iservice_customers_name" ColumnName="iservice_customers_name" />
+                <ScalarProperty Name="iservice_customers_surname" ColumnName="iservice_customers_surname" />
+                <ScalarProperty Name="iservice_customers_patronymic" ColumnName="iservice_customers_patronymic" />
+                <ScalarProperty Name="iservice_customers_address" ColumnName="iservice_customers_address" />
+                <ScalarProperty Name="iservice_customers_telephone" ColumnName="iservice_customers_telephone" />
+                <ScalarProperty Name="iservice_customers_telephone_home" ColumnName="iservice_customers_telephone_home" />
+                <ScalarProperty Name="iservice_customers_date_of_birthday" ColumnName="iservice_customers_date_of_birthday" />
+                <ScalarProperty Name="iservice_customers_email" ColumnName="iservice_customers_email" />
+                <ScalarProperty Name="iservice_customers_date_of_creation" ColumnName="iservice_customers_date_of_creation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_items">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_items">
+              <MappingFragment StoreEntitySet="iservice_items">
+                <ScalarProperty Name="iservice_items_id" ColumnName="iservice_items_id" />
+                <ScalarProperty Name="iservice_items_category" ColumnName="iservice_items_category" />
+                <ScalarProperty Name="iservice_items_description" ColumnName="iservice_items_description" />
+                <ScalarProperty Name="iservice_items_purchase_price_netto" ColumnName="iservice_items_purchase_price_netto" />
+                <ScalarProperty Name="iservice_items_purchase_price_brutto" ColumnName="iservice_items_purchase_price_brutto" />
+                <ScalarProperty Name="iservice_items_price_netto" ColumnName="iservice_items_price_netto" />
+                <ScalarProperty Name="iservice_items_price_brutto" ColumnName="iservice_items_price_brutto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_orders">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_orders">
+              <MappingFragment StoreEntitySet="iservice_orders">
+                <ScalarProperty Name="iservice_orders_id" ColumnName="iservice_orders_id" />
+                <ScalarProperty Name="iservice_orders_car_id" ColumnName="iservice_orders_car_id" />
+                <ScalarProperty Name="iservice_orders_user_id" ColumnName="iservice_orders_user_id" />
+                <ScalarProperty Name="iservice_orders_date_of_creation" ColumnName="iservice_orders_date_of_creation" />
+                <ScalarProperty Name="iservice_orders_date_of_last_update" ColumnName="iservice_orders_date_of_last_update" />
+                <ScalarProperty Name="iservice_orders_expiry_date" ColumnName="iservice_orders_expiry_date" />
+                <ScalarProperty Name="iservice_orders_status_of_payment" ColumnName="iservice_orders_status_of_payment" />
+                <ScalarProperty Name="iservice_orders_status_of_work" ColumnName="iservice_orders_status_of_work" />
+                <ScalarProperty Name="iservice_orders_prepayment" ColumnName="iservice_orders_prepayment" />
+                <ScalarProperty Name="iservice_orders_total_netto" ColumnName="iservice_orders_total_netto" />
+                <ScalarProperty Name="iservice_orders_total_brutto" ColumnName="iservice_orders_total_brutto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_orders_items">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_orders_items">
+              <MappingFragment StoreEntitySet="iservice_orders_items">
+                <ScalarProperty Name="iservice_orders_items_id" ColumnName="iservice_orders_items_id" />
+                <ScalarProperty Name="iservice_orders_items_orders_id" ColumnName="iservice_orders_items_orders_id" />
+                <ScalarProperty Name="iservice_orders_item_id" ColumnName="iservice_orders_item_id" />
+                <ScalarProperty Name="iservice_orders_items_price_netto" ColumnName="iservice_orders_items_price_netto" />
+                <ScalarProperty Name="iservice_orders_items_price_brutto" ColumnName="iservice_orders_items_price_brutto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_timeline">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_timeline">
+              <MappingFragment StoreEntitySet="iservice_timeline">
+                <ScalarProperty Name="iservice_timeline_id" ColumnName="iservice_timeline_id" />
+                <ScalarProperty Name="iservice_timeline_user_id" ColumnName="iservice_timeline_user_id" />
+                <ScalarProperty Name="iservice_timeline_start_time" ColumnName="iservice_timeline_start_time" />
+                <ScalarProperty Name="iservice_timeline_end_time" ColumnName="iservice_timeline_end_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iservice_users">
+            <EntityTypeMapping TypeName="iServiceModel.iservice_users">
+              <MappingFragment StoreEntitySet="iservice_users">
+                <ScalarProperty Name="iservice_users_id" ColumnName="iservice_users_id" />
+                <ScalarProperty Name="iservice_users_name" ColumnName="iservice_users_name" />
+                <ScalarProperty Name="iservice_users_surname" ColumnName="iservice_users_surname" />
+                <ScalarProperty Name="iservice_users_patronymic" ColumnName="iservice_users_patronymic" />
+                <ScalarProperty Name="iservice_users_address" ColumnName="iservice_users_address" />
+                <ScalarProperty Name="iservice_users_telephone" ColumnName="iservice_users_telephone" />
+                <ScalarProperty Name="iservice_users_telephone_home" ColumnName="iservice_users_telephone_home" />
+                <ScalarProperty Name="iservice_users_date_of_birthday" ColumnName="iservice_users_date_of_birthday" />
+                <ScalarProperty Name="iservice_users_email" ColumnName="iservice_users_email" />
+                <ScalarProperty Name="iservice_users_access" ColumnName="iservice_users_access" />
+                <ScalarProperty Name="iservice_customers_date_of_creation" ColumnName="iservice_customers_date_of_creation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
