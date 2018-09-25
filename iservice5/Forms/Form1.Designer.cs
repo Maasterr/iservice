@@ -81,6 +81,16 @@
             this.iservice_orders_total_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_orders_mileage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCars = new System.Windows.Forms.DataGridView();
+            this.iservice_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_customers_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_reg_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_vin_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_cars_employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -150,16 +160,6 @@
             this.pictureBoxSettingLogo = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
-            this.iservice_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_customers_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_reg_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_vin_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_cars_employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -618,6 +618,76 @@
             this.dataGridViewCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCars.Click += new System.EventHandler(this.dataGridViewCars_Click);
             // 
+            // iservice_cars_id
+            // 
+            this.iservice_cars_id.DataPropertyName = "iservice_cars_id";
+            resources.ApplyResources(this.iservice_cars_id, "iservice_cars_id");
+            this.iservice_cars_id.Name = "iservice_cars_id";
+            this.iservice_cars_id.ReadOnly = true;
+            // 
+            // iservice_cars_customers_id
+            // 
+            this.iservice_cars_customers_id.DataPropertyName = "iservice_cars_customers_id";
+            resources.ApplyResources(this.iservice_cars_customers_id, "iservice_cars_customers_id");
+            this.iservice_cars_customers_id.Name = "iservice_cars_customers_id";
+            this.iservice_cars_customers_id.ReadOnly = true;
+            // 
+            // iservice_cars_reg_number
+            // 
+            this.iservice_cars_reg_number.DataPropertyName = "iservice_cars_reg_number";
+            resources.ApplyResources(this.iservice_cars_reg_number, "iservice_cars_reg_number");
+            this.iservice_cars_reg_number.Name = "iservice_cars_reg_number";
+            this.iservice_cars_reg_number.ReadOnly = true;
+            // 
+            // iservice_cars_vin_number
+            // 
+            this.iservice_cars_vin_number.DataPropertyName = "iservice_cars_vin_number";
+            resources.ApplyResources(this.iservice_cars_vin_number, "iservice_cars_vin_number");
+            this.iservice_cars_vin_number.Name = "iservice_cars_vin_number";
+            this.iservice_cars_vin_number.ReadOnly = true;
+            // 
+            // iservice_cars_brand
+            // 
+            this.iservice_cars_brand.DataPropertyName = "iservice_cars_brand";
+            resources.ApplyResources(this.iservice_cars_brand, "iservice_cars_brand");
+            this.iservice_cars_brand.Name = "iservice_cars_brand";
+            this.iservice_cars_brand.ReadOnly = true;
+            // 
+            // iservice_cars_model
+            // 
+            this.iservice_cars_model.DataPropertyName = "iservice_cars_model";
+            resources.ApplyResources(this.iservice_cars_model, "iservice_cars_model");
+            this.iservice_cars_model.Name = "iservice_cars_model";
+            this.iservice_cars_model.ReadOnly = true;
+            // 
+            // iservice_cars_year
+            // 
+            this.iservice_cars_year.DataPropertyName = "iservice_cars_year";
+            resources.ApplyResources(this.iservice_cars_year, "iservice_cars_year");
+            this.iservice_cars_year.Name = "iservice_cars_year";
+            this.iservice_cars_year.ReadOnly = true;
+            // 
+            // iservice_cars_color
+            // 
+            this.iservice_cars_color.DataPropertyName = "iservice_cars_color";
+            resources.ApplyResources(this.iservice_cars_color, "iservice_cars_color");
+            this.iservice_cars_color.Name = "iservice_cars_color";
+            this.iservice_cars_color.ReadOnly = true;
+            // 
+            // iservice_cars_date_of_creation
+            // 
+            this.iservice_cars_date_of_creation.DataPropertyName = "iservice_cars_date_of_creation";
+            resources.ApplyResources(this.iservice_cars_date_of_creation, "iservice_cars_date_of_creation");
+            this.iservice_cars_date_of_creation.Name = "iservice_cars_date_of_creation";
+            this.iservice_cars_date_of_creation.ReadOnly = true;
+            // 
+            // iservice_cars_employee
+            // 
+            this.iservice_cars_employee.DataPropertyName = "iservice_cars_employee";
+            resources.ApplyResources(this.iservice_cars_employee, "iservice_cars_employee");
+            this.iservice_cars_employee.Name = "iservice_cars_employee";
+            this.iservice_cars_employee.ReadOnly = true;
+            // 
             // tableLayoutPanel14
             // 
             resources.ApplyResources(this.tableLayoutPanel14, "tableLayoutPanel14");
@@ -827,11 +897,11 @@
             this.tableLayoutPanel16.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tableLayoutPanel16, "tableLayoutPanel16");
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel23, 0, 5);
-            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 2);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 0, 1);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel19, 0, 3);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel20, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel22, 0, 4);
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             // 
             // tableLayoutPanel23
@@ -1179,76 +1249,6 @@
             // 
             resources.ApplyResources(this.textBoxSettingsEmail, "textBoxSettingsEmail");
             this.textBoxSettingsEmail.Name = "textBoxSettingsEmail";
-            // 
-            // iservice_cars_id
-            // 
-            this.iservice_cars_id.DataPropertyName = "iservice_cars_id";
-            resources.ApplyResources(this.iservice_cars_id, "iservice_cars_id");
-            this.iservice_cars_id.Name = "iservice_cars_id";
-            this.iservice_cars_id.ReadOnly = true;
-            // 
-            // iservice_cars_customers_id
-            // 
-            this.iservice_cars_customers_id.DataPropertyName = "iservice_cars_customers_id";
-            resources.ApplyResources(this.iservice_cars_customers_id, "iservice_cars_customers_id");
-            this.iservice_cars_customers_id.Name = "iservice_cars_customers_id";
-            this.iservice_cars_customers_id.ReadOnly = true;
-            // 
-            // iservice_cars_reg_number
-            // 
-            this.iservice_cars_reg_number.DataPropertyName = "iservice_cars_reg_number";
-            resources.ApplyResources(this.iservice_cars_reg_number, "iservice_cars_reg_number");
-            this.iservice_cars_reg_number.Name = "iservice_cars_reg_number";
-            this.iservice_cars_reg_number.ReadOnly = true;
-            // 
-            // iservice_cars_vin_number
-            // 
-            this.iservice_cars_vin_number.DataPropertyName = "iservice_cars_vin_number";
-            resources.ApplyResources(this.iservice_cars_vin_number, "iservice_cars_vin_number");
-            this.iservice_cars_vin_number.Name = "iservice_cars_vin_number";
-            this.iservice_cars_vin_number.ReadOnly = true;
-            // 
-            // iservice_cars_brand
-            // 
-            this.iservice_cars_brand.DataPropertyName = "iservice_cars_brand";
-            resources.ApplyResources(this.iservice_cars_brand, "iservice_cars_brand");
-            this.iservice_cars_brand.Name = "iservice_cars_brand";
-            this.iservice_cars_brand.ReadOnly = true;
-            // 
-            // iservice_cars_model
-            // 
-            this.iservice_cars_model.DataPropertyName = "iservice_cars_model";
-            resources.ApplyResources(this.iservice_cars_model, "iservice_cars_model");
-            this.iservice_cars_model.Name = "iservice_cars_model";
-            this.iservice_cars_model.ReadOnly = true;
-            // 
-            // iservice_cars_year
-            // 
-            this.iservice_cars_year.DataPropertyName = "iservice_cars_year";
-            resources.ApplyResources(this.iservice_cars_year, "iservice_cars_year");
-            this.iservice_cars_year.Name = "iservice_cars_year";
-            this.iservice_cars_year.ReadOnly = true;
-            // 
-            // iservice_cars_color
-            // 
-            this.iservice_cars_color.DataPropertyName = "iservice_cars_color";
-            resources.ApplyResources(this.iservice_cars_color, "iservice_cars_color");
-            this.iservice_cars_color.Name = "iservice_cars_color";
-            this.iservice_cars_color.ReadOnly = true;
-            // 
-            // iservice_cars_date_of_creation
-            // 
-            this.iservice_cars_date_of_creation.DataPropertyName = "iservice_cars_date_of_creation";
-            resources.ApplyResources(this.iservice_cars_date_of_creation, "iservice_cars_date_of_creation");
-            this.iservice_cars_date_of_creation.Name = "iservice_cars_date_of_creation";
-            this.iservice_cars_date_of_creation.ReadOnly = true;
-            // 
-            // iservice_cars_employee
-            // 
-            this.iservice_cars_employee.DataPropertyName = "iservice_cars_employee";
-            resources.ApplyResources(this.iservice_cars_employee, "iservice_cars_employee");
-            this.iservice_cars_employee.Name = "iservice_cars_employee";
-            this.iservice_cars_employee.ReadOnly = true;
             // 
             // Form1
             // 

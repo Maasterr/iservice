@@ -104,6 +104,11 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalString.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalString.resx</DependentUpon>
+    </Compile>
     <Compile Include="GlobalVars.cs" />
     <Compile Include="iservice_db\iservice_cars.cs" />
     <Compile Include="iservice_db\iservice_company.cs" />
@@ -174,6 +179,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderPage.resx">
       <DependentUpon>OrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalString.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalString.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -104,18 +104,12 @@ namespace iservice5
             labelRegNumber.Text = GlobalVars.regnumber;
             labelClient.Text = GlobalVars.Client;
           
-            /* dataGridViewItemsWorks.Columns[0].Visible = false;
-               dataGridViewItemsWorks.Columns[1].Visible = false;
-               dataGridViewItemsWorks.Columns[2].Visible = false;
-               dataGridViewItemsWorks.Columns[3].Visible = false;
-               dataGridViewItemsWorks.Columns[5].Visible = false;
-               dataGridViewItemsWorks.Columns[6].Visible = false;
-               dataGridViewItemsWorks.Columns[4].HeaderCell.Value = "Description";
-               dataGridViewItemsWorks.Columns[7].HeaderCell.Value = "Price netto";
-               dataGridViewItemsWorks.Columns[8].HeaderCell.Value = "Price brutto";*/
-            //dataGridViewItemsWorks.EnableHeadersVisualStyles = false;
-            dataGridViewItemsWorks.RowHeadersVisible = false;
-            dataGridViewItemsDetails.RowHeadersVisible = false;
+       
+            //dataGridViewItemsWorks.RowHeadersVisible = false;
+           // dataGridViewItemsDetails.RowHeadersVisible = false;
+
+
+          
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -142,11 +136,10 @@ namespace iservice5
             int sum = 0;
             for (int i = 0; i < dataGridViewItemsWorks.Rows.Count; ++i)
             {
-                sum += Convert.ToInt32(dataGridViewItemsWorks.Rows[i].Cells[8].Value);
+                sum += Convert.ToInt32(dataGridViewItemsWorks.Rows[i].Cells[10].Value);
             }
             labelItemWorksTotal.Text = sum.ToString();
             labelTotal.Text = (Convert.ToInt32(labelItemDetailsTotal.Text) + Convert.ToInt32(labelItemWorksTotal.Text)).ToString();
-
 
         }
         public void updatedetailstotal()
@@ -154,7 +147,7 @@ namespace iservice5
             int sumdetails = 0;
             for (int i = 0; i < dataGridViewItemsDetails.Rows.Count; ++i)
             {
-                sumdetails += Convert.ToInt32(dataGridViewItemsDetails.Rows[i].Cells[8].Value);
+                sumdetails += Convert.ToInt32(dataGridViewItemsDetails.Rows[i].Cells[10].Value);
             }
             labelItemDetailsTotal.Text = sumdetails.ToString();
            labelTotal.Text = (Convert.ToInt32(labelItemDetailsTotal.Text) + Convert.ToInt32(labelItemWorksTotal.Text)).ToString();

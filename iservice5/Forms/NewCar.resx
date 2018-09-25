@@ -1891,7 +1891,7 @@
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="btnAddEdit" xml:space="preserve">
+  <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="&gt;&gt;textBoxYear.Name" xml:space="preserve">

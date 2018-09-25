@@ -8,6 +8,8 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
 
 namespace iservice5
 {
@@ -30,15 +32,18 @@ namespace iservice5
         private void NewCar_Load(object sender, EventArgs e)
         {
             labelName.Text = GlobalVars.Client;
-            btnAdd.Text = "Save";
+            
+        
             if (Status == "Add")
             {
+                btnAdd.Text = GlobalString.Add;
                 this.Text = "New car";
                 labelEmployee.Text = GlobalVars.Employee;
                 labelDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }
             else
             {
+                btnAdd.Text = GlobalString.Save;
                 this.Text = "Edit car";
                 labelName.Text = GlobalVars.selected_iservice_customers_name;
                 textBoxReg.Text = GlobalVars.selected_iservice_cars_reg_number;
