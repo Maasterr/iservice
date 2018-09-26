@@ -103,13 +103,16 @@ namespace iservice5
             label18.Text = GlobalVars.Employee;
             labelRegNumber.Text = GlobalVars.regnumber;
             labelClient.Text = GlobalVars.Client;
-          
-       
+            labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            comboBoxOrderStatus.DataSource = DataService.GetOrderStatusList();
+            comboBoxOrderStatus.ValueMember = "iservice_orders_status_id";
+            comboBoxOrderStatus.DisplayMember= "iservice_orders_status_name";
+           
             //dataGridViewItemsWorks.RowHeadersVisible = false;
-           // dataGridViewItemsDetails.RowHeadersVisible = false;
+            // dataGridViewItemsDetails.RowHeadersVisible = false;
 
 
-          
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -159,5 +162,11 @@ namespace iservice5
             Warehouse_works.Show();
         }
 
+        private void comboBoxOrderStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           // labelClient.Text = comboBoxOrderStatus.SelectedValue.ToString();
+        }
+
+       
     }
 }

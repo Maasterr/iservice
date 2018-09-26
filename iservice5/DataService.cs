@@ -62,15 +62,7 @@ namespace iservice5
             }
         }
 
-      /*  public static List<iservice_cars> GetAllCars()
-        {
-            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
-            {
-                if (db.State == ConnectionState.Closed)
-                    db.Open();
-                return db.Query<iservice_cars>("Select * from iservice_cars where iservice_cars_id = iservice_orders_cars_id").ToList();
-            }
-        }*/
+ 
         public static List<iservice_cars> NewCar(int iservice_cars_customers_id, String iservice_cars_reg_number, String iservice_cars_brand, String iservice_cars_model, String iservice_cars_vin, String iservice_cars_year, String iservice_cars_color, String iservice_cars_date_of_creation, String iservice_cars_employee)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
@@ -108,6 +100,16 @@ namespace iservice5
                 if (db.State == ConnectionState.Closed)
                     db.Open();
                 return db.Query<iservice_orders>("SELECT * FROM iservice_orders INNER JOIN iservice_cars ON iservice_orders.iservice_orders_cars_id = iservice_cars.iservice_cars_id WHERE(iservice_orders.iservice_orders_cars_id = " + cars_id + ")").ToList();
+            }
+        }
+
+        public static List<iservice_orders_status> GetOrderStatusList()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders_status>("SELECT * FROM iservice_orders_status").ToList();
             }
         }
         public static List<iservice_company> CompanySetData(int iservice_company_inside_id, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email)

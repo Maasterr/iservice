@@ -77,12 +77,7 @@ namespace iservice5
 
         private void dataGridViewItemsWorks_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItemsWorks.SelectedRows.Count > 0)
-            {
-                labelDesc.Text = Convert.ToString(dataGridViewItemsWorks.SelectedCells[4].Value);
-                labelNetto.Text = Convert.ToString(dataGridViewItemsWorks.SelectedCells[7].Value);
-                labelBrutto.Text = Convert.ToString(dataGridViewItemsWorks.SelectedCells[8].Value);
-            }
+           
         }
     }
 }

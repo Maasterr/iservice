@@ -21,7 +21,7 @@ namespace iservice5
         private void btnService_Click(object sender, EventArgs e)
         {
             TextStatus.Text = btnService.Text;
-            panel1.Visible = false;
+           // panel1.Visible = false;
             panel5.Visible = false;
             panel4.Visible = true;
         }
@@ -69,7 +69,7 @@ namespace iservice5
         {
             panel4.Visible = false;
             panel5.Visible = false;
-            panel1.Visible = true;
+           // panel1.Visible = true;
         }
         private void pictureBoxNewClient_Click(object sender, EventArgs e)
         {
@@ -142,7 +142,7 @@ namespace iservice5
             textBoxSettingsVAT.Text = GlobalVars.iservice_company_vat_number;
             textBoxSettingsWebsite.Text = GlobalVars.iservice_company_website;
 
-            panel1.Visible = false;
+          //  panel1.Visible = false;
             panel5.Visible = false;
             panel4.Visible = true;
             dataGridViewClients.DataSource = DataService.GetAllCustomers();

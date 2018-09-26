@@ -159,6 +159,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -185,6 +186,7 @@
             this.panel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingLogo)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -198,6 +200,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnWarehouse, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEmployee, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 7, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
             // button1
@@ -1051,7 +1054,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.tableLayoutPanel3);
@@ -1237,12 +1239,19 @@
             // 
             // button9
             // 
-            resources.ApplyResources(this.button9, "button9");
             this.button9.AutoEllipsis = true;
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button9, "button9");
             this.button9.ForeColor = System.Drawing.SystemColors.Window;
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel6
+            // 
+            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
+            this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel6, 5);
+            this.tableLayoutPanel6.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             // 
             // Form1
             // 
@@ -1296,6 +1305,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingLogo)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1418,6 +1428,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_color;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_date_of_creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_employee;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button9;
     }
 }
