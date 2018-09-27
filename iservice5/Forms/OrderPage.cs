@@ -107,9 +107,12 @@ namespace iservice5
             comboBoxOrderStatus.DataSource = DataService.GetOrderStatusList();
             comboBoxOrderStatus.ValueMember = "iservice_orders_status_id";
             comboBoxOrderStatus.DisplayMember= "iservice_orders_status_name";
+            ComboBoxPaymentStatus.DataSource = DataService.GetOrderPaymentStatusList();
+            ComboBoxPaymentStatus.ValueMember = "iservice_orders_payment_status_id";
+            ComboBoxPaymentStatus.DisplayMember= "iservice_orders_payment_status_name";
            
-            //dataGridViewItemsWorks.RowHeadersVisible = false;
-            // dataGridViewItemsDetails.RowHeadersVisible = false;
+            dataGridViewItemsWorks.RowHeadersVisible = false;
+            dataGridViewItemsDetails.RowHeadersVisible = false;
 
 
 
@@ -167,6 +170,9 @@ namespace iservice5
            // labelClient.Text = comboBoxOrderStatus.SelectedValue.ToString();
         }
 
-       
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

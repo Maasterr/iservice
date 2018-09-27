@@ -112,6 +112,15 @@ namespace iservice5
                 return db.Query<iservice_orders_status>("SELECT * FROM iservice_orders_status").ToList();
             }
         }
+        public static List<iservice_orders_payment_status> GetOrderPaymentStatusList()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders_payment_status>("SELECT * FROM iservice_orders_payment_status").ToList();
+            }
+        }
         public static List<iservice_company> CompanySetData(int iservice_company_inside_id, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))

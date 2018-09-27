@@ -114,6 +114,7 @@
     <Compile Include="iservice_db\iservice_company.cs" />
     <Compile Include="iservice_db\iservice_customers.cs" />
     <Compile Include="iservice_db\iservice_items.cs" />
+    <Compile Include="iservice_db\iservice_orders_payment_status.cs" />
     <Compile Include="iservice_db\iservice_orders_status.cs" />
     <Compile Include="iservice_db\iservice_orders.cs" />
     <Compile Include="Forms\NewCar.cs">
@@ -269,6 +270,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

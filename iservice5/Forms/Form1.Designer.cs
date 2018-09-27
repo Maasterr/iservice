@@ -51,6 +51,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.tableLayoutPanelCompanySetting = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
             this.panel3_bottom = new System.Windows.Forms.Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -131,7 +133,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelCompanySetting = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -158,11 +160,10 @@
             this.pictureBoxSettingLogo = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelCompanySetting.SuspendLayout();
             this.panel_top.SuspendLayout();
             this.panel3_bottom.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -183,10 +184,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNewClient)).BeginInit();
             this.tableLayoutPanel22.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelCompanySetting.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingLogo)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -200,7 +200,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnWarehouse, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnEmployee, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 7, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanelCompanySetting, 0, 1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
             // button1
@@ -291,6 +291,22 @@
             this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            // 
+            // tableLayoutPanelCompanySetting
+            // 
+            resources.ApplyResources(this.tableLayoutPanelCompanySetting, "tableLayoutPanelCompanySetting");
+            this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanelCompanySetting, 5);
+            this.tableLayoutPanelCompanySetting.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanelCompanySetting.Name = "tableLayoutPanelCompanySetting";
+            // 
+            // button9
+            // 
+            this.button9.AutoEllipsis = true;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.ForeColor = System.Drawing.SystemColors.Window;
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // panel_top
             // 
@@ -1051,14 +1067,14 @@
             this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label9.Name = "label9";
             // 
-            // panel5
+            // panelCompanySetting
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.tableLayoutPanel3);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
+            this.panelCompanySetting.BackColor = System.Drawing.Color.Transparent;
+            this.panelCompanySetting.Controls.Add(this.button3);
+            this.panelCompanySetting.Controls.Add(this.label19);
+            this.panelCompanySetting.Controls.Add(this.tableLayoutPanel3);
+            resources.ApplyResources(this.panelCompanySetting, "panelCompanySetting");
+            this.panelCompanySetting.Name = "panelCompanySetting";
             // 
             // button3
             // 
@@ -1237,29 +1253,13 @@
             resources.ApplyResources(this.textBoxSettingsEmail, "textBoxSettingsEmail");
             this.textBoxSettingsEmail.Name = "textBoxSettingsEmail";
             // 
-            // button9
-            // 
-            this.button9.AutoEllipsis = true;
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.ForeColor = System.Drawing.SystemColors.Window;
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel6
-            // 
-            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
-            this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel6, 5);
-            this.tableLayoutPanel6.Controls.Add(this.button9, 0, 0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackImage = ((System.Drawing.Image)(resources.GetObject("$this.BackImage")));
+            this.Controls.Add(this.panelCompanySetting);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3_bottom);
             this.Controls.Add(this.panel_top);
             this.DisplayHeader = false;
@@ -1271,6 +1271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelCompanySetting.ResumeLayout(false);
             this.panel_top.ResumeLayout(false);
             this.panel3_bottom.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -1300,12 +1301,11 @@
             this.tableLayoutPanel22.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelCompanySetting.ResumeLayout(false);
+            this.panelCompanySetting.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettingLogo)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1315,7 +1315,7 @@
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Panel panel3_bottom;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelCompanySetting;
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button btnTimeLine;
         private System.Windows.Forms.Button btnWarehouse;
@@ -1428,7 +1428,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_color;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_date_of_creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_cars_employee;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCompanySetting;
         private System.Windows.Forms.Button button9;
     }
 }

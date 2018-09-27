@@ -35,7 +35,6 @@ namespace iservice5
         public static String selected_iservice_customers_zipcode;
         public static String selected_iservice_customers_telephone;
         public static String selected_iservice_customers_telephone_home;
-        public static String iservice_customers_telephone_home;
         public static String selected_iservice_customers_date_of_birthday;
         public static String selected_iservice_customers_email;
         public static String selected_iservice_customers_date_of_creation;

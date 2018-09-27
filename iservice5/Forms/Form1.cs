@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,8 @@ namespace iservice5
         {
             TextStatus.Text = btnService.Text;
            // panel1.Visible = false;
-            panel5.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             panel4.Visible = true;
         }
 
@@ -30,7 +32,8 @@ namespace iservice5
         {
             TextStatus.Text = btnTimeLine.Text;
             panel4.Visible = false;
-            panel5.Visible = true;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
         }
 
         private void btnClients_Click(object sender, EventArgs e)
@@ -46,14 +49,16 @@ namespace iservice5
         {
             panel4.Visible = false;
             panel4.Visible = true;
-            panel5.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             TextStatus.Text = btnService.Text;
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             panel4.Visible = false;
-            panel5.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             TextStatus.Text = btnService.Text + " --> " + btnEmployee.Text;
         }
 
@@ -62,14 +67,16 @@ namespace iservice5
             warehouse newcustomer1 = new warehouse();
             newcustomer1.Show();
             panel4.Visible = false;
-            panel5.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             TextStatus.Text = btnService.Text + " --> " + btnWarehouse.Text;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             panel4.Visible = false;
-            panel5.Visible = false;
-           // panel1.Visible = true;
+            panelCompanySetting.Visible = true;
+            tableLayoutPanelCompanySetting.Visible = true;
+            // panel1.Visible = true;
         }
         private void pictureBoxNewClient_Click(object sender, EventArgs e)
         {
@@ -143,7 +150,7 @@ namespace iservice5
             textBoxSettingsWebsite.Text = GlobalVars.iservice_company_website;
 
           //  panel1.Visible = false;
-            panel5.Visible = false;
+            panelCompanySetting.Visible = false;
             panel4.Visible = true;
             dataGridViewClients.DataSource = DataService.GetAllCustomers();
             dataGridViewClients.ClearSelection();
@@ -160,10 +167,11 @@ namespace iservice5
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnfd = new OpenFileDialog();
-            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;*.gif;*.png)|*.jpg;*.jpeg;*.gif;*.png;";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxSettingLogo.Image = new Bitmap(opnfd.FileName);
+
             }
  
         }
@@ -329,7 +337,8 @@ namespace iservice5
             if (DataService.CompanySetData(GlobalVars.iservice_company_inside_id, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text) == null)
             {
                 MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
-
+                string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
+                pictureBoxSettingLogo.Image.Save(appPath, System.Drawing.Imaging.ImageFormat.Png);
                 label19.Text = "Saved";
             }
             else
