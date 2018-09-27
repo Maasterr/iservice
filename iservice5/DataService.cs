@@ -92,7 +92,16 @@ namespace iservice5
                 return db.Query<iservice_cars>("SELECT iservice_cars.iservice_cars_brand, iservice_cars.iservice_cars_model, iservice_cars.iservice_cars_year, iservice_cars.iservice_cars_color, iservice_cars.iservice_cars_customers_id, iservice_cars.iservice_cars_reg_number, iservice_cars.iservice_cars_vin_number, iservice_cars.iservice_cars_id FROM iservice_cars INNER JOIN iservice_customers ON iservice_cars.iservice_cars_customers_id = iservice_customers.iservice_customers_id WHERE(iservice_cars.iservice_cars_customers_id = " + id+")").ToList();
             }
         }
-      
+       /* public static List<iservice_cars> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id, String iservice_cars_brand, String iservice_cars_model, String iservice_cars_vin, String iservice_cars_year, String iservice_cars_color, String iservice_cars_date_of_creation, String iservice_cars_employee)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Insert into iservice_orders values (N'" + iservice_cars_customers_id + "',N'" + iservice_cars_reg_number + "',N'" + iservice_cars_vin + " ',N'" + iservice_cars_brand + " ',N'" + iservice_cars_model + " ',N'" + iservice_cars_year + " ',N'" + iservice_cars_color + " ',N'" + iservice_cars_date_of_creation + " ',N'" + iservice_cars_employee + " ')");
+                return null;
+            }
+        }*/
         public static List<iservice_orders> GetOrdersByCar(int cars_id)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
@@ -162,13 +171,6 @@ namespace iservice5
             }
         }
 
-        public static string SafeGetString(String sqlstring)
-        {
-            if (String.IsNullOrEmpty(sqlstring))
-                return " ";
-            return sqlstring;
-          
-        }
 
     }
 }
