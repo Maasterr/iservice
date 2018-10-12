@@ -92,17 +92,37 @@ namespace iservice5
                 return db.Query<iservice_cars>("SELECT iservice_cars.iservice_cars_brand, iservice_cars.iservice_cars_model, iservice_cars.iservice_cars_year, iservice_cars.iservice_cars_color, iservice_cars.iservice_cars_customers_id, iservice_cars.iservice_cars_reg_number, iservice_cars.iservice_cars_vin_number, iservice_cars.iservice_cars_id FROM iservice_cars INNER JOIN iservice_customers ON iservice_cars.iservice_cars_customers_id = iservice_customers.iservice_customers_id WHERE(iservice_cars.iservice_cars_customers_id = " + id+")").ToList();
             }
         }
-       /* public static List<iservice_cars> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id, String iservice_cars_brand, String iservice_cars_model, String iservice_cars_vin, String iservice_cars_year, String iservice_cars_color, String iservice_cars_date_of_creation, String iservice_cars_employee)
+        public static List<iservice_cars> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id,String iservice_orders_date_of_creation, String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work,String iservice_orders_prepayment, String iservice_orders_total_netto,String iservice_orders_total_brutto,String iservice_orders_mileage)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_orders values (N'" + iservice_cars_customers_id + "',N'" + iservice_cars_reg_number + "',N'" + iservice_cars_vin + " ',N'" + iservice_cars_brand + " ',N'" + iservice_cars_model + " ',N'" + iservice_cars_year + " ',N'" + iservice_cars_color + " ',N'" + iservice_cars_date_of_creation + " ',N'" + iservice_cars_employee + " ')");
+                db.Execute("Insert into iservice_orders values (N'" + iservice_orders_cars_id + "',N'" + iservice_orders_user_id + "',(Select MAX(iservice_orders_number)+1 from iservice_orders),N'" + iservice_orders_date_of_creation + " ',N'" + iservice_orders_date_of_last_update + " ',N'" + iservice_orders_expiry_date + " ',N'" + iservice_orders_status_of_payment + " ',N'" + iservice_orders_status_of_work + " ',N'" + iservice_orders_prepayment + "',N'" + iservice_orders_total_netto + "',N'" + iservice_orders_total_brutto + "',N'" + iservice_orders_mileage + "')");
                 return null;
             }
-        }*/
+        }
+        public static List<iservice_orders> GetNewOrderNumber()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+               // List<iservice_orders> result();
+                return db.Query<iservice_orders>("Select MAX(iservice_orders_number) from iservice_orders").ToList();
+
+            }
+        }
         public static List<iservice_orders> GetOrdersByCar(int cars_id)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name FROM iservice_orders INNER JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
+            }
+        }
+        /*public static List<iservice_orders> GetOrdersByCar(int cars_id)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
@@ -110,8 +130,7 @@ namespace iservice5
                     db.Open();
                 return db.Query<iservice_orders>("SELECT * FROM iservice_orders INNER JOIN iservice_cars ON iservice_orders.iservice_orders_cars_id = iservice_cars.iservice_cars_id WHERE(iservice_orders.iservice_orders_cars_id = " + cars_id + ")").ToList();
             }
-        }
-
+        }*/
         public static List<iservice_orders_status> GetOrderStatusList()
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))

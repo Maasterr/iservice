@@ -17,6 +17,7 @@ namespace iservice5
         public string iservice_orders_expiry_date { get; set; }
         public string iservice_orders_status_of_payment { get; set; }
         public string iservice_orders_status_of_work { get; set; }
+        public string iservice_orders_status_name { get; set; }
         public string iservice_orders_prepayment { get; set; }
         public string iservice_orders_total_netto { get; set; }
         public string iservice_orders_total_brutto { get; set; }

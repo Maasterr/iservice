@@ -50,9 +50,17 @@ namespace iservice5
         public static String selected_iservice_cars_year;
         public static String selected_iservice_cars_color;
         public static String selected_iservice_cars_employee;
-
-
-
+        /*
+        public static int selected_iservice_cars_id;
+        public static String selected_iservice_cars_reg_number;
+        public static String selected_iservice_cars_vin;
+        public static String selected_iservice_cars_brand;
+        public static String selected_iservice_cars_model;
+        public static String selected_iservice_cars_date_of_creation;
+        public static String selected_iservice_cars_year;
+        public static String selected_iservice_cars_color;
+        public static String selected_iservice_cars_employee;
+        */
 
 
     }

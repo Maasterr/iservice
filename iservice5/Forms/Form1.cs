@@ -92,7 +92,7 @@ namespace iservice5
             
             if (GlobalVars.regnumber != null)
             {
-                OrderPage orderpage = new OrderPage();
+                OrderPage orderpage = new OrderPage(this,"Add");
                 orderpage.Show();
 
             }
@@ -122,7 +122,16 @@ namespace iservice5
             else
                 MessageBox.Show("Please select car", "Notification", MessageBoxButtons.OK);
         }
-
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (GlobalVars.OrderNumber != null)
+            {
+                OrderPage editorder = new OrderPage(this, "Edit");
+                editorder.Show();
+            }
+            else
+                MessageBox.Show("Please select car", "Notification", MessageBoxButtons.OK);
+        }
         private void button17_Click(object sender, EventArgs e)
         {
             NewCustomer newcustomer = new NewCustomer(this, "Save");
@@ -154,7 +163,7 @@ namespace iservice5
             panel4.Visible = true;
             dataGridViewClients.DataSource = DataService.GetAllCustomers();
             dataGridViewClients.ClearSelection();
-
+            tableLayoutPanelCompanySetting.Visible = false;
 
 
 
@@ -252,7 +261,7 @@ namespace iservice5
                             if (dataGridViewOrders.SelectedRows.Count > 0)
                             {
                                 labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
-                                GlobalVars.regnumber = labelOrders.Text;
+                                GlobalVars.OrderNumber = labelOrders.Text;
                             }
                             else
                                 labelOrders.Text = "Please select order";
@@ -317,7 +326,7 @@ namespace iservice5
                     if (dataGridViewOrders.SelectedRows.Count > 0)
                     {
                         labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
-                        GlobalVars.regnumber = labelOrders.Text;
+                        GlobalVars.OrderNumber = labelOrders.Text;
                     }
                     else
                         labelOrders.Text = "Please select order";
@@ -359,7 +368,7 @@ namespace iservice5
             if (dataGridViewCars.SelectedRows.Count > 0)
             {
                 labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
-                GlobalVars.regnumber = labelOrders.Text;
+                GlobalVars.OrderNumber = labelOrders.Text;
             }
             else
                 labelOrders.Text = "Please select order";
@@ -398,6 +407,8 @@ namespace iservice5
                 dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
             }
         }
+
+        
     }
 
    

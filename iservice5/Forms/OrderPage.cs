@@ -16,7 +16,15 @@ namespace iservice5
         {
             InitializeComponent(); 
         }
+        private readonly Form1 frm1;
+        private readonly String Status;
+        public OrderPage(Form1 frm, String status)
+        {
+            InitializeComponent();
+            frm1 = frm;
+            Status = status;
 
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
@@ -25,7 +33,45 @@ namespace iservice5
 
         private void button6_Click(object sender, EventArgs e)
         {
-            printDocument1.Print();
+            
+            if (Status == "Add")
+            {
+                if ((comboBoxOrderStatus.SelectedValue==null) || (ComboBoxPaymentStatus.SelectedValue == null))
+                    MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
+               
+                else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, 1, "", labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", labelTotal.Text, textBoxMileage.Text) == null)
+                {
+                    frm1.updateclientsdata();
+                    this.Close();
+                    MessageBox.Show("Succesfully added", "Notification", MessageBoxButtons.OK);
+
+                }
+                else
+                {
+                    this.Close();
+                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+
+
+                }
+            }
+            else if (DataService.EditCustomerById(GlobalVars.selected_iservice_customers_id, textBoxName.Text, textBoxSurname.Text, textBoxPatr.Text, textBoxCountry.Text, textBoxCity.Text, textBoxStreet.Text, textBoxZipCode.Text, textBoxPhone.Text, textBoxPhonehome.Text, dateTimePickerBirthay.Value.Date.ToString("dd/MM/yyyy"), textBoxEmail.Text, labelDate.Text, labelEmployee.Text, textBoxCompany.Text) == null)
+            {
+                frm1.updateclientsdata();
+                this.Close();
+                MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                this.Close();
+                MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+
+
+            }
+            
+
+           
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -100,17 +146,36 @@ namespace iservice5
 
         private void OrderPage_Load(object sender, EventArgs e)
         {
-            label18.Text = GlobalVars.Employee;
+            button6.Text = Status;
             labelRegNumber.Text = GlobalVars.regnumber;
             labelClient.Text = GlobalVars.Client;
-            labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             comboBoxOrderStatus.DataSource = DataService.GetOrderStatusList();
             comboBoxOrderStatus.ValueMember = "iservice_orders_status_id";
-            comboBoxOrderStatus.DisplayMember= "iservice_orders_status_name";
+            comboBoxOrderStatus.DisplayMember = "iservice_orders_status_name";
             ComboBoxPaymentStatus.DataSource = DataService.GetOrderPaymentStatusList();
             ComboBoxPaymentStatus.ValueMember = "iservice_orders_payment_status_id";
-            ComboBoxPaymentStatus.DisplayMember= "iservice_orders_payment_status_name";
-           
+            ComboBoxPaymentStatus.DisplayMember = "iservice_orders_payment_status_name";
+
+            if (Status == "Add")
+            {
+                this.Text = "New customer";
+                labelEmployee.Text = GlobalVars.Employee;
+                labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+                labelOrderNumber.Text = "-";
+             
+                
+            }
+            else
+            {
+                this.Text = "Edit customer";
+
+                
+                labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
+                labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            }
+
+          
+            
             dataGridViewItemsWorks.RowHeadersVisible = false;
             dataGridViewItemsDetails.RowHeadersVisible = false;
 
