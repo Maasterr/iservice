@@ -369,6 +369,7 @@ namespace iservice5
             {
                 labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
                 GlobalVars.OrderNumber = labelOrders.Text;
+                GlobalVars.selected_iservice_orders_id = Convert.ToInt32(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
             }
             else
                 labelOrders.Text = "Please select order";
@@ -408,7 +409,16 @@ namespace iservice5
             }
         }
 
-        
+        private void buttonShowAllCustomers_Click(object sender, EventArgs e)
+        {
+            dataGridViewClients.DataSource = DataService.GetCustomersByWord("");
+            dataGridViewClients.ClearSelection();
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
+            dataGridViewCars.DataSource = DataService.GetCarsByCustomer(-1);
+
+            dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
+        }
     }
 
    

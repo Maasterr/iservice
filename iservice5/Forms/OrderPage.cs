@@ -39,7 +39,7 @@ namespace iservice5
                 if ((comboBoxOrderStatus.SelectedValue==null) || (ComboBoxPaymentStatus.SelectedValue == null))
                     MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
                
-                else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, 1, "", labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", labelTotal.Text, textBoxMileage.Text) == null)
+                else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, 1, labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                 {
                     frm1.updateclientsdata();
                     this.Close();
@@ -54,7 +54,7 @@ namespace iservice5
 
                 }
             }
-            else if (DataService.EditCustomerById(GlobalVars.selected_iservice_customers_id, textBoxName.Text, textBoxSurname.Text, textBoxPatr.Text, textBoxCountry.Text, textBoxCity.Text, textBoxStreet.Text, textBoxZipCode.Text, textBoxPhone.Text, textBoxPhonehome.Text, dateTimePickerBirthay.Value.Date.ToString("dd/MM/yyyy"), textBoxEmail.Text, labelDate.Text, labelEmployee.Text, textBoxCompany.Text) == null)
+            else if (DataService.UpdateOrder(GlobalVars.selected_iservice_orders_id, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
             {
                 frm1.updateclientsdata();
                 this.Close();
@@ -168,8 +168,11 @@ namespace iservice5
             else
             {
                 this.Text = "Edit customer";
-
-                
+                //comboBoxOrderStatus.SelectedValue = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work;
+                comboBoxOrderStatus.SelectedValue = 6;
+                labelOrderNumber.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number.ToString();
+                textBoxMileage.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage;
+                //ComboBoxPaymentStatus.SelectedValue = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment;
                 labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
                 labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }

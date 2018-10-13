@@ -102,24 +102,43 @@ namespace iservice5
                 return null;
             }
         }
-        public static List<iservice_orders> GetNewOrderNumber()
+        public static List<iservice_cars> UpdateOrder(int iservice_orders_id,String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work, String iservice_orders_prepayment, String iservice_orders_total_netto, String iservice_orders_total_brutto, String iservice_orders_mileage)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-               // List<iservice_orders> result();
-                return db.Query<iservice_orders>("Select MAX(iservice_orders_number) from iservice_orders").ToList();
-
+                db.Execute("Update iservice_orders set iservice_orders_date_of_last_update = N'" + iservice_orders_date_of_last_update + " ',iservice_orders_expiry_date =N'" + iservice_orders_expiry_date + " ',iservice_orders_status_of_payment=N'" + iservice_orders_status_of_payment + " ',iservice_orders_status_of_work=N'" + iservice_orders_status_of_work + " ',iservice_orders_prepayment=N'" + iservice_orders_prepayment + "',iservice_orders_total_netto=N'" + iservice_orders_total_netto + "',iservice_orders_total_brutto=N'" + iservice_orders_total_brutto + "',iservice_orders_mileage=N'" + iservice_orders_mileage + "')");
+                return null;
             }
         }
+        /* public static List<iservice_orders> GetNewOrderNumber()
+         {
+             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+             {
+                 if (db.State == ConnectionState.Closed)
+                     db.Open();
+                // List<iservice_orders> result();
+                 return db.Query<iservice_orders>("Select MAX(iservice_orders_number) from iservice_orders").ToList();
+
+             }
+         }*/
         public static List<iservice_orders> GetOrdersByCar(int cars_id)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name FROM iservice_orders INNER JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
+            }
+        }
+        public static List<iservice_orders> GetOrdersById(int order_id)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders>("SELECT * FROM iservice_orders where iservice_orders_id = " + order_id).ToList();
             }
         }
         /*public static List<iservice_orders> GetOrdersByCar(int cars_id)

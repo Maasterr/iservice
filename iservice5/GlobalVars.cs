@@ -50,17 +50,21 @@ namespace iservice5
         public static String selected_iservice_cars_year;
         public static String selected_iservice_cars_color;
         public static String selected_iservice_cars_employee;
-        /*
-        public static int selected_iservice_cars_id;
-        public static String selected_iservice_cars_reg_number;
-        public static String selected_iservice_cars_vin;
-        public static String selected_iservice_cars_brand;
-        public static String selected_iservice_cars_model;
-        public static String selected_iservice_cars_date_of_creation;
-        public static String selected_iservice_cars_year;
-        public static String selected_iservice_cars_color;
-        public static String selected_iservice_cars_employee;
-        */
+        
+        public static int selected_iservice_orders_id;
+        public static int selected_iservice_orders_cars_id;
+        public static int selected_iservice_orders_user_id;
+        public static int selected_iservice_orders_number;
+        public static String selected_iservice_orders_date_of_creation;
+        public static String selected_iservice_orders_date_of_last_update;
+        public static String selected_iservice_orders_expiry_date;
+        public static String selected_iservice_orders_status_of_payment;
+        public static String selected_iservice_orders_status_of_work;
+        public static String selected_iservice_orders_prepayment;
+        public static String selected_iservice_orders_total_netto;
+        public static String selected_iservice_orders_total_brutto;
+        public static String selected_iservice_orders_mileage;
+        
 
 
     }
