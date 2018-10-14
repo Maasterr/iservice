@@ -112,6 +112,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -614,6 +615,7 @@
             this.tableLayoutPanel10.Controls.Add(this.richTextBox1, 1, 3);
             this.tableLayoutPanel10.Controls.Add(this.labelEmployee, 3, 1);
             this.tableLayoutPanel10.Controls.Add(this.comboBoxOrderStatus, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.listView1, 1, 5);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(254, 2);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1142,7 +1144,7 @@
             this.button6.Location = new System.Drawing.Point(903, 2);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(173, 30);
+            this.button6.Size = new System.Drawing.Size(173, 35);
             this.button6.TabIndex = 48;
             this.button6.Text = " Save";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1160,7 +1162,7 @@
             this.button3.Location = new System.Drawing.Point(723, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 30);
+            this.button3.Size = new System.Drawing.Size(173, 35);
             this.button3.TabIndex = 47;
             this.button3.Text = " Print";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1181,6 +1183,14 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(166, 198);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(255, 33);
+            this.listView1.TabIndex = 46;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // OrderPage
             // 
@@ -1301,5 +1311,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxMileage;
         private System.Windows.Forms.Label labelOrderNumber;
+        private System.Windows.Forms.ListView listView1;
     }
 }

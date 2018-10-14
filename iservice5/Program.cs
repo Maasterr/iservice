@@ -16,7 +16,12 @@ namespace iservice5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Login loginform = new Login();
+            if (loginform.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Form1());
+            }
+            else Application.Exit();
         }
     }
 }

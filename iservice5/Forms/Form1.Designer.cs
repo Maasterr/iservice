@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,7 +51,8 @@
             this.btnEmployee = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.labelEmployee = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanelCompanySetting = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
@@ -161,6 +163,7 @@
             this.pictureBoxSettingLogo = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -268,7 +271,8 @@
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroComboBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelEmployee, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 2, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // label1
@@ -277,21 +281,21 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Name = "label1";
             // 
-            // metroComboBox1
+            // labelEmployee
             // 
-            resources.ApplyResources(this.metroComboBox1, "metroComboBox1");
-            this.metroComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.metroComboBox1.DisplayFocus = true;
-            this.metroComboBox1.DropDownHeight = 85;
-            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            resources.GetString("metroComboBox1.Items"),
-            resources.GetString("metroComboBox1.Items1")});
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            resources.ApplyResources(this.labelEmployee, "labelEmployee");
+            this.labelEmployee.Name = "labelEmployee";
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.AutoEllipsis = true;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button4.ForeColor = System.Drawing.SystemColors.Window;
+            this.button4.Image = global::iservice5.Properties.Resources.Exit_18px1;
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // tableLayoutPanelCompanySetting
             // 
@@ -1265,20 +1269,25 @@
             resources.ApplyResources(this.textBoxSettingsEmail, "textBoxSettingsEmail");
             this.textBoxSettingsEmail.Name = "textBoxSettingsEmail";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackImage = ((System.Drawing.Image)(resources.GetObject("$this.BackImage")));
+            this.BackgroundImage = global::iservice5.Properties.Resources.bg;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelCompanySetting);
             this.Controls.Add(this.panel3_bottom);
             this.Controls.Add(this.panel_top);
-            this.DisplayHeader = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Resizable = false;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1392,7 +1401,6 @@
         private System.Windows.Forms.TextBox textBoxSettingsVAT;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label19;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.DataGridView dataGridViewOrders;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button button7;
@@ -1443,6 +1451,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_netto;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_brutto;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_mileage;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label labelEmployee;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -168,11 +168,11 @@ namespace iservice5
             else
             {
                 this.Text = "Edit customer";
-                //comboBoxOrderStatus.SelectedValue = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work;
-                comboBoxOrderStatus.SelectedValue = 6;
-                labelOrderNumber.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number.ToString();
+                comboBoxOrderStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work);
+                ComboBoxPaymentStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment);
+                //comboBoxOrderStatus.SelectedValue = 6;
+                labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number);
                 textBoxMileage.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage;
-                //ComboBoxPaymentStatus.SelectedValue = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment;
                 labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
                 labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }

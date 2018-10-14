@@ -11,6 +11,7 @@ namespace iservice5
     {
         public static int iservice_company_inside_id = 111111;
         public static String Employee;
+        public static int Employee_id;
         public static String regnumber;
         public static String OrderNumber;
         public static String Client;

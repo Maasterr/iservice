@@ -143,6 +143,16 @@ namespace iservice5.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap box_grey {
+            get {
+                object obj = ResourceManager.GetObject("box_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete_File_18px {
             get {
                 object obj = ResourceManager.GetObject("Delete_File_18px", resourceCulture);
@@ -193,9 +203,49 @@ namespace iservice5.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Exit_18px {
+            get {
+                object obj = ResourceManager.GetObject("Exit_18px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit_18px1 {
+            get {
+                object obj = ResourceManager.GetObject("Exit_18px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iService {
             get {
                 object obj = ResourceManager.GetObject("iService", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_16px {
+            get {
+                object obj = ResourceManager.GetObject("Lock_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_32px {
+            get {
+                object obj = ResourceManager.GetObject("Lock_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +286,26 @@ namespace iservice5.Properties {
         internal static System.Drawing.Bitmap Permanent_Job_36px {
             get {
                 object obj = ResourceManager.GetObject("Permanent_Job_36px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pin_Pad_16px {
+            get {
+                object obj = ResourceManager.GetObject("Pin Pad_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pin_Pad_32px {
+            get {
+                object obj = ResourceManager.GetObject("Pin Pad_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +386,26 @@ namespace iservice5.Properties {
         internal static System.Drawing.Bitmap Timesheet_36px {
             get {
                 object obj = ResourceManager.GetObject("Timesheet_36px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_16px {
+            get {
+                object obj = ResourceManager.GetObject("User_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_32px {
+            get {
+                object obj = ResourceManager.GetObject("User_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

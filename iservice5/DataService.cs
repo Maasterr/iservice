@@ -12,6 +12,24 @@ namespace iservice5
 {
     class DataService
     {
+        public static List<iservice_users> CheckLogin(String login, String password)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_users>("Select * from iservice_users where iservice_users_name = '"+login+"' and iservice_users_password='"+password+"'").ToList();
+            }
+        }
+        public static List<iservice_users> GetUsers()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_users>("Select * from iservice_users").ToList();
+            }
+        }
         public static List<iservice_customers> GetAllCustomers()
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))

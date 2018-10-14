@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace iservice5
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Form1 : Form
     {
         public Form1()
         {
@@ -143,10 +143,11 @@ namespace iservice5
         {
          
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+            
+            labelEmployee.Text = GlobalVars.Employee;
+            
             textBoxSettingsName.Text = GlobalVars.iservice_company_name;
             textBoxSettingsCountry.Text = GlobalVars.iservice_company_country;
             textBoxSettingsCity.Text = GlobalVars.iservice_company_city;
@@ -358,11 +359,7 @@ namespace iservice5
             }
         }
 
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GlobalVars.Employee = metroComboBox1.Items[metroComboBox1.SelectedIndex].ToString();
-        }
-
+       
         private void dataGridViewOrders_Click(object sender, EventArgs e)
         {
             if (dataGridViewCars.SelectedRows.Count > 0)
@@ -370,10 +367,12 @@ namespace iservice5
                 labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
                 GlobalVars.OrderNumber = labelOrders.Text;
                 GlobalVars.selected_iservice_orders_id = Convert.ToInt32(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
+                labelOrders.Text = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
+
             }
             else
                 labelOrders.Text = "Please select order";
-
+            labelOrders.Text = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
         }
         public void updateclientsdata()
         {
@@ -418,6 +417,28 @@ namespace iservice5
             dataGridViewCars.DataSource = DataService.GetCarsByCustomer(-1);
 
             dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 
