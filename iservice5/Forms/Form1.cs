@@ -130,7 +130,7 @@ namespace iservice5
                 editorder.Show();
             }
             else
-                MessageBox.Show("Please select car", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Please select order", "Notification", MessageBoxButtons.OK);
         }
         private void button17_Click(object sender, EventArgs e)
         {
@@ -367,8 +367,7 @@ namespace iservice5
                 labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
                 GlobalVars.OrderNumber = labelOrders.Text;
                 GlobalVars.selected_iservice_orders_id = Convert.ToInt32(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
-                labelOrders.Text = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
-
+                
             }
             else
                 labelOrders.Text = "Please select order";

@@ -43,7 +43,7 @@
             this.metroButton2.Location = new System.Drawing.Point(48, 228);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(102, 30);
-            this.metroButton2.TabIndex = 49;
+            this.metroButton2.TabIndex = 5;
             this.metroButton2.Text = "Exit";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
@@ -54,7 +54,7 @@
             this.metroButton1.Location = new System.Drawing.Point(168, 228);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(102, 30);
-            this.metroButton1.TabIndex = 47;
+            this.metroButton1.TabIndex = 4;
             this.metroButton1.Text = "Login";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton1.UseSelectable = true;
@@ -88,7 +88,7 @@
             this.metroTextBoxPassword.SelectionStart = 0;
             this.metroTextBoxPassword.ShortcutsEnabled = true;
             this.metroTextBoxPassword.Size = new System.Drawing.Size(222, 28);
-            this.metroTextBoxPassword.TabIndex = 48;
+            this.metroTextBoxPassword.TabIndex = 3;
             this.metroTextBoxPassword.UseSelectable = true;
             this.metroTextBoxPassword.WaterMark = "Password";
             this.metroTextBoxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -137,7 +137,7 @@
             this.metroTextBoxUsername.SelectionStart = 0;
             this.metroTextBoxUsername.ShortcutsEnabled = true;
             this.metroTextBoxUsername.Size = new System.Drawing.Size(222, 28);
-            this.metroTextBoxUsername.TabIndex = 46;
+            this.metroTextBoxUsername.TabIndex = 2;
             this.metroTextBoxUsername.UseSelectable = true;
             this.metroTextBoxUsername.WaterMark = "Username";
             this.metroTextBoxUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
