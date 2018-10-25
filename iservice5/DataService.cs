@@ -65,7 +65,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_customers>("SELECT * FROM  iservice_customers WHERE(iservice_customers_name LIKE '%' + N'" +word +"' + '%') OR (iservice_customers_surname LIKE '%' + N'"  + word  + "' +'%') OR (iservice_customers_telephone LIKE '%' + N'"  + word  + "' + '%') OR (iservice_customers_email LIKE '%' + N'"  + word  + "' + '%')").ToList();
+                return db.Query<iservice_customers>("SELECT * FROM  iservice_customers WHERE(iservice_customers_id LIKE '%' + N'" + word + "' + '%') OR(iservice_customers_company LIKE '%' + N'" + word + "' + '%') OR (iservice_customers_name LIKE '%' + N'" + word +"' + '%') OR (iservice_customers_surname LIKE '%' + N'"  + word  + "' +'%') OR (iservice_customers_telephone LIKE '%' + N'"  + word  + "' + '%') OR (iservice_customers_email LIKE '%' + N'"  + word  + "' + '%')").ToList();
             }
         }
 
@@ -110,6 +110,27 @@ namespace iservice5
                 return db.Query<iservice_cars>("SELECT iservice_cars.iservice_cars_brand, iservice_cars.iservice_cars_model, iservice_cars.iservice_cars_year, iservice_cars.iservice_cars_color, iservice_cars.iservice_cars_customers_id, iservice_cars.iservice_cars_reg_number, iservice_cars.iservice_cars_vin_number, iservice_cars.iservice_cars_id FROM iservice_cars INNER JOIN iservice_customers ON iservice_cars.iservice_cars_customers_id = iservice_customers.iservice_customers_id WHERE(iservice_cars.iservice_cars_customers_id = " + id+")").ToList();
             }
         }
+
+        public static List<iservice_cars> GetCarsByWord(String word)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_cars>("SELECT * FROM iservice_cars WHERE(iservice_cars_reg_number LIKE '%' + N'" + word + "' + '%') OR  (iservice_cars_vin_number LIKE '%' + N'" + word + "' + '%')").ToList();
+            }
+        }
+
+        public static List<iservice_cars> GetAllCars()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_cars>("SELECT * FROM iservice_cars").ToList();
+            }
+        }
+
         public static List<iservice_cars> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id,String iservice_orders_date_of_creation, String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work,String iservice_orders_prepayment, String iservice_orders_total_netto,String iservice_orders_total_brutto,String iservice_orders_mileage)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
@@ -147,7 +168,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
             }
         }
         public static List<iservice_orders> GetOrdersById(int order_id)

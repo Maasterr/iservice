@@ -81,7 +81,7 @@
             this.metroTextBoxPassword.MaxLength = 32767;
             this.metroTextBoxPassword.Name = "metroTextBoxPassword";
             this.metroTextBoxPassword.PasswordChar = '*';
-            this.metroTextBoxPassword.PromptText = "Password";
+            this.metroTextBoxPassword.WaterMark = "Password";
             this.metroTextBoxPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBoxPassword.SelectedText = "";
             this.metroTextBoxPassword.SelectionLength = 0;
@@ -130,7 +130,7 @@
             this.metroTextBoxUsername.MaxLength = 32767;
             this.metroTextBoxUsername.Name = "metroTextBoxUsername";
             this.metroTextBoxUsername.PasswordChar = '\0';
-            this.metroTextBoxUsername.PromptText = "Username";
+            this.metroTextBoxUsername.WaterMark = "Username";
             this.metroTextBoxUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBoxUsername.SelectedText = "";
             this.metroTextBoxUsername.SelectionLength = 0;

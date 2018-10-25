@@ -43,6 +43,7 @@ namespace iservice5
         public static String selected_iservice_customers_company;
 
         public static int selected_iservice_cars_id;
+        public static int selected_iservice_cars_customers_id;
         public static String selected_iservice_cars_reg_number;
         public static String selected_iservice_cars_vin;
         public static String selected_iservice_cars_brand;

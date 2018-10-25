@@ -42,8 +42,25 @@ namespace iservice5
         private void button2_Click(object sender, EventArgs e)
         {
 
-            frm1.dataGridViewItemsDetails.Rows.Add(dataGridViewItemsDetails.SelectedCells[0].Value, dataGridViewItemsDetails.SelectedCells[1].Value, dataGridViewItemsDetails.SelectedCells[2].Value, dataGridViewItemsDetails.SelectedCells[3].Value, dataGridViewItemsDetails.SelectedCells[4].Value, dataGridViewItemsDetails.SelectedCells[5].Value, dataGridViewItemsDetails.SelectedCells[6].Value, dataGridViewItemsDetails.SelectedCells[7].Value, dataGridViewItemsDetails.SelectedCells[8].Value);
+            bool Found = false;
+            if (frm1.dataGridViewItemsDetails.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in frm1.dataGridViewItemsDetails.Rows)
+                {
 
+                    if (Convert.ToString(row.Cells[0].Value) == Convert.ToString(dataGridViewItemsDetails.SelectedCells[0].Value))
+                    {
+                        row.Cells[5].Value = Convert.ToString(1 + Convert.ToInt32(row.Cells[5].Value));
+                        row.Cells[10].Value = (Convert.ToInt32(row.Cells[5].Value) * Convert.ToInt32(row.Cells[9].Value)).ToString();
+                        Found = true;
+                    }
+                }
+            }
+            if (!Found)
+            {
+                frm1.dataGridViewItemsDetails.Rows.Add(dataGridViewItemsDetails.SelectedCells[0].Value, dataGridViewItemsDetails.SelectedCells[1].Value, dataGridViewItemsDetails.SelectedCells[2].Value, dataGridViewItemsDetails.SelectedCells[3].Value, dataGridViewItemsDetails.SelectedCells[4].Value, "1", dataGridViewItemsDetails.SelectedCells[5].Value, dataGridViewItemsDetails.SelectedCells[6].Value, dataGridViewItemsDetails.SelectedCells[7].Value, dataGridViewItemsDetails.SelectedCells[8].Value, dataGridViewItemsDetails.SelectedCells[8].Value);
+            }
+         
             frm1.updatedetailstotal();
             frm1.Refresh();
 

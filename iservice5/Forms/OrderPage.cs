@@ -170,7 +170,7 @@ namespace iservice5
                 this.Text = "Edit customer";
                 comboBoxOrderStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work);
                 ComboBoxPaymentStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment);
-                //comboBoxOrderStatus.SelectedValue = 6;
+          
                 labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number);
                 textBoxMileage.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage;
                 labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
@@ -191,7 +191,11 @@ namespace iservice5
             warehouse_details Warehouse_details = new warehouse_details(this);
             Warehouse_details.Show();
         }
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            warehouse_works Warehouse_works = new warehouse_works(this);
+            Warehouse_works.Show();
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             foreach ( DataGridViewRow row in dataGridViewItemsDetails.SelectedRows)
@@ -227,11 +231,7 @@ namespace iservice5
            labelTotal.Text = (Convert.ToInt32(labelItemDetailsTotal.Text) + Convert.ToInt32(labelItemWorksTotal.Text)).ToString();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            warehouse_works Warehouse_works = new warehouse_works(this);
-            Warehouse_works.Show();
-        }
+      
 
         private void comboBoxOrderStatus_SelectedIndexChanged(object sender, EventArgs e)
         {

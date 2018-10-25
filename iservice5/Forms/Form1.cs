@@ -199,6 +199,7 @@ namespace iservice5
         }
         private void dataGridViewClients_Click(object sender, EventArgs e)
         {
+          
             String s=null;
             if (dataGridViewClients.SelectedRows.Count > 0)
             {   s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
@@ -233,7 +234,7 @@ namespace iservice5
                 try
                 {
                     dataGridViewCars.DataSource = DataService.GetCarsByCustomer(Int32.Parse(s));
-                    dataGridViewCars.ClearSelection();
+                    //dataGridViewCars.ClearSelection();
 
 
                     if (dataGridViewCars.SelectedRows.Count > 0)
@@ -246,11 +247,6 @@ namespace iservice5
 
                         String s2 = dataGridViewCars.SelectedRows[0].Cells[0].Value.ToString();
 
-                        /* if(e.RowIndex==9)
-                       {
-                           MessageBox.Show((e.RowIndex+1).ToString() +" Row Clicked");
-                       }
-                        */
                         if (s2 != null)
                         {
 
@@ -294,18 +290,27 @@ namespace iservice5
 
 
         }
-
-       
+        private void dataGridViewCars_CurrentCellChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private void dataGridViewClients_CurrentCellChanged(object sender, EventArgs e)
+        {
+           
+        }
 
         private void dataGridViewCars_Click(object sender, EventArgs e)
         {
+            
             String s2=null;
             if (dataGridViewCars.SelectedRows.Count > 0)
             {
+               
                 s2 = dataGridViewCars.SelectedRows[0].Cells[0].Value.ToString();
                 labelCars.Text = dataGridViewCars.SelectedRows[0].Cells[2].Value.ToString();
                 GlobalVars.regnumber = labelCars.Text;
                 GlobalVars.selected_iservice_cars_id = Convert.ToInt32(dataGridViewCars.SelectedRows[0].Cells[0].Value);
+                GlobalVars.selected_iservice_cars_customers_id = Convert.ToInt32(dataGridViewCars.SelectedRows[0].Cells[1].Value);
                 GlobalVars.selected_iservice_cars_reg_number = Convert.ToString(dataGridViewCars.SelectedRows[0].Cells[2].Value);
                 GlobalVars.selected_iservice_cars_vin = Convert.ToString(dataGridViewCars.SelectedRows[0].Cells[3].Value);
                 GlobalVars.selected_iservice_cars_brand = Convert.ToString(dataGridViewCars.SelectedRows[0].Cells[4].Value);
@@ -340,6 +345,48 @@ namespace iservice5
                 
 
             }
+
+
+
+
+            String s = null;
+            if (dataGridViewCars.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewClients.Rows)
+                {
+
+                    if (Convert.ToInt32(row.Cells[0].Value) == GlobalVars.selected_iservice_cars_customers_id)
+                    {
+
+                        dataGridViewClients.Rows[row.Index].Selected = true;
+                        dataGridViewClients.FirstDisplayedScrollingRowIndex = dataGridViewClients.SelectedRows[0].Index;
+
+
+                        s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
+                        labelClients.Text = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
+                        GlobalVars.Client = labelClients.Text;
+
+                        GlobalVars.selected_iservice_customers_id = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_id;
+                        GlobalVars.selected_iservice_customers_name = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_name;
+                        GlobalVars.selected_iservice_customers_surname = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_surname;
+                        GlobalVars.selected_iservice_customers_patronymic = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_patronymic;
+                        GlobalVars.selected_iservice_customers_country = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_country;
+                        GlobalVars.selected_iservice_customers_city = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_city;
+                        GlobalVars.selected_iservice_customers_street = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_street;
+                        GlobalVars.selected_iservice_customers_zipcode = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_zipcode;
+                        GlobalVars.selected_iservice_customers_telephone = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_telephone;
+                        GlobalVars.selected_iservice_customers_telephone_home = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_telephone_home;
+                        GlobalVars.selected_iservice_customers_date_of_birthday = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_date_of_birthday;
+                        GlobalVars.selected_iservice_customers_date_of_creation = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_date_of_creation;
+                        GlobalVars.selected_iservice_customers_email = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_email;
+                        GlobalVars.selected_iservice_customers_employee = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_employee;
+                        GlobalVars.selected_iservice_customers_company = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_company;
+
+                    }
+
+                }
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -371,7 +418,7 @@ namespace iservice5
             }
             else
                 labelOrders.Text = "Please select order";
-            labelOrders.Text = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
+          
         }
         public void updateclientsdata()
         {
@@ -437,6 +484,50 @@ namespace iservice5
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void button_search_cars_Click(object sender, EventArgs e)
+        {
+
+            dataGridViewClients.DataSource = DataService.GetCustomersByWord("");
+            dataGridViewCars.DataSource = DataService.GetCarsByWord(textBox_search_cars.Text);
+            dataGridViewClients.ClearSelection();
+            dataGridViewCars.ClearSelection();
+            labelClients.Text = "Please select clients";
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
+            dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
+        }
+
+        private void button_search_cars_all_Click(object sender, EventArgs e)
+        {
+            dataGridViewClients.DataSource = DataService.GetCustomersByWord("");
+            dataGridViewCars.DataSource = DataService.GetAllCars();
+            dataGridViewClients.ClearSelection();
+            dataGridViewCars.ClearSelection();
+            labelClients.Text = "Please select clients";
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
+            
+
+            dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
+        }
+
+        private void textBox_search_cars_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;             
+            dataGridViewClients.DataSource = DataService.GetCustomersByWord("");
+            dataGridViewCars.DataSource = DataService.GetCarsByWord(textBox_search_cars.Text);
+            dataGridViewClients.ClearSelection();
+            dataGridViewCars.ClearSelection();
+            labelClients.Text = "Please select clients";
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
+            dataGridViewOrders.DataSource = DataService.GetOrdersByCar(-1);
             }
         }
     }
