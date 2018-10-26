@@ -151,17 +151,25 @@ namespace iservice5
                 return null;
             }
         }
-        /* public static List<iservice_orders> GetNewOrderNumber()
-         {
-             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
-             {
-                 if (db.State == ConnectionState.Closed)
-                     db.Open();
-                // List<iservice_orders> result();
-                 return db.Query<iservice_orders>("Select MAX(iservice_orders_number) from iservice_orders").ToList();
+        public static List<iservice_orders> GetOrdersByWord(String word)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id WHERE(iservice_orders_number LIKE '%' + N'" + word + "' + '%')").ToList();
+            }
+        }
 
-             }
-         }*/
+        public static List<iservice_orders> GetAllOrders()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id").ToList();
+            }
+        }
         public static List<iservice_orders> GetOrdersByCar(int cars_id)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))

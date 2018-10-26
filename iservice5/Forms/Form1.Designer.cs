@@ -63,9 +63,9 @@
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button_search_orders_all = new System.Windows.Forms.Button();
+            this.button_search_orders = new System.Windows.Forms.Button();
+            this.textBox_search_orders = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button_search_cars_all = new System.Windows.Forms.Button();
             this.button_search_cars = new System.Windows.Forms.Button();
@@ -372,34 +372,37 @@
             // tableLayoutPanel5
             // 
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
-            this.tableLayoutPanel5.Controls.Add(this.button7, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button8, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button_search_orders_all, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button_search_orders, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBox_search_orders, 0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
-            // button7
+            // button_search_orders_all
             // 
-            this.button7.AutoEllipsis = true;
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_search_orders_all.AutoEllipsis = true;
+            this.button_search_orders_all.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button_search_orders_all, "button_search_orders_all");
+            this.button_search_orders_all.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_search_orders_all.Name = "button_search_orders_all";
+            this.button_search_orders_all.UseVisualStyleBackColor = false;
+            this.button_search_orders_all.Click += new System.EventHandler(this.button_search_orders_all_Click);
             // 
-            // button8
+            // button_search_orders
             // 
-            this.button8.AutoEllipsis = true;
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.button8, "button8");
-            this.button8.ForeColor = System.Drawing.SystemColors.Window;
-            this.button8.Image = global::iservice5.Properties.Resources.View_18px;
-            this.button8.Name = "button8";
-            this.button8.UseVisualStyleBackColor = false;
+            this.button_search_orders.AutoEllipsis = true;
+            this.button_search_orders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button_search_orders, "button_search_orders");
+            this.button_search_orders.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_search_orders.Image = global::iservice5.Properties.Resources.View_18px;
+            this.button_search_orders.Name = "button_search_orders";
+            this.button_search_orders.UseVisualStyleBackColor = false;
+            this.button_search_orders.Click += new System.EventHandler(this.button_search_orders_Click);
             // 
-            // textBox2
+            // textBox_search_orders
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.textBox_search_orders, "textBox_search_orders");
+            this.textBox_search_orders.Name = "textBox_search_orders";
+            this.textBox_search_orders.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_search_orders_KeyDown);
             // 
             // tableLayoutPanel4
             // 
@@ -440,8 +443,10 @@
             // 
             this.dataGridViewOrders.AllowUserToAddRows = false;
             this.dataGridViewOrders.AllowUserToDeleteRows = false;
-            this.dataGridViewOrders.AllowUserToOrderColumns = true;
-            this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOrders.AllowUserToResizeColumns = false;
+            this.dataGridViewOrders.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dataGridViewOrders, "dataGridViewOrders");
+            this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOrders.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -478,7 +483,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dataGridViewOrders, "dataGridViewOrders");
             this.dataGridViewOrders.MultiSelect = false;
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.ReadOnly = true;
@@ -497,12 +501,15 @@
             this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewOrders.RowTemplate.Height = 24;
             this.dataGridViewOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOrders.CurrentCellChanged += new System.EventHandler(this.dataGridViewOrders_CurrentCellChanged);
             this.dataGridViewOrders.Click += new System.EventHandler(this.dataGridViewOrders_Click);
             // 
             // dataGridViewCars
             // 
             this.dataGridViewCars.AllowUserToAddRows = false;
             this.dataGridViewCars.AllowUserToDeleteRows = false;
+            this.dataGridViewCars.AllowUserToResizeColumns = false;
+            this.dataGridViewCars.AllowUserToResizeRows = false;
             this.dataGridViewCars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCars.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCars.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -667,6 +674,8 @@
             // 
             this.dataGridViewClients.AllowUserToAddRows = false;
             this.dataGridViewClients.AllowUserToDeleteRows = false;
+            this.dataGridViewClients.AllowUserToResizeColumns = false;
+            this.dataGridViewClients.AllowUserToResizeRows = false;
             this.dataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClients.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewClients.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -1187,19 +1196,19 @@
             // 
             // iservice_orders_id
             // 
+            this.iservice_orders_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_id.DataPropertyName = "iservice_orders_id";
             resources.ApplyResources(this.iservice_orders_id, "iservice_orders_id");
             this.iservice_orders_id.Name = "iservice_orders_id";
             this.iservice_orders_id.ReadOnly = true;
-            this.iservice_orders_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_cars_id
             // 
+            this.iservice_orders_cars_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_cars_id.DataPropertyName = "iservice_orders_cars_id";
             resources.ApplyResources(this.iservice_orders_cars_id, "iservice_orders_cars_id");
             this.iservice_orders_cars_id.Name = "iservice_orders_cars_id";
             this.iservice_orders_cars_id.ReadOnly = true;
-            this.iservice_orders_cars_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_user_id
             // 
@@ -1207,112 +1216,102 @@
             resources.ApplyResources(this.iservice_orders_user_id, "iservice_orders_user_id");
             this.iservice_orders_user_id.Name = "iservice_orders_user_id";
             this.iservice_orders_user_id.ReadOnly = true;
-            this.iservice_orders_user_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_number
             // 
-            this.iservice_orders_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_number.DataPropertyName = "iservice_orders_number";
             resources.ApplyResources(this.iservice_orders_number, "iservice_orders_number");
             this.iservice_orders_number.Name = "iservice_orders_number";
             this.iservice_orders_number.ReadOnly = true;
-            this.iservice_orders_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_of_work
             // 
+            this.iservice_orders_status_of_work.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_status_of_work.DataPropertyName = "iservice_orders_status_of_work";
             resources.ApplyResources(this.iservice_orders_status_of_work, "iservice_orders_status_of_work");
             this.iservice_orders_status_of_work.Name = "iservice_orders_status_of_work";
             this.iservice_orders_status_of_work.ReadOnly = true;
-            this.iservice_orders_status_of_work.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_name
             // 
-            this.iservice_orders_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_status_name.DataPropertyName = "iservice_orders_status_name";
             resources.ApplyResources(this.iservice_orders_status_name, "iservice_orders_status_name");
             this.iservice_orders_status_name.Name = "iservice_orders_status_name";
             this.iservice_orders_status_name.ReadOnly = true;
-            this.iservice_orders_status_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_of_payment
             // 
+            this.iservice_orders_status_of_payment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_status_of_payment.DataPropertyName = "iservice_orders_status_of_payment";
             resources.ApplyResources(this.iservice_orders_status_of_payment, "iservice_orders_status_of_payment");
             this.iservice_orders_status_of_payment.Name = "iservice_orders_status_of_payment";
             this.iservice_orders_status_of_payment.ReadOnly = true;
-            this.iservice_orders_status_of_payment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_payment_status_name
             // 
-            this.iservice_orders_payment_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_payment_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_payment_status_name.DataPropertyName = "iservice_orders_payment_status_name";
             resources.ApplyResources(this.iservice_orders_payment_status_name, "iservice_orders_payment_status_name");
             this.iservice_orders_payment_status_name.Name = "iservice_orders_payment_status_name";
             this.iservice_orders_payment_status_name.ReadOnly = true;
-            this.iservice_orders_payment_status_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_date_of_creation
             // 
-            this.iservice_orders_date_of_creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_date_of_creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_date_of_creation.DataPropertyName = "iservice_orders_date_of_creation";
             resources.ApplyResources(this.iservice_orders_date_of_creation, "iservice_orders_date_of_creation");
             this.iservice_orders_date_of_creation.Name = "iservice_orders_date_of_creation";
             this.iservice_orders_date_of_creation.ReadOnly = true;
-            this.iservice_orders_date_of_creation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_date_of_last_update
             // 
-            this.iservice_orders_date_of_last_update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_date_of_last_update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_date_of_last_update.DataPropertyName = "iservice_orders_date_of_last_update";
             resources.ApplyResources(this.iservice_orders_date_of_last_update, "iservice_orders_date_of_last_update");
             this.iservice_orders_date_of_last_update.Name = "iservice_orders_date_of_last_update";
             this.iservice_orders_date_of_last_update.ReadOnly = true;
-            this.iservice_orders_date_of_last_update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_expiry_date
             // 
-            this.iservice_orders_expiry_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_expiry_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_expiry_date.DataPropertyName = "iservice_orders_expiry_date";
             resources.ApplyResources(this.iservice_orders_expiry_date, "iservice_orders_expiry_date");
             this.iservice_orders_expiry_date.Name = "iservice_orders_expiry_date";
             this.iservice_orders_expiry_date.ReadOnly = true;
-            this.iservice_orders_expiry_date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_prepayment
             // 
+            this.iservice_orders_prepayment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_prepayment.DataPropertyName = "iservice_orders_prepayment";
             resources.ApplyResources(this.iservice_orders_prepayment, "iservice_orders_prepayment");
             this.iservice_orders_prepayment.Name = "iservice_orders_prepayment";
             this.iservice_orders_prepayment.ReadOnly = true;
-            this.iservice_orders_prepayment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_total_netto
             // 
-            this.iservice_orders_total_netto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_total_netto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_total_netto.DataPropertyName = "iservice_orders_total_netto";
             resources.ApplyResources(this.iservice_orders_total_netto, "iservice_orders_total_netto");
             this.iservice_orders_total_netto.Name = "iservice_orders_total_netto";
             this.iservice_orders_total_netto.ReadOnly = true;
-            this.iservice_orders_total_netto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_total_brutto
             // 
-            this.iservice_orders_total_brutto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_total_brutto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_total_brutto.DataPropertyName = "iservice_orders_total_brutto";
             resources.ApplyResources(this.iservice_orders_total_brutto, "iservice_orders_total_brutto");
             this.iservice_orders_total_brutto.Name = "iservice_orders_total_brutto";
             this.iservice_orders_total_brutto.ReadOnly = true;
-            this.iservice_orders_total_brutto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_mileage
             // 
-            this.iservice_orders_mileage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_orders_mileage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.iservice_orders_mileage.DataPropertyName = "iservice_orders_mileage";
             resources.ApplyResources(this.iservice_orders_mileage, "iservice_orders_mileage");
             this.iservice_orders_mileage.Name = "iservice_orders_mileage";
             this.iservice_orders_mileage.ReadOnly = true;
-            this.iservice_orders_mileage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Form1
             // 
@@ -1440,9 +1439,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button_search_orders_all;
+        private System.Windows.Forms.Button button_search_orders;
+        private System.Windows.Forms.TextBox textBox_search_orders;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button button_search_cars_all;
         private System.Windows.Forms.Button button_search_cars;
