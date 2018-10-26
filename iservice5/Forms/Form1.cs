@@ -21,11 +21,13 @@ namespace iservice5
 
         private void btnService_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = false;
             TextStatus.Text = btnService.Text;
            // panel1.Visible = false;
             panelCompanySetting.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             panel4.Visible = true;
+            tableLayoutPanelCompanySetting.Visible = false;
         }
 
         private void btnTimeLine_Click(object sender, EventArgs e)
@@ -54,12 +56,14 @@ namespace iservice5
             TextStatus.Text = btnService.Text;
         }
 
-        private void btnEmployee_Click(object sender, EventArgs e)
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = true;
             panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             panelCompanySetting.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
-            TextStatus.Text = btnService.Text + " --> " + btnEmployee.Text;
+            TextStatus.Text = btnDashboard.Text;
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
@@ -73,10 +77,12 @@ namespace iservice5
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = false;
             panel4.Visible = false;
             panelCompanySetting.Visible = true;
             tableLayoutPanelCompanySetting.Visible = true;
-            // panel1.Visible = true;
+            TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
+
         }
         private void pictureBoxNewClient_Click(object sender, EventArgs e)
         {
@@ -145,7 +151,18 @@ namespace iservice5
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            dataGridViewOrdersinProcess.DataSource = DataService.GetOrderStatusList();
+            dataGridView_lastactivecars.DataSource = DataService.GetOrderStatusList();
+            dataGridView_lastactivecustomers.DataSource = DataService.GetOrderStatusList();
+            dataGridView_lastclosedorders.DataSource = DataService.GetOrderStatusList();
+            dataGridView_lastmadejobs.DataSource = DataService.GetOrderStatusList();
+            dataGridView_lastsolddetails.DataSource = DataService.GetOrderStatusList();
+            dataGridViewOrdersinProcess.ClearSelection();
+            dataGridView_lastactivecars.ClearSelection();
+            dataGridView_lastactivecustomers.ClearSelection();
+            dataGridView_lastclosedorders.ClearSelection();
+            dataGridView_lastmadejobs.ClearSelection();
+            dataGridView_lastsolddetails.ClearSelection();
             labelEmployee.Text = GlobalVars.Employee;
             
             textBoxSettingsName.Text = GlobalVars.iservice_company_name;
@@ -648,6 +665,37 @@ namespace iservice5
         private void dataGridViewOrders_CurrentCellChanged(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void button_company_Click(object sender, EventArgs e)
+        {
+            TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
+
+        }
+
+        private void button_employee_Click(object sender, EventArgs e)
+        {
+            TextStatus.Text = btnDashboard.Text + " --> " + button_employee.Text;
+
+        }
+
+        private void button_orders_Click(object sender, EventArgs e)
+        {
+            TextStatus.Text = btnDashboard.Text + " --> " + button_orders.Text;
+
+        }
+
+        private void dataGridViewOrdersinProcess_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            var height = 40;
+            foreach (DataGridViewRow dr in dataGridViewOrdersinProcess.Rows)
+            {
+                height += dr.Height;
+            }
+
+            dataGridViewOrdersinProcess.Height = height;
         }
     }
 

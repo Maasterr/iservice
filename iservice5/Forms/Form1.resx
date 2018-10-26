@@ -159,107 +159,6 @@
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnService.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnService.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.2pt</value>
-  </data>
-  <data name="btnService.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAARRJREFUWEft
-        kzEKwjAUhushvIm7TiK4OHgEHR0cHAoiHd3aegIFcXYpDio42lRw9QQiCG5qg0P0QRQb0iaDASnvg29o
-        kpf/pxALQUzhRveKR2jfi+jwp77uHJFHmceoYYwVvJDOXoPMpD6hUx6ZjU/imuwCE462cZXHpuMSasuG
-        TQhZPDYdN6TO91DdP7DSYP8Rvt979uKS2ANhTWcWhCwem45YCC4qtjcf4fu9152fE3sgrOnMgljISCGT
-        5qMQvjIRLKRCLGTSfBTCVyaChVSIhUyaj0L4ykSwkAqxUJaqQiq1CvXWcae7ui91bI6PO7EQrMnOyoQs
-        HptOK7g6reDGdGxMTokyIKzJzsq9qv8Q8t9Y1hPXyVIeJRXx7QAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnService.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 2</value>
-  </data>
-  <data name="btnService.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnService.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 57</value>
-  </data>
-  <data name="btnService.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="btnService.Text" xml:space="preserve">
-    <value>   Service</value>
-  </data>
-  <data name="btnService.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnService.Name" xml:space="preserve">
-    <value>btnService</value>
-  </data>
-  <data name="&gt;&gt;btnService.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnService.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;btnService.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnTimeLine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnTimeLine.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.2pt</value>
-  </data>
-  <data name="btnTimeLine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAwlJREFUWEft
-        lstPE0EcxzeKAdRw1fIHeDCeNBoSo60aL5iY4MEYD14gMZhQ4wEPHoiJAY0XsUHDDSEaGsoCLUUhRdvt
-        g0cgmtLyKG151SottMYHBiT6c3Z2tmmzU3cLra/0m3wzuzO78/nu/Ha6ZfL6p6Wu6PMgQw79TVNhvkRw
-        8qJMkHVrLvTdJjh50SbItjMKdKV2GHLtyzdcjQQnL8vcJuTauq6QjeDkRZsg2/7rArXZYy0EJy/aBHXP
-        V7HF42sd7xS73b0mmc8S3FT+UktuRj7VGMAWj1U3JxRb5/womW/bgbLu7QbKlyxZkptz4WyW7JZ5Bara
-        w790bU8E+mY3JPMknM2SnZYpWfnjeTD5hDBPZz5D5fACHB/0wuEBN26rhhagyfvhAcHJKznIVm0ObMB5
-        mw8KWDswnZzEOzq576htYlqsRQSbXjSAkpLVvRDGe/3rcLD/dQJe2jsEF51uuD42hVsVOhfHkF1M7/hu
-        gqYrOYhoJSW79zKOx8+8msIwfnXq3bMQjcUgHo8nHFmNwR3Uv1NcPZZrJWi6koNk6kZPPPH0jyaDiRAm
-        kwnQ1LgV+3RonFz7g2GtZQKdIhpIrmT1lhgeO2udxpCywfEEOF0g3kctYySULf3HNjmIaLmSVT57i8f2
-        mUYw4P6EPwVsNBqpge6i0gmB7AGBTlFykEy9i3VgQGdgKQWs1WpxoJqampT+Dv8iCcR9FegU0UBKXdIj
-        7KDWmfkUsMFgAJVKBcXFxXi1xP4nvgUxUJTgpaKBlPpQ/xsMqB71pgTiHQ6HQa1WQ2FhIej1etx3dXRS
-        CMRy6f9B0kBKXT2yhAElPU7wRaKSUKFQCDQaDTQ3N8P0chT2dgslRi+1luCl4r8zW7XBt9ZQ1O34wkP4
-        nTYXWZGE4h1E/cfEHWbglpm2gT0EnwOx3EkEWudh/K8yv5O87yM4iAe1Deh8v8lFVgZdZ7CdIHfmUKz9
-        HIJ9ItB05sfLyR2/QUZnKXp6HVqxlZQgwvlDPP5HZLUWMF2OA0yH4whu+fO8/i8xzE9rDP83oZRb9AAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnTimeLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 2</value>
-  </data>
-  <data name="btnTimeLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnTimeLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 57</value>
-  </data>
-  <data name="btnTimeLine.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="btnTimeLine.Text" xml:space="preserve">
-    <value> TimeLine</value>
-  </data>
-  <data name="btnTimeLine.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnTimeLine.Name" xml:space="preserve">
-    <value>btnTimeLine</value>
-  </data>
-  <data name="&gt;&gt;btnTimeLine.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTimeLine.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;btnTimeLine.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
@@ -690,93 +589,7 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnWarehouse.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnWarehouse.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.2pt</value>
-  </data>
-  <data name="btnWarehouse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAfZJREFUWEft
-        lc0rRFEYxk9EbCxEouysJGKaO/s7FDI0ahYWiqXsUBbKx4KF8a18LMjav2BDyl8wDVZixUL5uJdRxut9
-        zz1TM7dz5porauo89WtO9/14nrndOkxLS8slKxxqtU1jC3836Swe/69ee9prLdOYtszQpRU2wEWSatQj
-        2v9GEIuV2mYwYncax2iacoWQkaJemqFZseb34m8jHJxEg6TLkPM22AL3Y3UcOst6EJwNTvp+axAIlL2a
-        Rgy/iRNclnYtB7u3Az7GGyEdrwDYY3Cz6EDndLyS16jHPYfgrtAJ7SYPYZdfdtjow8Fb1yLOQ6QZkqM1
-        8LJaws0zZAfK8LxSgr21fEa2C7klL2GrltUdWMoetPvb4CJaDzsD5bAcZRBHruZzzWWBLrGHemmGZmmH
-        HWnLDgTkJWzVeh9pOrW6gpAaaYLPhaocExWyQCpoJ+0mD/IStmp9zlTvf62VS5epKCRQBvIgL2GrFuyy
-        edmCfPgJxEEvYauWDuQlHchLj2vs6CHOoBCuFxxktXyQl7BV626JnSZmGfwH5CVs1SqKb4j+zdmEw/kU
-        3lMbuXVZoKd1pzczl5jLrXP8BjoYdu4kv3cZcYg7suscv4G8kAX6ETqQFzqQFzqQF8UZaJs1wA4LFML9
-        MhsiZLW8oJew1SpWMfYNqn7WH7ff5bEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnWarehouse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 2</value>
-  </data>
-  <data name="btnWarehouse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnWarehouse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 57</value>
-  </data>
-  <data name="btnWarehouse.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="btnWarehouse.Text" xml:space="preserve">
-    <value>Warehouse</value>
-  </data>
-  <data name="btnWarehouse.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnWarehouse.Name" xml:space="preserve">
-    <value>btnWarehouse</value>
-  </data>
-  <data name="&gt;&gt;btnWarehouse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnWarehouse.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;btnWarehouse.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnEmployee.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnEmployee.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.2pt</value>
-  </data>
-  <data name="btnEmployee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 2</value>
-  </data>
-  <data name="btnEmployee.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnEmployee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 57</value>
-  </data>
-  <data name="btnEmployee.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="btnEmployee.Text" xml:space="preserve">
-    <value>Employee</value>
-  </data>
-  <data name="btnEmployee.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnEmployee.Name" xml:space="preserve">
-    <value>btnEmployee</value>
-  </data>
-  <data name="&gt;&gt;btnEmployee.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEmployee.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;btnEmployee.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
@@ -920,49 +733,157 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelEmployee" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="button4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,57.40741,Percent,42.59259,Absolute,96" /&gt;&lt;Rows Styles="Percent,100,Absolute,41" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
+  <data name="btnDashboard.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDashboard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.2pt</value>
+  </data>
+  <data name="btnDashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="btnDashboard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnDashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 57</value>
+  </data>
+  <data name="btnDashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="btnDashboard.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="btnDashboard.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnDashboard.Name" xml:space="preserve">
+    <value>btnDashboard</value>
+  </data>
+  <data name="&gt;&gt;btnDashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDashboard.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnDashboard.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="tableLayoutPanelCompanySetting.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="button9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="button_orders.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="button_orders.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
   </data>
-  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button_orders.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 2</value>
+  <data name="button_orders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 2</value>
   </data>
-  <data name="button9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="button_orders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="button_orders.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 35</value>
   </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
+  <data name="button_orders.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
-  <data name="button9.Text" xml:space="preserve">
-    <value>Company</value>
+  <data name="button_orders.Text" xml:space="preserve">
+    <value>Orders</value>
   </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
+  <data name="&gt;&gt;button_orders.Name" xml:space="preserve">
+    <value>button_orders</value>
   </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_orders.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_orders.Parent" xml:space="preserve">
     <value>tableLayoutPanelCompanySetting</value>
   </data>
-  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button_orders.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="button_employee.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button_employee.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
+  </data>
+  <data name="button_employee.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_employee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 2</value>
+  </data>
+  <data name="button_employee.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="button_employee.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 35</value>
+  </data>
+  <data name="button_employee.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="button_employee.Text" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="&gt;&gt;button_employee.Name" xml:space="preserve">
+    <value>button_employee</value>
+  </data>
+  <data name="&gt;&gt;button_employee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_employee.Parent" xml:space="preserve">
+    <value>tableLayoutPanelCompanySetting</value>
+  </data>
+  <data name="&gt;&gt;button_employee.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button_company.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button_company.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
+  </data>
+  <data name="button_company.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_company.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="button_company.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="button_company.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 35</value>
+  </data>
+  <data name="button_company.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="button_company.Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="&gt;&gt;button_company.Name" xml:space="preserve">
+    <value>button_company</value>
+  </data>
+  <data name="&gt;&gt;button_company.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_company.Parent" xml:space="preserve">
+    <value>tableLayoutPanelCompanySetting</value>
+  </data>
+  <data name="&gt;&gt;button_company.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tableLayoutPanelCompanySetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 70</value>
@@ -986,10 +907,161 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanelCompanySetting.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="tableLayoutPanelCompanySetting.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button9" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25,Absolute,20" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button_orders" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button_employee" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button_company" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25,Absolute,20" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btnWarehouse.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnWarehouse.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.2pt</value>
+  </data>
+  <data name="btnWarehouse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAfZJREFUWEft
+        lc0rRFEYxk9EbCxEouysJGKaO/s7FDI0ahYWiqXsUBbKx4KF8a18LMjav2BDyl8wDVZixUL5uJdRxut9
+        zz1TM7dz5porauo89WtO9/14nrndOkxLS8slKxxqtU1jC3836Swe/69ee9prLdOYtszQpRU2wEWSatQj
+        2v9GEIuV2mYwYncax2iacoWQkaJemqFZseb34m8jHJxEg6TLkPM22AL3Y3UcOst6EJwNTvp+axAIlL2a
+        Rgy/iRNclnYtB7u3Az7GGyEdrwDYY3Cz6EDndLyS16jHPYfgrtAJ7SYPYZdfdtjow8Fb1yLOQ6QZkqM1
+        8LJaws0zZAfK8LxSgr21fEa2C7klL2GrltUdWMoetPvb4CJaDzsD5bAcZRBHruZzzWWBLrGHemmGZmmH
+        HWnLDgTkJWzVeh9pOrW6gpAaaYLPhaocExWyQCpoJ+0mD/IStmp9zlTvf62VS5epKCRQBvIgL2GrFuyy
+        edmCfPgJxEEvYauWDuQlHchLj2vs6CHOoBCuFxxktXyQl7BV626JnSZmGfwH5CVs1SqKb4j+zdmEw/kU
+        3lMbuXVZoKd1pzczl5jLrXP8BjoYdu4kv3cZcYg7suscv4G8kAX6ETqQFzqQFzqQF8UZaJs1wA4LFML9
+        MhsiZLW8oJew1SpWMfYNqn7WH7ff5bEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnWarehouse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 2</value>
+  </data>
+  <data name="btnWarehouse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnWarehouse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 57</value>
+  </data>
+  <data name="btnWarehouse.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="btnWarehouse.Text" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="btnWarehouse.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnWarehouse.Name" xml:space="preserve">
+    <value>btnWarehouse</value>
+  </data>
+  <data name="&gt;&gt;btnWarehouse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnWarehouse.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnWarehouse.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnTimeLine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnTimeLine.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.2pt</value>
+  </data>
+  <data name="btnTimeLine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAwlJREFUWEft
+        lstPE0EcxzeKAdRw1fIHeDCeNBoSo60aL5iY4MEYD14gMZhQ4wEPHoiJAY0XsUHDDSEaGsoCLUUhRdvt
+        g0cgmtLyKG151SottMYHBiT6c3Z2tmmzU3cLra/0m3wzuzO78/nu/Ha6ZfL6p6Wu6PMgQw79TVNhvkRw
+        8qJMkHVrLvTdJjh50SbItjMKdKV2GHLtyzdcjQQnL8vcJuTauq6QjeDkRZsg2/7rArXZYy0EJy/aBHXP
+        V7HF42sd7xS73b0mmc8S3FT+UktuRj7VGMAWj1U3JxRb5/womW/bgbLu7QbKlyxZkptz4WyW7JZ5Bara
+        w790bU8E+mY3JPMknM2SnZYpWfnjeTD5hDBPZz5D5fACHB/0wuEBN26rhhagyfvhAcHJKznIVm0ObMB5
+        mw8KWDswnZzEOzq576htYlqsRQSbXjSAkpLVvRDGe/3rcLD/dQJe2jsEF51uuD42hVsVOhfHkF1M7/hu
+        gqYrOYhoJSW79zKOx8+8msIwfnXq3bMQjcUgHo8nHFmNwR3Uv1NcPZZrJWi6koNk6kZPPPH0jyaDiRAm
+        kwnQ1LgV+3RonFz7g2GtZQKdIhpIrmT1lhgeO2udxpCywfEEOF0g3kctYySULf3HNjmIaLmSVT57i8f2
+        mUYw4P6EPwVsNBqpge6i0gmB7AGBTlFykEy9i3VgQGdgKQWs1WpxoJqampT+Dv8iCcR9FegU0UBKXdIj
+        7KDWmfkUsMFgAJVKBcXFxXi1xP4nvgUxUJTgpaKBlPpQ/xsMqB71pgTiHQ6HQa1WQ2FhIej1etx3dXRS
+        CMRy6f9B0kBKXT2yhAElPU7wRaKSUKFQCDQaDTQ3N8P0chT2dgslRi+1luCl4r8zW7XBt9ZQ1O34wkP4
+        nTYXWZGE4h1E/cfEHWbglpm2gT0EnwOx3EkEWudh/K8yv5O87yM4iAe1Deh8v8lFVgZdZ7CdIHfmUKz9
+        HIJ9ItB05sfLyR2/QUZnKXp6HVqxlZQgwvlDPP5HZLUWMF2OA0yH4whu+fO8/i8xzE9rDP83oZRb9AAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnTimeLine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 2</value>
+  </data>
+  <data name="btnTimeLine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnTimeLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 57</value>
+  </data>
+  <data name="btnTimeLine.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="btnTimeLine.Text" xml:space="preserve">
+    <value> TimeLine</value>
+  </data>
+  <data name="btnTimeLine.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnTimeLine.Name" xml:space="preserve">
+    <value>btnTimeLine</value>
+  </data>
+  <data name="&gt;&gt;btnTimeLine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTimeLine.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnTimeLine.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnService.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnService.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.2pt</value>
+  </data>
+  <data name="btnService.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAARRJREFUWEft
+        kzEKwjAUhushvIm7TiK4OHgEHR0cHAoiHd3aegIFcXYpDio42lRw9QQiCG5qg0P0QRQb0iaDASnvg29o
+        kpf/pxALQUzhRveKR2jfi+jwp77uHJFHmceoYYwVvJDOXoPMpD6hUx6ZjU/imuwCE462cZXHpuMSasuG
+        TQhZPDYdN6TO91DdP7DSYP8Rvt979uKS2ANhTWcWhCwem45YCC4qtjcf4fu9152fE3sgrOnMgljISCGT
+        5qMQvjIRLKRCLGTSfBTCVyaChVSIhUyaj0L4ykSwkAqxUJaqQiq1CvXWcae7ui91bI6PO7EQrMnOyoQs
+        HptOK7g6reDGdGxMTokyIKzJzsq9qv8Q8t9Y1hPXyVIeJRXx7QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnService.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 2</value>
+  </data>
+  <data name="btnService.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnService.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 57</value>
+  </data>
+  <data name="btnService.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="btnService.Text" xml:space="preserve">
+    <value>   Service</value>
+  </data>
+  <data name="btnService.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnService.Name" xml:space="preserve">
+    <value>btnService</value>
+  </data>
+  <data name="&gt;&gt;btnService.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnService.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnService.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1022,7 +1094,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button1" Row="0" RowSpan="1" Column="5" ColumnSpan="2" /&gt;&lt;Control Name="btnService" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnTimeLine" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="pictureBox1" Row="0" RowSpan="1" Column="7" ColumnSpan="1" /&gt;&lt;Control Name="btnWarehouse" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnEmployee" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="1" RowSpan="1" Column="7" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanelCompanySetting" Row="1" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,160,Absolute,80,Absolute,80,Absolute,160,Absolute,160,Absolute,116,Absolute,149,Percent,100" /&gt;&lt;Rows Styles="Percent,60.57692,Percent,39.42308" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button1" Row="0" RowSpan="1" Column="5" ColumnSpan="2" /&gt;&lt;Control Name="pictureBox1" Row="0" RowSpan="1" Column="7" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="1" RowSpan="1" Column="7" ColumnSpan="1" /&gt;&lt;Control Name="btnDashboard" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanelCompanySetting" Row="1" RowSpan="1" Column="0" ColumnSpan="5" /&gt;&lt;Control Name="btnWarehouse" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="btnTimeLine" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="btnService" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,160,Absolute,80,Absolute,80,Absolute,160,Absolute,160,Absolute,116,Absolute,149,Percent,100" /&gt;&lt;Rows Styles="Percent,60.57692,Percent,39.42308" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="panel_top.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1049,7 +1121,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_top.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel3_bottom.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1057,8 +1129,11 @@
   <data name="tableLayoutPanel10.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="TextStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="TextStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>3, 9</value>
   </data>
   <data name="TextStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 25</value>
@@ -1118,7 +1193,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel3_bottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 682</value>
+    <value>20, 697</value>
   </data>
   <data name="panel3_bottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1139,7 +1214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3_bottom.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tableLayoutPanel12.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1268,7 +1343,7 @@
     <value>Left</value>
   </data>
   <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 358</value>
+    <value>3, 368</value>
   </data>
   <data name="tableLayoutPanel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1418,7 +1493,7 @@
     <value>Left</value>
   </data>
   <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 180</value>
+    <value>3, 185</value>
   </data>
   <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1562,7 +1637,7 @@
     <value>Mileage</value>
   </data>
   <data name="dataGridViewOrders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 404</value>
+    <value>3, 414</value>
   </data>
   <data name="dataGridViewOrders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1571,7 +1646,7 @@
     <value>Vertical</value>
   </data>
   <data name="dataGridViewOrders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1044, 130</value>
+    <value>1044, 135</value>
   </data>
   <data name="dataGridViewOrders.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1667,13 +1742,13 @@
     <value>Fill</value>
   </data>
   <data name="dataGridViewCars.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 226</value>
+    <value>3, 231</value>
   </data>
   <data name="dataGridViewCars.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="dataGridViewCars.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1044, 128</value>
+    <value>1044, 133</value>
   </data>
   <data name="dataGridViewCars.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1964,7 +2039,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="dataGridViewClients.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1044, 128</value>
+    <value>1044, 133</value>
   </data>
   <data name="dataGridViewClients.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1994,7 +2069,7 @@
     <value>6</value>
   </data>
   <data name="tableLayoutPanel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1050, 536</value>
+    <value>1050, 551</value>
   </data>
   <data name="tableLayoutPanel13.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -2144,7 +2219,7 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 404</value>
+    <value>3, 414</value>
   </data>
   <data name="tableLayoutPanel23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -2153,7 +2228,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 130</value>
+    <value>239, 135</value>
   </data>
   <data name="tableLayoutPanel23.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2309,7 +2384,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 128</value>
+    <value>239, 133</value>
   </data>
   <data name="tableLayoutPanel18.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2456,7 +2531,7 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 226</value>
+    <value>3, 231</value>
   </data>
   <data name="tableLayoutPanel19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -2465,7 +2540,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 128</value>
+    <value>239, 133</value>
   </data>
   <data name="tableLayoutPanel19.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2649,7 +2724,7 @@
     <value>Left</value>
   </data>
   <data name="tableLayoutPanel22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 358</value>
+    <value>3, 368</value>
   </data>
   <data name="tableLayoutPanel22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -2724,7 +2799,7 @@
     <value>Left</value>
   </data>
   <data name="tableLayoutPanel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 180</value>
+    <value>3, 185</value>
   </data>
   <data name="tableLayoutPanel17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -2766,7 +2841,7 @@
     <value>6</value>
   </data>
   <data name="tableLayoutPanel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 536</value>
+    <value>245, 551</value>
   </data>
   <data name="tableLayoutPanel16.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2799,7 +2874,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1307, 540</value>
+    <value>1307, 555</value>
   </data>
   <data name="tableLayoutPanel12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2829,7 +2904,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1307, 540</value>
+    <value>1307, 555</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2844,7 +2919,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2898,7 +2973,7 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>537, 514</value>
+    <value>537, 521</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 18</value>
@@ -3669,7 +3744,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="panelCompanySetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1307, 540</value>
+    <value>1307, 555</value>
   </data>
   <data name="panelCompanySetting.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3684,7 +3759,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelCompanySetting.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -3698,8 +3773,551 @@
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="tableLayoutPanel6.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 40</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Orders in process</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 40</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Last active cars</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 275</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Last closed orders</value>
+  </data>
+  <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label20.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 275</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Last made jobs</value>
+  </data>
+  <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label21.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 275</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Last sold details</value>
+  </data>
+  <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label22.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 40</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Last active customers</value>
+  </data>
+  <data name="label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="dataGridViewOrdersinProcess.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="iservice_orders_status_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="iservice_orders_status_id.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="iservice_orders_status_name1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="iservice_orders_status_name1.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridViewOrdersinProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 82</value>
+  </data>
+  <data name="dataGridViewOrdersinProcess.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridViewOrdersinProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 160</value>
+  </data>
+  <data name="dataGridViewOrdersinProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewOrdersinProcess.Name" xml:space="preserve">
+    <value>dataGridViewOrdersinProcess</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewOrdersinProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewOrdersinProcess.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewOrdersinProcess.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dataGridView_lastactivecars.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridView_lastactivecars.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_lastactivecars.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 82</value>
+  </data>
+  <data name="dataGridView_lastactivecars.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView_lastactivecars.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 181</value>
+  </data>
+  <data name="dataGridView_lastactivecars.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecars.Name" xml:space="preserve">
+    <value>dataGridView_lastactivecars</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecars.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecars.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecars.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 82</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 181</value>
+  </data>
+  <data name="dataGridView_lastactivecustomers.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecustomers.Name" xml:space="preserve">
+    <value>dataGridView_lastactivecustomers</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecustomers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecustomers.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastactivecustomers.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 317</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 182</value>
+  </data>
+  <data name="dataGridView_lastclosedorders.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastclosedorders.Name" xml:space="preserve">
+    <value>dataGridView_lastclosedorders</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastclosedorders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastclosedorders.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastclosedorders.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 317</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 182</value>
+  </data>
+  <data name="dataGridView_lastmadejobs.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastmadejobs.Name" xml:space="preserve">
+    <value>dataGridView_lastmadejobs</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastmadejobs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastmadejobs.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastmadejobs.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>807, 317</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 182</value>
+  </data>
+  <data name="dataGridView_lastsolddetails.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastsolddetails.Name" xml:space="preserve">
+    <value>dataGridView_lastsolddetails</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastsolddetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastsolddetails.Parent" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_lastsolddetails.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tableLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="tableLayoutPanel6.RowCount" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1197, 501</value>
+  </data>
+  <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel6.Name" xml:space="preserve">
+    <value>tableLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel6.Parent" xml:space="preserve">
+    <value>panel_dashboard</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel6.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="label15" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label20" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="label21" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="label22" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="dataGridViewOrdersinProcess" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_lastactivecars" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_lastactivecustomers" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_lastclosedorders" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_lastmadejobs" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="dataGridView_lastsolddetails" Row="5" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,20,Percent,33.33333,Absolute,20,Percent,33.33333,Absolute,20,Percent,33.33333,Absolute,20" /&gt;&lt;Rows Styles="Absolute,40,Absolute,40,Percent,50,Absolute,10,Absolute,40,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="panel_dashboard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel_dashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 142</value>
+  </data>
+  <data name="panel_dashboard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel_dashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1307, 555</value>
+  </data>
+  <data name="panel_dashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel_dashboard.Name" xml:space="preserve">
+    <value>panel_dashboard</value>
+  </data>
+  <data name="&gt;&gt;panel_dashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_dashboard.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel_dashboard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
@@ -3735,7 +4353,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>20, 30, 20, 20</value>
+    <value>20, 30, 20, 5</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -3981,6 +4599,78 @@
     <value>iservice_orders_mileage</value>
   </data>
   <data name="&gt;&gt;iservice_orders_mileage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iservice_orders_status_id.Name" xml:space="preserve">
+    <value>iservice_orders_status_id</value>
+  </data>
+  <data name="&gt;&gt;iservice_orders_status_id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iservice_orders_status_name1.Name" xml:space="preserve">
+    <value>iservice_orders_status_name1</value>
+  </data>
+  <data name="&gt;&gt;iservice_orders_status_name1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn9</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn10</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn10.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
