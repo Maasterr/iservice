@@ -20,6 +20,9 @@ namespace iservice5
         private void warehouse_details_Load(object sender, EventArgs e)
         {
             dataGridViewItemsDetails.DataSource = DataService.ItemsDetailsGetData();
+            
+            
+            
             dataGridViewItemsDetails.Columns[0].Visible = false;
             dataGridViewItemsDetails.Columns[1].Visible = false;
             dataGridViewItemsDetails.Columns[2].Visible = false;
@@ -29,7 +32,7 @@ namespace iservice5
             dataGridViewItemsDetails.Columns[4].HeaderCell.Value = "Description";
             dataGridViewItemsDetails.Columns[7].HeaderCell.Value = "Price netto";
             dataGridViewItemsDetails.Columns[8].HeaderCell.Value = "Price brutto";
-            dataGridViewItemsDetails.EnableHeadersVisualStyles = false;
+            //dataGridViewItemsDetails.EnableHeadersVisualStyles = false;
             dataGridViewItemsDetails.RowHeadersVisible = false;
             dataGridViewItemsDetails.AllowUserToAddRows = false;
         }

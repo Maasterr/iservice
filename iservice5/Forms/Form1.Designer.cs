@@ -87,6 +87,21 @@
             this.button12 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
+            this.iservice_customers_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_patronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_city = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_street = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_zipcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_telephone_home = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_date_of_birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_customers_employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.labelOrders = new System.Windows.Forms.Label();
@@ -135,21 +150,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.iservice_customers_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_patronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_zipcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_telephone_home = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_date_of_birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_customers_employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_orders_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_orders_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_orders_user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -440,6 +440,7 @@
             // 
             this.dataGridViewOrders.AllowUserToAddRows = false;
             this.dataGridViewOrders.AllowUserToDeleteRows = false;
+            this.dataGridViewOrders.AllowUserToOrderColumns = true;
             this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOrders.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -724,6 +725,113 @@
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewClients.CurrentCellChanged += new System.EventHandler(this.dataGridViewClients_CurrentCellChanged);
             this.dataGridViewClients.Click += new System.EventHandler(this.dataGridViewClients_Click);
+            // 
+            // iservice_customers_id
+            // 
+            this.iservice_customers_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iservice_customers_id.DataPropertyName = "iservice_customers_id";
+            this.iservice_customers_id.Frozen = true;
+            resources.ApplyResources(this.iservice_customers_id, "iservice_customers_id");
+            this.iservice_customers_id.Name = "iservice_customers_id";
+            this.iservice_customers_id.ReadOnly = true;
+            // 
+            // iservice_customers_company
+            // 
+            this.iservice_customers_company.DataPropertyName = "iservice_customers_company";
+            resources.ApplyResources(this.iservice_customers_company, "iservice_customers_company");
+            this.iservice_customers_company.Name = "iservice_customers_company";
+            this.iservice_customers_company.ReadOnly = true;
+            // 
+            // iservice_customers_name
+            // 
+            this.iservice_customers_name.DataPropertyName = "iservice_customers_name";
+            resources.ApplyResources(this.iservice_customers_name, "iservice_customers_name");
+            this.iservice_customers_name.Name = "iservice_customers_name";
+            this.iservice_customers_name.ReadOnly = true;
+            // 
+            // iservice_customers_surname
+            // 
+            this.iservice_customers_surname.DataPropertyName = "iservice_customers_surname";
+            resources.ApplyResources(this.iservice_customers_surname, "iservice_customers_surname");
+            this.iservice_customers_surname.Name = "iservice_customers_surname";
+            this.iservice_customers_surname.ReadOnly = true;
+            // 
+            // iservice_customers_patronymic
+            // 
+            this.iservice_customers_patronymic.DataPropertyName = "iservice_customers_patronymic";
+            resources.ApplyResources(this.iservice_customers_patronymic, "iservice_customers_patronymic");
+            this.iservice_customers_patronymic.Name = "iservice_customers_patronymic";
+            this.iservice_customers_patronymic.ReadOnly = true;
+            // 
+            // iservice_customers_country
+            // 
+            this.iservice_customers_country.DataPropertyName = "iservice_customers_country";
+            resources.ApplyResources(this.iservice_customers_country, "iservice_customers_country");
+            this.iservice_customers_country.Name = "iservice_customers_country";
+            this.iservice_customers_country.ReadOnly = true;
+            // 
+            // iservice_customers_city
+            // 
+            this.iservice_customers_city.DataPropertyName = "iservice_customers_city";
+            resources.ApplyResources(this.iservice_customers_city, "iservice_customers_city");
+            this.iservice_customers_city.Name = "iservice_customers_city";
+            this.iservice_customers_city.ReadOnly = true;
+            // 
+            // iservice_customers_street
+            // 
+            this.iservice_customers_street.DataPropertyName = "iservice_customers_street";
+            resources.ApplyResources(this.iservice_customers_street, "iservice_customers_street");
+            this.iservice_customers_street.Name = "iservice_customers_street";
+            this.iservice_customers_street.ReadOnly = true;
+            // 
+            // iservice_customers_zipcode
+            // 
+            this.iservice_customers_zipcode.DataPropertyName = "iservice_customers_zipcode";
+            resources.ApplyResources(this.iservice_customers_zipcode, "iservice_customers_zipcode");
+            this.iservice_customers_zipcode.Name = "iservice_customers_zipcode";
+            this.iservice_customers_zipcode.ReadOnly = true;
+            // 
+            // iservice_customers_telephone
+            // 
+            this.iservice_customers_telephone.DataPropertyName = "iservice_customers_telephone";
+            resources.ApplyResources(this.iservice_customers_telephone, "iservice_customers_telephone");
+            this.iservice_customers_telephone.Name = "iservice_customers_telephone";
+            this.iservice_customers_telephone.ReadOnly = true;
+            // 
+            // iservice_customers_telephone_home
+            // 
+            this.iservice_customers_telephone_home.DataPropertyName = "iservice_customers_telephone_home";
+            resources.ApplyResources(this.iservice_customers_telephone_home, "iservice_customers_telephone_home");
+            this.iservice_customers_telephone_home.Name = "iservice_customers_telephone_home";
+            this.iservice_customers_telephone_home.ReadOnly = true;
+            // 
+            // iservice_customers_date_of_birthday
+            // 
+            this.iservice_customers_date_of_birthday.DataPropertyName = "iservice_customers_date_of_birthday";
+            resources.ApplyResources(this.iservice_customers_date_of_birthday, "iservice_customers_date_of_birthday");
+            this.iservice_customers_date_of_birthday.Name = "iservice_customers_date_of_birthday";
+            this.iservice_customers_date_of_birthday.ReadOnly = true;
+            // 
+            // iservice_customers_email
+            // 
+            this.iservice_customers_email.DataPropertyName = "iservice_customers_email";
+            resources.ApplyResources(this.iservice_customers_email, "iservice_customers_email");
+            this.iservice_customers_email.Name = "iservice_customers_email";
+            this.iservice_customers_email.ReadOnly = true;
+            // 
+            // iservice_customers_date_of_creation
+            // 
+            this.iservice_customers_date_of_creation.DataPropertyName = "iservice_customers_date_of_creation";
+            resources.ApplyResources(this.iservice_customers_date_of_creation, "iservice_customers_date_of_creation");
+            this.iservice_customers_date_of_creation.Name = "iservice_customers_date_of_creation";
+            this.iservice_customers_date_of_creation.ReadOnly = true;
+            // 
+            // iservice_customers_employee
+            // 
+            this.iservice_customers_employee.DataPropertyName = "iservice_customers_employee";
+            resources.ApplyResources(this.iservice_customers_employee, "iservice_customers_employee");
+            this.iservice_customers_employee.Name = "iservice_customers_employee";
+            this.iservice_customers_employee.ReadOnly = true;
             // 
             // tableLayoutPanel16
             // 
@@ -1077,119 +1185,13 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
-            // iservice_customers_id
-            // 
-            this.iservice_customers_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.iservice_customers_id.DataPropertyName = "iservice_customers_id";
-            this.iservice_customers_id.Frozen = true;
-            resources.ApplyResources(this.iservice_customers_id, "iservice_customers_id");
-            this.iservice_customers_id.Name = "iservice_customers_id";
-            this.iservice_customers_id.ReadOnly = true;
-            // 
-            // iservice_customers_company
-            // 
-            this.iservice_customers_company.DataPropertyName = "iservice_customers_company";
-            resources.ApplyResources(this.iservice_customers_company, "iservice_customers_company");
-            this.iservice_customers_company.Name = "iservice_customers_company";
-            this.iservice_customers_company.ReadOnly = true;
-            // 
-            // iservice_customers_name
-            // 
-            this.iservice_customers_name.DataPropertyName = "iservice_customers_name";
-            resources.ApplyResources(this.iservice_customers_name, "iservice_customers_name");
-            this.iservice_customers_name.Name = "iservice_customers_name";
-            this.iservice_customers_name.ReadOnly = true;
-            // 
-            // iservice_customers_surname
-            // 
-            this.iservice_customers_surname.DataPropertyName = "iservice_customers_surname";
-            resources.ApplyResources(this.iservice_customers_surname, "iservice_customers_surname");
-            this.iservice_customers_surname.Name = "iservice_customers_surname";
-            this.iservice_customers_surname.ReadOnly = true;
-            // 
-            // iservice_customers_patronymic
-            // 
-            this.iservice_customers_patronymic.DataPropertyName = "iservice_customers_patronymic";
-            resources.ApplyResources(this.iservice_customers_patronymic, "iservice_customers_patronymic");
-            this.iservice_customers_patronymic.Name = "iservice_customers_patronymic";
-            this.iservice_customers_patronymic.ReadOnly = true;
-            // 
-            // iservice_customers_country
-            // 
-            this.iservice_customers_country.DataPropertyName = "iservice_customers_country";
-            resources.ApplyResources(this.iservice_customers_country, "iservice_customers_country");
-            this.iservice_customers_country.Name = "iservice_customers_country";
-            this.iservice_customers_country.ReadOnly = true;
-            // 
-            // iservice_customers_city
-            // 
-            this.iservice_customers_city.DataPropertyName = "iservice_customers_city";
-            resources.ApplyResources(this.iservice_customers_city, "iservice_customers_city");
-            this.iservice_customers_city.Name = "iservice_customers_city";
-            this.iservice_customers_city.ReadOnly = true;
-            // 
-            // iservice_customers_street
-            // 
-            this.iservice_customers_street.DataPropertyName = "iservice_customers_street";
-            resources.ApplyResources(this.iservice_customers_street, "iservice_customers_street");
-            this.iservice_customers_street.Name = "iservice_customers_street";
-            this.iservice_customers_street.ReadOnly = true;
-            // 
-            // iservice_customers_zipcode
-            // 
-            this.iservice_customers_zipcode.DataPropertyName = "iservice_customers_zipcode";
-            resources.ApplyResources(this.iservice_customers_zipcode, "iservice_customers_zipcode");
-            this.iservice_customers_zipcode.Name = "iservice_customers_zipcode";
-            this.iservice_customers_zipcode.ReadOnly = true;
-            // 
-            // iservice_customers_telephone
-            // 
-            this.iservice_customers_telephone.DataPropertyName = "iservice_customers_telephone";
-            resources.ApplyResources(this.iservice_customers_telephone, "iservice_customers_telephone");
-            this.iservice_customers_telephone.Name = "iservice_customers_telephone";
-            this.iservice_customers_telephone.ReadOnly = true;
-            // 
-            // iservice_customers_telephone_home
-            // 
-            this.iservice_customers_telephone_home.DataPropertyName = "iservice_customers_telephone_home";
-            resources.ApplyResources(this.iservice_customers_telephone_home, "iservice_customers_telephone_home");
-            this.iservice_customers_telephone_home.Name = "iservice_customers_telephone_home";
-            this.iservice_customers_telephone_home.ReadOnly = true;
-            // 
-            // iservice_customers_date_of_birthday
-            // 
-            this.iservice_customers_date_of_birthday.DataPropertyName = "iservice_customers_date_of_birthday";
-            resources.ApplyResources(this.iservice_customers_date_of_birthday, "iservice_customers_date_of_birthday");
-            this.iservice_customers_date_of_birthday.Name = "iservice_customers_date_of_birthday";
-            this.iservice_customers_date_of_birthday.ReadOnly = true;
-            // 
-            // iservice_customers_email
-            // 
-            this.iservice_customers_email.DataPropertyName = "iservice_customers_email";
-            resources.ApplyResources(this.iservice_customers_email, "iservice_customers_email");
-            this.iservice_customers_email.Name = "iservice_customers_email";
-            this.iservice_customers_email.ReadOnly = true;
-            // 
-            // iservice_customers_date_of_creation
-            // 
-            this.iservice_customers_date_of_creation.DataPropertyName = "iservice_customers_date_of_creation";
-            resources.ApplyResources(this.iservice_customers_date_of_creation, "iservice_customers_date_of_creation");
-            this.iservice_customers_date_of_creation.Name = "iservice_customers_date_of_creation";
-            this.iservice_customers_date_of_creation.ReadOnly = true;
-            // 
-            // iservice_customers_employee
-            // 
-            this.iservice_customers_employee.DataPropertyName = "iservice_customers_employee";
-            resources.ApplyResources(this.iservice_customers_employee, "iservice_customers_employee");
-            this.iservice_customers_employee.Name = "iservice_customers_employee";
-            this.iservice_customers_employee.ReadOnly = true;
-            // 
             // iservice_orders_id
             // 
             this.iservice_orders_id.DataPropertyName = "iservice_orders_id";
             resources.ApplyResources(this.iservice_orders_id, "iservice_orders_id");
             this.iservice_orders_id.Name = "iservice_orders_id";
             this.iservice_orders_id.ReadOnly = true;
+            this.iservice_orders_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_cars_id
             // 
@@ -1197,6 +1199,7 @@
             resources.ApplyResources(this.iservice_orders_cars_id, "iservice_orders_cars_id");
             this.iservice_orders_cars_id.Name = "iservice_orders_cars_id";
             this.iservice_orders_cars_id.ReadOnly = true;
+            this.iservice_orders_cars_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_user_id
             // 
@@ -1204,13 +1207,16 @@
             resources.ApplyResources(this.iservice_orders_user_id, "iservice_orders_user_id");
             this.iservice_orders_user_id.Name = "iservice_orders_user_id";
             this.iservice_orders_user_id.ReadOnly = true;
+            this.iservice_orders_user_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_number
             // 
+            this.iservice_orders_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_number.DataPropertyName = "iservice_orders_number";
             resources.ApplyResources(this.iservice_orders_number, "iservice_orders_number");
             this.iservice_orders_number.Name = "iservice_orders_number";
             this.iservice_orders_number.ReadOnly = true;
+            this.iservice_orders_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_of_work
             // 
@@ -1218,13 +1224,16 @@
             resources.ApplyResources(this.iservice_orders_status_of_work, "iservice_orders_status_of_work");
             this.iservice_orders_status_of_work.Name = "iservice_orders_status_of_work";
             this.iservice_orders_status_of_work.ReadOnly = true;
+            this.iservice_orders_status_of_work.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_name
             // 
+            this.iservice_orders_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_status_name.DataPropertyName = "iservice_orders_status_name";
             resources.ApplyResources(this.iservice_orders_status_name, "iservice_orders_status_name");
             this.iservice_orders_status_name.Name = "iservice_orders_status_name";
             this.iservice_orders_status_name.ReadOnly = true;
+            this.iservice_orders_status_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_status_of_payment
             // 
@@ -1232,34 +1241,43 @@
             resources.ApplyResources(this.iservice_orders_status_of_payment, "iservice_orders_status_of_payment");
             this.iservice_orders_status_of_payment.Name = "iservice_orders_status_of_payment";
             this.iservice_orders_status_of_payment.ReadOnly = true;
+            this.iservice_orders_status_of_payment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_payment_status_name
             // 
+            this.iservice_orders_payment_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_payment_status_name.DataPropertyName = "iservice_orders_payment_status_name";
             resources.ApplyResources(this.iservice_orders_payment_status_name, "iservice_orders_payment_status_name");
             this.iservice_orders_payment_status_name.Name = "iservice_orders_payment_status_name";
             this.iservice_orders_payment_status_name.ReadOnly = true;
+            this.iservice_orders_payment_status_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_date_of_creation
             // 
+            this.iservice_orders_date_of_creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_date_of_creation.DataPropertyName = "iservice_orders_date_of_creation";
             resources.ApplyResources(this.iservice_orders_date_of_creation, "iservice_orders_date_of_creation");
             this.iservice_orders_date_of_creation.Name = "iservice_orders_date_of_creation";
             this.iservice_orders_date_of_creation.ReadOnly = true;
+            this.iservice_orders_date_of_creation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_date_of_last_update
             // 
+            this.iservice_orders_date_of_last_update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_date_of_last_update.DataPropertyName = "iservice_orders_date_of_last_update";
             resources.ApplyResources(this.iservice_orders_date_of_last_update, "iservice_orders_date_of_last_update");
             this.iservice_orders_date_of_last_update.Name = "iservice_orders_date_of_last_update";
             this.iservice_orders_date_of_last_update.ReadOnly = true;
+            this.iservice_orders_date_of_last_update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_expiry_date
             // 
+            this.iservice_orders_expiry_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_expiry_date.DataPropertyName = "iservice_orders_expiry_date";
             resources.ApplyResources(this.iservice_orders_expiry_date, "iservice_orders_expiry_date");
             this.iservice_orders_expiry_date.Name = "iservice_orders_expiry_date";
             this.iservice_orders_expiry_date.ReadOnly = true;
+            this.iservice_orders_expiry_date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_prepayment
             // 
@@ -1267,27 +1285,34 @@
             resources.ApplyResources(this.iservice_orders_prepayment, "iservice_orders_prepayment");
             this.iservice_orders_prepayment.Name = "iservice_orders_prepayment";
             this.iservice_orders_prepayment.ReadOnly = true;
+            this.iservice_orders_prepayment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_total_netto
             // 
+            this.iservice_orders_total_netto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_total_netto.DataPropertyName = "iservice_orders_total_netto";
             resources.ApplyResources(this.iservice_orders_total_netto, "iservice_orders_total_netto");
             this.iservice_orders_total_netto.Name = "iservice_orders_total_netto";
             this.iservice_orders_total_netto.ReadOnly = true;
+            this.iservice_orders_total_netto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_total_brutto
             // 
+            this.iservice_orders_total_brutto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_total_brutto.DataPropertyName = "iservice_orders_total_brutto";
             resources.ApplyResources(this.iservice_orders_total_brutto, "iservice_orders_total_brutto");
             this.iservice_orders_total_brutto.Name = "iservice_orders_total_brutto";
             this.iservice_orders_total_brutto.ReadOnly = true;
+            this.iservice_orders_total_brutto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // iservice_orders_mileage
             // 
+            this.iservice_orders_mileage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.iservice_orders_mileage.DataPropertyName = "iservice_orders_mileage";
             resources.ApplyResources(this.iservice_orders_mileage, "iservice_orders_mileage");
             this.iservice_orders_mileage.Name = "iservice_orders_mileage";
             this.iservice_orders_mileage.ReadOnly = true;
+            this.iservice_orders_mileage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Form1
             // 
@@ -1414,7 +1439,6 @@
         private System.Windows.Forms.TextBox textBoxSettingsVAT;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dataGridViewOrders;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
@@ -1454,6 +1478,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_customers_date_of_creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_customers_employee;
         public System.Windows.Forms.DataGridView dataGridViewCars;
+        public System.Windows.Forms.DataGridView dataGridViewOrders;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_cars_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_user_id;
