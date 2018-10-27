@@ -131,7 +131,7 @@ namespace iservice5
             }
         }
 
-        public static List<iservice_cars> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id,String iservice_orders_date_of_creation, String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work,String iservice_orders_prepayment, String iservice_orders_total_netto,String iservice_orders_total_brutto,String iservice_orders_mileage)
+        public static List<iservice_orders> NewOrder(int iservice_orders_cars_id, int iservice_orders_user_id,String iservice_orders_date_of_creation, String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work,String iservice_orders_prepayment, String iservice_orders_total_netto,String iservice_orders_total_brutto,String iservice_orders_mileage)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
@@ -141,13 +141,34 @@ namespace iservice5
                 return null;
             }
         }
-        public static List<iservice_cars> UpdateOrder(int iservice_orders_id,String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work, String iservice_orders_prepayment, String iservice_orders_total_netto, String iservice_orders_total_brutto, String iservice_orders_mileage)
+        public static List<iservice_orders_items> NewOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_id, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Update iservice_orders set iservice_orders_date_of_last_update = N'" + iservice_orders_date_of_last_update + " ',iservice_orders_expiry_date =N'" + iservice_orders_expiry_date + " ',iservice_orders_status_of_payment=N'" + iservice_orders_status_of_payment + " ',iservice_orders_status_of_work=N'" + iservice_orders_status_of_work + " ',iservice_orders_prepayment=N'" + iservice_orders_prepayment + "',iservice_orders_total_netto=N'" + iservice_orders_total_netto + "',iservice_orders_total_brutto=N'" + iservice_orders_total_brutto + "',iservice_orders_mileage=N'" + iservice_orders_mileage + "')");
+                db.Execute("Insert into iservice_orders_items values (N'" + iservice_orders_items_orders_id + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_price_netto  + " ',N'" + iservice_orders_items_price_brutto + " ')");
+                return null;
+            }
+        }
+        public static List<iservice_items> GetOrderItems( String ItemType, String OrderNumber)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_items>("Select iservice_items.* from iservice_items where iservice_items_type='" + ItemType+ "' and iservice_items_id = (select iservice_orders_item_id from iservice_orders_items where iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id)").ToList();
+
+
+            }
+        }
+        public static List<iservice_orders> UpdateOrder(int iservice_orders_id,String iservice_orders_date_of_last_update, String iservice_orders_expiry_date, String iservice_orders_status_of_payment, String iservice_orders_status_of_work, String iservice_orders_prepayment, String iservice_orders_total_netto, String iservice_orders_total_brutto, String iservice_orders_mileage)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Update iservice_orders set iservice_orders_date_of_last_update = N'" + iservice_orders_date_of_last_update + " ',iservice_orders_expiry_date =N'" + iservice_orders_expiry_date + " ',iservice_orders_status_of_payment=N'" + iservice_orders_status_of_payment + " ',iservice_orders_status_of_work=N'" + iservice_orders_status_of_work + " ',iservice_orders_prepayment=N'" + iservice_orders_prepayment + "',iservice_orders_total_netto=N'" + iservice_orders_total_netto + "',iservice_orders_total_brutto=N'" + iservice_orders_total_brutto + "', iservice_orders_mileage = N'" + iservice_orders_mileage + "' where iservice_orders_id = '"+ iservice_orders_id+"'");
                 return null;
             }
         }
@@ -157,17 +178,25 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id WHERE(iservice_orders_number LIKE '%' + N'" + word + "' + '%')").ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name, iservice_users.iservice_users_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id LEFT JOIN iservice_users ON iservice_orders.iservice_orders_user_id = iservice_users.iservice_users_id WHERE(iservice_orders_number LIKE '%' + N'" + word + "' + '%')").ToList();
             }
         }
-
+        public static List<iservice_orders> GetLastOrderNumber()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders>("SELECT MAX(iservice_orders_number) FROM iservice_orders ").ToList();
+            }
+        }
         public static List<iservice_orders> GetAllOrders()
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id").ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name, iservice_users.iservice_users_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id LEFT JOIN iservice_users ON iservice_orders.iservice_orders_user_id = iservice_users.iservice_users_id").ToList();
             }
         }
         public static List<iservice_orders> GetOrdersByCar(int cars_id)
@@ -176,7 +205,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name, iservice_users.iservice_users_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id LEFT JOIN iservice_users ON iservice_orders.iservice_orders_user_id = iservice_users.iservice_users_id where iservice_orders.iservice_orders_cars_id = " + cars_id ).ToList();
             }
         }
         public static List<iservice_orders> GetOrdersById(int order_id)
@@ -185,7 +214,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT * FROM iservice_orders where iservice_orders_id = " + order_id).ToList();
+                return db.Query<iservice_orders>("SELECT iservice_orders.*,iservice_orders_status.iservice_orders_status_name,iservice_orders_payment_status.iservice_orders_payment_status_name, iservice_users.iservice_users_name FROM iservice_orders LEFT JOIN iservice_orders_status ON iservice_orders.iservice_orders_status_of_work = iservice_orders_status.iservice_orders_status_id LEFT JOIN iservice_orders_payment_status ON iservice_orders.iservice_orders_status_of_payment = iservice_orders_payment_status.iservice_orders_payment_status_id LEFT JOIN iservice_users ON iservice_orders.iservice_orders_user_id = iservice_users.iservice_users_id where iservice_orders_id = " + order_id).ToList();
             }
         }
         /*public static List<iservice_orders> GetOrdersByCar(int cars_id)

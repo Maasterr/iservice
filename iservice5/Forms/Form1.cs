@@ -436,6 +436,8 @@ namespace iservice5
                 GlobalVars.OrderNumber = labelOrders.Text;
                 GlobalVars.selected_iservice_orders_id = Convert.ToInt32(dataGridViewOrders.SelectedRows[0].Cells[0].Value);
                 GlobalVars.selected_iservice_orders_cars_id = Convert.ToInt32(dataGridViewOrders.SelectedRows[0].Cells[1].Value);
+                GlobalVars.selected_iservice_orders_user_name = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[15].Value);
+                GlobalVars.selected_iservice_orders_mileage = Convert.ToString(dataGridViewOrders.SelectedRows[0].Cells[14].Value);
             }
             else
                 labelOrders.Text = "Please select order";

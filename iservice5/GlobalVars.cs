@@ -56,6 +56,7 @@ namespace iservice5
         public static int selected_iservice_orders_id;
         public static int selected_iservice_orders_cars_id;
         public static int selected_iservice_orders_user_id;
+        public static String selected_iservice_orders_user_name;
         public static int selected_iservice_orders_number;
         public static String selected_iservice_orders_date_of_creation;
         public static String selected_iservice_orders_date_of_last_update;

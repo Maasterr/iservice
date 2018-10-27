@@ -68,6 +68,8 @@
             this.textBoxMileage = new System.Windows.Forms.TextBox();
             this.labelOrderNumber = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_date_of_close = new System.Windows.Forms.Label();
+            this.label_lastupdate = new System.Windows.Forms.Label();
             this.labelCreationDate = new System.Windows.Forms.Label();
             this.ComboBoxPaymentStatus = new MetroFramework.Controls.MetroComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -82,18 +84,15 @@
             this.comboBoxOrderStatus = new MetroFramework.Controls.MetroComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.dataGridViewItemsWorks = new System.Windows.Forms.DataGridView();
-            this.iservice_items_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_subcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_purchase_price_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_purchase_price_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_price_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_items_price_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewItemsDetails = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,16 +104,17 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label_lastupdate = new System.Windows.Forms.Label();
-            this.label_date_of_close = new System.Windows.Forms.Label();
+            this.iservice_items_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_subcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_purchase_price_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_purchase_price_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_price_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_price_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -635,6 +635,30 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(871, 236);
             this.tableLayoutPanel10.TabIndex = 13;
             // 
+            // label_date_of_close
+            // 
+            this.label_date_of_close.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_date_of_close.AutoSize = true;
+            this.label_date_of_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label_date_of_close.Location = new System.Drawing.Point(626, 166);
+            this.label_date_of_close.Name = "label_date_of_close";
+            this.label_date_of_close.Size = new System.Drawing.Size(39, 18);
+            this.label_date_of_close.TabIndex = 19;
+            this.label_date_of_close.Text = "Date";
+            this.label_date_of_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_lastupdate
+            // 
+            this.label_lastupdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_lastupdate.AutoSize = true;
+            this.label_lastupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label_lastupdate.Location = new System.Drawing.Point(626, 127);
+            this.label_lastupdate.Name = "label_lastupdate";
+            this.label_lastupdate.Size = new System.Drawing.Size(39, 18);
+            this.label_lastupdate.TabIndex = 19;
+            this.label_lastupdate.Text = "Date";
+            this.label_lastupdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // labelCreationDate
             // 
             this.labelCreationDate.AutoSize = true;
@@ -875,80 +899,6 @@
             this.dataGridViewItemsWorks.Size = new System.Drawing.Size(871, 115);
             this.dataGridViewItemsWorks.TabIndex = 14;
             // 
-            // iservice_items_id
-            // 
-            this.iservice_items_id.HeaderText = "iservice_items_id";
-            this.iservice_items_id.Name = "iservice_items_id";
-            this.iservice_items_id.ReadOnly = true;
-            this.iservice_items_id.Visible = false;
-            // 
-            // iservice_items_type
-            // 
-            this.iservice_items_type.HeaderText = "iservice_items_type";
-            this.iservice_items_type.Name = "iservice_items_type";
-            this.iservice_items_type.ReadOnly = true;
-            this.iservice_items_type.Visible = false;
-            // 
-            // iservice_items_category
-            // 
-            this.iservice_items_category.HeaderText = "iservice_items_category";
-            this.iservice_items_category.Name = "iservice_items_category";
-            this.iservice_items_category.ReadOnly = true;
-            this.iservice_items_category.Visible = false;
-            // 
-            // iservice_items_subcategory
-            // 
-            this.iservice_items_subcategory.HeaderText = "iservice_items_subcategory";
-            this.iservice_items_subcategory.Name = "iservice_items_subcategory";
-            this.iservice_items_subcategory.ReadOnly = true;
-            this.iservice_items_subcategory.Visible = false;
-            // 
-            // iservice_items_description
-            // 
-            this.iservice_items_description.HeaderText = "Description";
-            this.iservice_items_description.Name = "iservice_items_description";
-            this.iservice_items_description.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "QTY";
-            this.dataGridViewTextBoxColumn10.HeaderText = "QTY";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // iservice_items_purchase_price_netto
-            // 
-            this.iservice_items_purchase_price_netto.HeaderText = "iservice_items_purchase_price_netto";
-            this.iservice_items_purchase_price_netto.Name = "iservice_items_purchase_price_netto";
-            this.iservice_items_purchase_price_netto.ReadOnly = true;
-            this.iservice_items_purchase_price_netto.Visible = false;
-            // 
-            // iservice_items_purchase_price_brutto
-            // 
-            this.iservice_items_purchase_price_brutto.HeaderText = "iservice_items_purchase_price_brutto";
-            this.iservice_items_purchase_price_brutto.Name = "iservice_items_purchase_price_brutto";
-            this.iservice_items_purchase_price_brutto.ReadOnly = true;
-            this.iservice_items_purchase_price_brutto.Visible = false;
-            // 
-            // iservice_items_price_netto
-            // 
-            this.iservice_items_price_netto.HeaderText = "Price netto";
-            this.iservice_items_price_netto.Name = "iservice_items_price_netto";
-            this.iservice_items_price_netto.ReadOnly = true;
-            // 
-            // iservice_items_price_brutto
-            // 
-            this.iservice_items_price_brutto.HeaderText = "Price brutto";
-            this.iservice_items_price_brutto.Name = "iservice_items_price_brutto";
-            this.iservice_items_price_brutto.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Total";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Total";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
             // dataGridViewItemsDetails
             // 
             this.dataGridViewItemsDetails.AllowUserToAddRows = false;
@@ -1008,80 +958,6 @@
             this.dataGridViewItemsDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewItemsDetails.Size = new System.Drawing.Size(871, 115);
             this.dataGridViewItemsDetails.TabIndex = 15;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "iservice_items_id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "iservice_items_type";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "iservice_items_category";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "iservice_items_subcategory";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // QTY
-            // 
-            this.QTY.DataPropertyName = "QTY";
-            this.QTY.HeaderText = "QTY";
-            this.QTY.Name = "QTY";
-            this.QTY.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "iservice_items_purchase_price_netto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "iservice_items_purchase_price_brutto";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Price netto";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Price brutto";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
             // 
             // tableLayoutPanel7
             // 
@@ -1196,29 +1072,164 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label_lastupdate
+            // dataGridViewTextBoxColumn1
             // 
-            this.label_lastupdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_lastupdate.AutoSize = true;
-            this.label_lastupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label_lastupdate.Location = new System.Drawing.Point(626, 127);
-            this.label_lastupdate.Name = "label_lastupdate";
-            this.label_lastupdate.Size = new System.Drawing.Size(39, 18);
-            this.label_lastupdate.TabIndex = 19;
-            this.label_lastupdate.Text = "Date";
-            this.label_lastupdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "iservice_items_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "iservice_items_id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // label_date_of_close
+            // dataGridViewTextBoxColumn2
             // 
-            this.label_date_of_close.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_date_of_close.AutoSize = true;
-            this.label_date_of_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label_date_of_close.Location = new System.Drawing.Point(626, 166);
-            this.label_date_of_close.Name = "label_date_of_close";
-            this.label_date_of_close.Size = new System.Drawing.Size(39, 18);
-            this.label_date_of_close.TabIndex = 19;
-            this.label_date_of_close.Text = "Date";
-            this.label_date_of_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "iservice_items_type";
+            this.dataGridViewTextBoxColumn2.HeaderText = "iservice_items_type";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "iservice_items_category";
+            this.dataGridViewTextBoxColumn3.HeaderText = "iservice_items_category";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "iservice_items_subcategory";
+            this.dataGridViewTextBoxColumn4.HeaderText = "iservice_items_subcategory";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // QTY
+            // 
+            this.QTY.DataPropertyName = "QTY";
+            this.QTY.HeaderText = "QTY";
+            this.QTY.Name = "QTY";
+            this.QTY.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "iservice_items_purchase_price_netto";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "iservice_items_purchase_price_brutto";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Price netto";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Price brutto";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // iservice_items_id
+            // 
+            this.iservice_items_id.DataPropertyName = "iservice_items_id";
+            this.iservice_items_id.HeaderText = "iservice_items_id";
+            this.iservice_items_id.Name = "iservice_items_id";
+            this.iservice_items_id.ReadOnly = true;
+            this.iservice_items_id.Visible = false;
+            // 
+            // iservice_items_type
+            // 
+            this.iservice_items_type.DataPropertyName = "iservice_items_type";
+            this.iservice_items_type.HeaderText = "iservice_items_type";
+            this.iservice_items_type.Name = "iservice_items_type";
+            this.iservice_items_type.ReadOnly = true;
+            this.iservice_items_type.Visible = false;
+            // 
+            // iservice_items_category
+            // 
+            this.iservice_items_category.DataPropertyName = "iservice_items_category";
+            this.iservice_items_category.HeaderText = "iservice_items_category";
+            this.iservice_items_category.Name = "iservice_items_category";
+            this.iservice_items_category.ReadOnly = true;
+            this.iservice_items_category.Visible = false;
+            // 
+            // iservice_items_subcategory
+            // 
+            this.iservice_items_subcategory.DataPropertyName = "iservice_items_subcategory";
+            this.iservice_items_subcategory.HeaderText = "iservice_items_subcategory";
+            this.iservice_items_subcategory.Name = "iservice_items_subcategory";
+            this.iservice_items_subcategory.ReadOnly = true;
+            this.iservice_items_subcategory.Visible = false;
+            // 
+            // iservice_items_description
+            // 
+            this.iservice_items_description.DataPropertyName = "iservice_items_description";
+            this.iservice_items_description.HeaderText = "Description";
+            this.iservice_items_description.Name = "iservice_items_description";
+            this.iservice_items_description.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "QTY";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // iservice_items_purchase_price_netto
+            // 
+            this.iservice_items_purchase_price_netto.DataPropertyName = "iservice_items_purchase_price_netto";
+            this.iservice_items_purchase_price_netto.HeaderText = "iservice_items_purchase_price_netto";
+            this.iservice_items_purchase_price_netto.Name = "iservice_items_purchase_price_netto";
+            this.iservice_items_purchase_price_netto.ReadOnly = true;
+            this.iservice_items_purchase_price_netto.Visible = false;
+            // 
+            // iservice_items_purchase_price_brutto
+            // 
+            this.iservice_items_purchase_price_brutto.DataPropertyName = "iservice_items_purchase_price_brutto";
+            this.iservice_items_purchase_price_brutto.HeaderText = "iservice_items_purchase_price_brutto";
+            this.iservice_items_purchase_price_brutto.Name = "iservice_items_purchase_price_brutto";
+            this.iservice_items_purchase_price_brutto.ReadOnly = true;
+            this.iservice_items_purchase_price_brutto.Visible = false;
+            // 
+            // iservice_items_price_netto
+            // 
+            this.iservice_items_price_netto.DataPropertyName = "iservice_items_price_netto";
+            this.iservice_items_price_netto.HeaderText = "Price netto";
+            this.iservice_items_price_netto.Name = "iservice_items_price_netto";
+            this.iservice_items_price_netto.ReadOnly = true;
+            // 
+            // iservice_items_price_brutto
+            // 
+            this.iservice_items_price_brutto.DataPropertyName = "iservice_items_price_brutto";
+            this.iservice_items_price_brutto.HeaderText = "Price brutto";
+            this.iservice_items_price_brutto.Name = "iservice_items_price_brutto";
+            this.iservice_items_price_brutto.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // OrderPage
             // 
@@ -1311,6 +1322,15 @@
         private System.Windows.Forms.Label labelItemWorksTotal;
         public System.Windows.Forms.DataGridView dataGridViewItemsDetails;
         private System.Windows.Forms.Label labelTotal;
+        private MetroFramework.Controls.MetroComboBox comboBoxOrderStatus;
+        private System.Windows.Forms.Label labelCreationDate;
+        private MetroFramework.Controls.MetroComboBox ComboBoxPaymentStatus;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxMileage;
+        private System.Windows.Forms.Label labelOrderNumber;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label_date_of_close;
+        private System.Windows.Forms.Label label_lastupdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_category;
@@ -1333,14 +1353,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private MetroFramework.Controls.MetroComboBox comboBoxOrderStatus;
-        private System.Windows.Forms.Label labelCreationDate;
-        private MetroFramework.Controls.MetroComboBox ComboBoxPaymentStatus;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBoxMileage;
-        private System.Windows.Forms.Label labelOrderNumber;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label_date_of_close;
-        private System.Windows.Forms.Label label_lastupdate;
     }
 }

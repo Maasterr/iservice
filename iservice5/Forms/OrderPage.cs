@@ -39,9 +39,17 @@ namespace iservice5
                 if ((comboBoxOrderStatus.SelectedValue==null) || (ComboBoxPaymentStatus.SelectedValue == null))
                     MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
                
-                else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, 1, labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
+                else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, GlobalVars.Employee_id, labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                 {
-                    frm1.updateclientsdata();
+
+                    foreach (DataGridViewRow row in dataGridViewItemsDetails.Rows)
+                    {
+
+                        DataService.NewOrderItem(DataService.GetLastOrderNumber()[0].iservice_orders_number, Convert.ToInt32(row.Cells[0].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                      
+
+                    }
+                            frm1.updateclientsdata();
                     this.Close();
                     MessageBox.Show("Succesfully added", "Notification", MessageBoxButtons.OK);
 
@@ -146,7 +154,8 @@ namespace iservice5
 
         private void OrderPage_Load(object sender, EventArgs e)
         {
-            button6.Text = Status;
+            //button6.Text = Status;
+            
             labelRegNumber.Text = GlobalVars.regnumber;
             labelClient.Text = GlobalVars.Client;
             comboBoxOrderStatus.DataSource = DataService.GetOrderStatusList();
@@ -167,16 +176,18 @@ namespace iservice5
             }
             else
             {
-                labelEmployee.Text = GlobalVars.Employee;
+                
+                labelEmployee.Text = GlobalVars.selected_iservice_orders_user_name;
                 this.Text = "Edit customer";
                 comboBoxOrderStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work);
                 ComboBoxPaymentStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment);    
                 labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number);
-                textBoxMileage.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage;
-                labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
+                textBoxMileage.Text = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage;             
                 labelCreationDate.Text = GlobalVars.selected_iservice_orders_date_of_creation;
                 label_date_of_close.Text = GlobalVars.selected_iservice_orders_expiry_date;
                 label_lastupdate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+                textBoxMileage.Text = GlobalVars.selected_iservice_orders_mileage;
+                dataGridViewItemsWorks.DataSource = DataService.GetOrderItems("Works", labelOrderNumber.Text);
             }
 
           

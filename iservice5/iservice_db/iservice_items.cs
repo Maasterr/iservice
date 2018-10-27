@@ -18,8 +18,8 @@ namespace iservice5
         public string iservice_items_price_netto { get; set; }
         public string iservice_items_price_brutto { get; set; }
         public string iservice_items_employee { get; set; }
-        public Nullable<System.DateTime> iservice_items_date_of_creation { get; set; }
-        public Nullable<System.DateTime> iservice_items_last_update { get; set; }
+        public string iservice_items_date_of_creation { get; set; }
+        public string iservice_items_last_update { get; set; }
      
     }
 }
