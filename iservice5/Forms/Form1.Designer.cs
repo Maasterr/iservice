@@ -30,55 +30,57 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnService = new System.Windows.Forms.Button();
-            this.btnTimeLine = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnWarehouse = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.labelEmployee = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.tableLayoutPanelCompanySetting = new System.Windows.Forms.TableLayoutPanel();
+            this.button_orders = new System.Windows.Forms.Button();
+            this.button_employee = new System.Windows.Forms.Button();
             this.button_company = new System.Windows.Forms.Button();
+            this.btnWarehouse = new System.Windows.Forms.Button();
+            this.btnTimeLine = new System.Windows.Forms.Button();
+            this.btnService = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
             this.panel3_bottom = new System.Windows.Forms.Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -174,23 +176,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxSettingsEmail = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.iservice_orders_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_of_work = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_of_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_payment_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_date_of_last_update = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_expiry_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_prepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_total_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_total_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_mileage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_employee = new System.Windows.Forms.Button();
-            this.button_orders = new System.Windows.Forms.Button();
             this.panel_dashboard = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -202,6 +187,9 @@
             this.dataGridViewOrdersinProcess = new System.Windows.Forms.DataGridView();
             this.iservice_orders_status_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_orders_status_name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_timeline = new System.Windows.Forms.Panel();
+            this.panel_setting_employee = new System.Windows.Forms.Panel();
+            this.panel_setting_orders = new System.Windows.Forms.Panel();
             this.dataGridView_lastactivecars = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -217,6 +205,21 @@
             this.dataGridView_lastsolddetails = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_of_work = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_of_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_payment_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_date_of_last_update = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_expiry_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_prepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_total_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_total_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_mileage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -280,53 +283,11 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnService
-            // 
-            this.btnService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.tableLayoutPanel2.SetColumnSpan(this.btnService, 2);
-            this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.btnService, "btnService");
-            this.btnService.ForeColor = System.Drawing.Color.White;
-            this.btnService.Name = "btnService";
-            this.btnService.UseVisualStyleBackColor = false;
-            this.btnService.Click += new System.EventHandler(this.btnService_Click);
-            // 
-            // btnTimeLine
-            // 
-            this.btnTimeLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnTimeLine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.btnTimeLine, "btnTimeLine");
-            this.btnTimeLine.ForeColor = System.Drawing.Color.White;
-            this.btnTimeLine.Name = "btnTimeLine";
-            this.btnTimeLine.UseVisualStyleBackColor = false;
-            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
-            // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
-            // 
-            // btnWarehouse
-            // 
-            this.btnWarehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnWarehouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.btnWarehouse, "btnWarehouse");
-            this.btnWarehouse.ForeColor = System.Drawing.Color.White;
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.UseVisualStyleBackColor = false;
-            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.btnDashboard, "btnDashboard");
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Image = global::iservice5.Properties.Resources.Permanent_Job_36px;
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -358,6 +319,17 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnDashboard, "btnDashboard");
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = global::iservice5.Properties.Resources.Permanent_Job_36px;
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
             // tableLayoutPanelCompanySetting
             // 
             resources.ApplyResources(this.tableLayoutPanelCompanySetting, "tableLayoutPanelCompanySetting");
@@ -366,6 +338,26 @@
             this.tableLayoutPanelCompanySetting.Controls.Add(this.button_employee, 0, 0);
             this.tableLayoutPanelCompanySetting.Controls.Add(this.button_company, 0, 0);
             this.tableLayoutPanelCompanySetting.Name = "tableLayoutPanelCompanySetting";
+            // 
+            // button_orders
+            // 
+            this.button_orders.AutoEllipsis = true;
+            this.button_orders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button_orders, "button_orders");
+            this.button_orders.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_orders.Name = "button_orders";
+            this.button_orders.UseVisualStyleBackColor = false;
+            this.button_orders.Click += new System.EventHandler(this.button_orders_Click);
+            // 
+            // button_employee
+            // 
+            this.button_employee.AutoEllipsis = true;
+            this.button_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button_employee, "button_employee");
+            this.button_employee.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_employee.Name = "button_employee";
+            this.button_employee.UseVisualStyleBackColor = false;
+            this.button_employee.Click += new System.EventHandler(this.button_employee_Click);
             // 
             // button_company
             // 
@@ -376,6 +368,37 @@
             this.button_company.Name = "button_company";
             this.button_company.UseVisualStyleBackColor = false;
             this.button_company.Click += new System.EventHandler(this.button_company_Click);
+            // 
+            // btnWarehouse
+            // 
+            this.btnWarehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnWarehouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnWarehouse, "btnWarehouse");
+            this.btnWarehouse.ForeColor = System.Drawing.Color.White;
+            this.btnWarehouse.Name = "btnWarehouse";
+            this.btnWarehouse.UseVisualStyleBackColor = false;
+            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
+            // 
+            // btnTimeLine
+            // 
+            this.btnTimeLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnTimeLine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnTimeLine, "btnTimeLine");
+            this.btnTimeLine.ForeColor = System.Drawing.Color.White;
+            this.btnTimeLine.Name = "btnTimeLine";
+            this.btnTimeLine.UseVisualStyleBackColor = false;
+            this.btnTimeLine.Click += new System.EventHandler(this.btnTimeLine_Click);
+            // 
+            // btnService
+            // 
+            this.btnService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.btnService, 2);
+            this.btnService.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnService, "btnService");
+            this.btnService.ForeColor = System.Drawing.Color.White;
+            this.btnService.Name = "btnService";
+            this.btnService.UseVisualStyleBackColor = false;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // panel_top
             // 
@@ -394,7 +417,7 @@
             // 
             // tableLayoutPanel10
             // 
-            this.tableLayoutPanel10.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel10.BackColor = System.Drawing.Color.AliceBlue;
             resources.ApplyResources(this.tableLayoutPanel10, "tableLayoutPanel10");
             this.tableLayoutPanel10.Controls.Add(this.TextStatus, 0, 0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -407,7 +430,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackColor = System.Drawing.Color.AliceBlue;
             this.panel4.Controls.Add(this.tableLayoutPanel12);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
@@ -416,8 +439,8 @@
             // 
             this.tableLayoutPanel12.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel16, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             // 
             // tableLayoutPanel13
@@ -511,16 +534,18 @@
             resources.ApplyResources(this.dataGridViewOrders, "dataGridViewOrders");
             this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewOrders.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewOrders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle73.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle73.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle73.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            dataGridViewCellStyle73.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle73.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle73.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle73;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iservice_orders_id,
@@ -538,30 +563,35 @@
             this.iservice_orders_total_netto,
             this.iservice_orders_total_brutto,
             this.iservice_orders_mileage});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle74.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle74;
+            this.dataGridViewOrders.EnableHeadersVisualStyles = false;
+            this.dataGridViewOrders.GridColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewOrders.MultiSelect = false;
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.ReadOnly = true;
             this.dataGridViewOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOrders.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle75.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle75.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle75.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle75.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle75.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrders.RowHeadersDefaultCellStyle = dataGridViewCellStyle75;
             this.dataGridViewOrders.RowHeadersVisible = false;
             this.dataGridViewOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle76.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle76.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle76.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle76;
             this.dataGridViewOrders.RowTemplate.Height = 24;
             this.dataGridViewOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOrders.CurrentCellChanged += new System.EventHandler(this.dataGridViewOrders_CurrentCellChanged);
@@ -575,16 +605,18 @@
             this.dataGridViewCars.AllowUserToResizeRows = false;
             this.dataGridViewCars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCars.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCars.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewCars.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewCars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle77.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle77.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle77;
             this.dataGridViewCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCars.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iservice_cars_id,
@@ -597,31 +629,36 @@
             this.iservice_cars_color,
             this.iservice_cars_date_of_creation,
             this.iservice_cars_employee});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCars.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCars.DefaultCellStyle = dataGridViewCellStyle78;
             resources.ApplyResources(this.dataGridViewCars, "dataGridViewCars");
+            this.dataGridViewCars.EnableHeadersVisualStyles = false;
+            this.dataGridViewCars.GridColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewCars.MultiSelect = false;
             this.dataGridViewCars.Name = "dataGridViewCars";
             this.dataGridViewCars.ReadOnly = true;
             this.dataGridViewCars.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle79.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle79.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle79.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle79.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle79;
             this.dataGridViewCars.RowHeadersVisible = false;
             this.dataGridViewCars.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.dataGridViewCars.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle80.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCars.RowsDefaultCellStyle = dataGridViewCellStyle80;
             this.dataGridViewCars.RowTemplate.Height = 24;
             this.dataGridViewCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCars.CurrentCellChanged += new System.EventHandler(this.dataGridViewCars_CurrentCellChanged);
@@ -741,16 +778,18 @@
             this.dataGridViewClients.AllowUserToResizeRows = false;
             this.dataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClients.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewClients.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewClients.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle81.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle81.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle81;
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iservice_customers_id,
@@ -768,31 +807,36 @@
             this.iservice_customers_email,
             this.iservice_customers_date_of_creation,
             this.iservice_customers_employee});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewClients.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle82.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewClients.DefaultCellStyle = dataGridViewCellStyle82;
             resources.ApplyResources(this.dataGridViewClients, "dataGridViewClients");
+            this.dataGridViewClients.EnableHeadersVisualStyles = false;
+            this.dataGridViewClients.GridColor = System.Drawing.Color.AliceBlue;
             this.dataGridViewClients.MultiSelect = false;
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.ReadOnly = true;
             this.dataGridViewClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle83.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle83;
             this.dataGridViewClients.RowHeadersVisible = false;
             this.dataGridViewClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.dataGridViewClients.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle84.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewClients.RowsDefaultCellStyle = dataGridViewCellStyle84;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewClients.CurrentCellChanged += new System.EventHandler(this.dataGridViewClients_CurrentCellChanged);
@@ -1257,6 +1301,531 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
+            // panel_dashboard
+            // 
+            this.panel_dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.panel_dashboard.Controls.Add(this.tableLayoutPanel6);
+            resources.ApplyResources(this.panel_dashboard, "panel_dashboard");
+            this.panel_dashboard.Name = "panel_dashboard";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.AliceBlue;
+            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
+            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label15, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label20, 3, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label21, 5, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label22, 5, 1);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridViewOrdersinProcess, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastactivecars, 3, 2);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastactivecustomers, 5, 2);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastclosedorders, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastmadejobs, 3, 5);
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastsolddetails, 5, 5);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.Click += new System.EventHandler(this.tableLayoutPanel6_Paint);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Name = "label15";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Name = "label21";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Name = "label22";
+            // 
+            // dataGridViewOrdersinProcess
+            // 
+            this.dataGridViewOrdersinProcess.AllowUserToAddRows = false;
+            this.dataGridViewOrdersinProcess.AllowUserToDeleteRows = false;
+            this.dataGridViewOrdersinProcess.AllowUserToResizeColumns = false;
+            this.dataGridViewOrdersinProcess.AllowUserToResizeRows = false;
+            this.dataGridViewOrdersinProcess.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOrdersinProcess.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewOrdersinProcess.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridViewOrdersinProcess.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOrdersinProcess.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle85.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrdersinProcess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle85;
+            resources.ApplyResources(this.dataGridViewOrdersinProcess, "dataGridViewOrdersinProcess");
+            this.dataGridViewOrdersinProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewOrdersinProcess.ColumnHeadersVisible = false;
+            this.dataGridViewOrdersinProcess.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iservice_orders_status_id,
+            this.iservice_orders_status_name1});
+            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle86.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle86.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle86.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrdersinProcess.DefaultCellStyle = dataGridViewCellStyle86;
+            this.dataGridViewOrdersinProcess.EnableHeadersVisualStyles = false;
+            this.dataGridViewOrdersinProcess.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridViewOrdersinProcess.MultiSelect = false;
+            this.dataGridViewOrdersinProcess.Name = "dataGridViewOrdersinProcess";
+            this.dataGridViewOrdersinProcess.ReadOnly = true;
+            this.dataGridViewOrdersinProcess.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle87.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle87.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle87.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridViewOrdersinProcess.RowHeadersDefaultCellStyle = dataGridViewCellStyle87;
+            this.dataGridViewOrdersinProcess.RowHeadersVisible = false;
+            this.dataGridViewOrdersinProcess.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle88.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle88.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle88.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle88.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle88.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOrdersinProcess.RowsDefaultCellStyle = dataGridViewCellStyle88;
+            this.dataGridViewOrdersinProcess.RowTemplate.Height = 24;
+            this.dataGridViewOrdersinProcess.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOrdersinProcess.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewOrdersinProcess_DataBindingComplete);
+            // 
+            // iservice_orders_status_id
+            // 
+            this.iservice_orders_status_id.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.iservice_orders_status_id, "iservice_orders_status_id");
+            this.iservice_orders_status_id.Name = "iservice_orders_status_id";
+            this.iservice_orders_status_id.ReadOnly = true;
+            // 
+            // iservice_orders_status_name1
+            // 
+            this.iservice_orders_status_name1.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.iservice_orders_status_name1, "iservice_orders_status_name1");
+            this.iservice_orders_status_name1.Name = "iservice_orders_status_name1";
+            this.iservice_orders_status_name1.ReadOnly = true;
+            // 
+            // panel_timeline
+            // 
+            this.panel_timeline.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel_timeline, "panel_timeline");
+            this.panel_timeline.Name = "panel_timeline";
+            // 
+            // panel_setting_employee
+            // 
+            this.panel_setting_employee.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel_setting_employee, "panel_setting_employee");
+            this.panel_setting_employee.Name = "panel_setting_employee";
+            // 
+            // panel_setting_orders
+            // 
+            this.panel_setting_orders.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel_setting_orders, "panel_setting_orders");
+            this.panel_setting_orders.Name = "panel_setting_orders";
+            // 
+            // dataGridView_lastactivecars
+            // 
+            this.dataGridView_lastactivecars.AllowUserToAddRows = false;
+            this.dataGridView_lastactivecars.AllowUserToDeleteRows = false;
+            this.dataGridView_lastactivecars.AllowUserToResizeColumns = false;
+            this.dataGridView_lastactivecars.AllowUserToResizeRows = false;
+            this.dataGridView_lastactivecars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_lastactivecars.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_lastactivecars.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastactivecars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_lastactivecars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle89.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle89.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle89.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle89.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle89.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_lastactivecars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle89;
+            resources.ApplyResources(this.dataGridView_lastactivecars, "dataGridView_lastactivecars");
+            this.dataGridView_lastactivecars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_lastactivecars.ColumnHeadersVisible = false;
+            this.dataGridView_lastactivecars.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle90.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle90.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle90.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle90.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_lastactivecars.DefaultCellStyle = dataGridViewCellStyle90;
+            this.dataGridView_lastactivecars.EnableHeadersVisualStyles = false;
+            this.dataGridView_lastactivecars.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastactivecars.MultiSelect = false;
+            this.dataGridView_lastactivecars.Name = "dataGridView_lastactivecars";
+            this.dataGridView_lastactivecars.ReadOnly = true;
+            this.dataGridView_lastactivecars.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle91.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle91.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle91.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle91.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle91.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView_lastactivecars.RowHeadersDefaultCellStyle = dataGridViewCellStyle91;
+            this.dataGridView_lastactivecars.RowHeadersVisible = false;
+            this.dataGridView_lastactivecars.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle92.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle92.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle92.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_lastactivecars.RowsDefaultCellStyle = dataGridViewCellStyle92;
+            this.dataGridView_lastactivecars.RowTemplate.Height = 24;
+            this.dataGridView_lastactivecars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridView_lastactivecustomers
+            // 
+            this.dataGridView_lastactivecustomers.AllowUserToAddRows = false;
+            this.dataGridView_lastactivecustomers.AllowUserToDeleteRows = false;
+            this.dataGridView_lastactivecustomers.AllowUserToResizeColumns = false;
+            this.dataGridView_lastactivecustomers.AllowUserToResizeRows = false;
+            this.dataGridView_lastactivecustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_lastactivecustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_lastactivecustomers.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastactivecustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_lastactivecustomers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle93.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle93.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle93.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle93.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle93.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_lastactivecustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle93;
+            resources.ApplyResources(this.dataGridView_lastactivecustomers, "dataGridView_lastactivecustomers");
+            this.dataGridView_lastactivecustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_lastactivecustomers.ColumnHeadersVisible = false;
+            this.dataGridView_lastactivecustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle94.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle94.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle94.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle94.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle94.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle94.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_lastactivecustomers.DefaultCellStyle = dataGridViewCellStyle94;
+            this.dataGridView_lastactivecustomers.EnableHeadersVisualStyles = false;
+            this.dataGridView_lastactivecustomers.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastactivecustomers.MultiSelect = false;
+            this.dataGridView_lastactivecustomers.Name = "dataGridView_lastactivecustomers";
+            this.dataGridView_lastactivecustomers.ReadOnly = true;
+            this.dataGridView_lastactivecustomers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle95.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle95.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle95.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle95.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle95.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView_lastactivecustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle95;
+            this.dataGridView_lastactivecustomers.RowHeadersVisible = false;
+            this.dataGridView_lastactivecustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle96.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle96.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle96.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle96.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle96.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_lastactivecustomers.RowsDefaultCellStyle = dataGridViewCellStyle96;
+            this.dataGridView_lastactivecustomers.RowTemplate.Height = 24;
+            this.dataGridView_lastactivecustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridView_lastclosedorders
+            // 
+            this.dataGridView_lastclosedorders.AllowUserToAddRows = false;
+            this.dataGridView_lastclosedorders.AllowUserToDeleteRows = false;
+            this.dataGridView_lastclosedorders.AllowUserToResizeColumns = false;
+            this.dataGridView_lastclosedorders.AllowUserToResizeRows = false;
+            this.dataGridView_lastclosedorders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_lastclosedorders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_lastclosedorders.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastclosedorders.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_lastclosedorders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle97.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle97.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle97.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle97.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle97.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_lastclosedorders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle97;
+            resources.ApplyResources(this.dataGridView_lastclosedorders, "dataGridView_lastclosedorders");
+            this.dataGridView_lastclosedorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_lastclosedorders.ColumnHeadersVisible = false;
+            this.dataGridView_lastclosedorders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            dataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle98.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle98.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle98.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle98.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle98.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle98.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_lastclosedorders.DefaultCellStyle = dataGridViewCellStyle98;
+            this.dataGridView_lastclosedorders.EnableHeadersVisualStyles = false;
+            this.dataGridView_lastclosedorders.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastclosedorders.MultiSelect = false;
+            this.dataGridView_lastclosedorders.Name = "dataGridView_lastclosedorders";
+            this.dataGridView_lastclosedorders.ReadOnly = true;
+            this.dataGridView_lastclosedorders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle99.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle99.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle99.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle99.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle99.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView_lastclosedorders.RowHeadersDefaultCellStyle = dataGridViewCellStyle99;
+            this.dataGridView_lastclosedorders.RowHeadersVisible = false;
+            this.dataGridView_lastclosedorders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle100.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle100.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle100.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle100.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle100.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_lastclosedorders.RowsDefaultCellStyle = dataGridViewCellStyle100;
+            this.dataGridView_lastclosedorders.RowTemplate.Height = 24;
+            this.dataGridView_lastclosedorders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridView_lastmadejobs
+            // 
+            this.dataGridView_lastmadejobs.AllowUserToAddRows = false;
+            this.dataGridView_lastmadejobs.AllowUserToDeleteRows = false;
+            this.dataGridView_lastmadejobs.AllowUserToResizeColumns = false;
+            this.dataGridView_lastmadejobs.AllowUserToResizeRows = false;
+            this.dataGridView_lastmadejobs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_lastmadejobs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_lastmadejobs.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastmadejobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_lastmadejobs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle101.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_lastmadejobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle101;
+            resources.ApplyResources(this.dataGridView_lastmadejobs, "dataGridView_lastmadejobs");
+            this.dataGridView_lastmadejobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_lastmadejobs.ColumnHeadersVisible = false;
+            this.dataGridView_lastmadejobs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle102.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle102.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle102.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_lastmadejobs.DefaultCellStyle = dataGridViewCellStyle102;
+            this.dataGridView_lastmadejobs.EnableHeadersVisualStyles = false;
+            this.dataGridView_lastmadejobs.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastmadejobs.MultiSelect = false;
+            this.dataGridView_lastmadejobs.Name = "dataGridView_lastmadejobs";
+            this.dataGridView_lastmadejobs.ReadOnly = true;
+            this.dataGridView_lastmadejobs.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle103.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle103.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle103.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView_lastmadejobs.RowHeadersDefaultCellStyle = dataGridViewCellStyle103;
+            this.dataGridView_lastmadejobs.RowHeadersVisible = false;
+            this.dataGridView_lastmadejobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle104.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle104.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle104.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_lastmadejobs.RowsDefaultCellStyle = dataGridViewCellStyle104;
+            this.dataGridView_lastmadejobs.RowTemplate.Height = 24;
+            this.dataGridView_lastmadejobs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridView_lastsolddetails
+            // 
+            this.dataGridView_lastsolddetails.AllowUserToAddRows = false;
+            this.dataGridView_lastsolddetails.AllowUserToDeleteRows = false;
+            this.dataGridView_lastsolddetails.AllowUserToResizeColumns = false;
+            this.dataGridView_lastsolddetails.AllowUserToResizeRows = false;
+            this.dataGridView_lastsolddetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_lastsolddetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_lastsolddetails.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastsolddetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_lastsolddetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle105.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle105.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle105.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_lastsolddetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle105;
+            resources.ApplyResources(this.dataGridView_lastsolddetails, "dataGridView_lastsolddetails");
+            this.dataGridView_lastsolddetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView_lastsolddetails.ColumnHeadersVisible = false;
+            this.dataGridView_lastsolddetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle106.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle106.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle106.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle106.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle106.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle106.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_lastsolddetails.DefaultCellStyle = dataGridViewCellStyle106;
+            this.dataGridView_lastsolddetails.EnableHeadersVisualStyles = false;
+            this.dataGridView_lastsolddetails.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_lastsolddetails.MultiSelect = false;
+            this.dataGridView_lastsolddetails.Name = "dataGridView_lastsolddetails";
+            this.dataGridView_lastsolddetails.ReadOnly = true;
+            this.dataGridView_lastsolddetails.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle107.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle107.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle107.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
+            dataGridViewCellStyle107.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView_lastsolddetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle107;
+            this.dataGridView_lastsolddetails.RowHeadersVisible = false;
+            this.dataGridView_lastsolddetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle108.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle108.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_lastsolddetails.RowsDefaultCellStyle = dataGridViewCellStyle108;
+            this.dataGridView_lastsolddetails.RowTemplate.Height = 24;
+            this.dataGridView_lastsolddetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "iservice_orders_status_id";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
             // iservice_orders_id
             // 
             this.iservice_orders_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -1376,538 +1945,22 @@
             this.iservice_orders_mileage.Name = "iservice_orders_mileage";
             this.iservice_orders_mileage.ReadOnly = true;
             // 
-            // button_employee
-            // 
-            this.button_employee.AutoEllipsis = true;
-            this.button_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.button_employee, "button_employee");
-            this.button_employee.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_employee.Name = "button_employee";
-            this.button_employee.UseVisualStyleBackColor = false;
-            this.button_employee.Click += new System.EventHandler(this.button_employee_Click);
-            // 
-            // button_orders
-            // 
-            this.button_orders.AutoEllipsis = true;
-            this.button_orders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.button_orders, "button_orders");
-            this.button_orders.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_orders.Name = "button_orders";
-            this.button_orders.UseVisualStyleBackColor = false;
-            this.button_orders.Click += new System.EventHandler(this.button_orders_Click);
-            // 
-            // panel_dashboard
-            // 
-            this.panel_dashboard.BackColor = System.Drawing.Color.Transparent;
-            this.panel_dashboard.Controls.Add(this.tableLayoutPanel6);
-            resources.ApplyResources(this.panel_dashboard, "panel_dashboard");
-            this.panel_dashboard.Name = "panel_dashboard";
-            // 
-            // tableLayoutPanel6
-            // 
-            resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
-            this.tableLayoutPanel6.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 3, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label15, 1, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label20, 3, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label21, 5, 4);
-            this.tableLayoutPanel6.Controls.Add(this.label22, 5, 1);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridViewOrdersinProcess, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastactivecars, 3, 2);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastactivecustomers, 5, 2);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastclosedorders, 1, 5);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastmadejobs, 3, 5);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView_lastsolddetails, 5, 5);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Name = "label15";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Name = "label20";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Name = "label21";
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Name = "label22";
-            // 
-            // dataGridViewOrdersinProcess
-            // 
-            this.dataGridViewOrdersinProcess.AllowUserToAddRows = false;
-            this.dataGridViewOrdersinProcess.AllowUserToDeleteRows = false;
-            this.dataGridViewOrdersinProcess.AllowUserToResizeColumns = false;
-            this.dataGridViewOrdersinProcess.AllowUserToResizeRows = false;
-            this.dataGridViewOrdersinProcess.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewOrdersinProcess.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewOrdersinProcess.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewOrdersinProcess.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewOrdersinProcess.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewOrdersinProcess.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOrdersinProcess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            resources.ApplyResources(this.dataGridViewOrdersinProcess, "dataGridViewOrdersinProcess");
-            this.dataGridViewOrdersinProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewOrdersinProcess.ColumnHeadersVisible = false;
-            this.dataGridViewOrdersinProcess.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iservice_orders_status_id,
-            this.iservice_orders_status_name1});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewOrdersinProcess.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewOrdersinProcess.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridViewOrdersinProcess.MultiSelect = false;
-            this.dataGridViewOrdersinProcess.Name = "dataGridViewOrdersinProcess";
-            this.dataGridViewOrdersinProcess.ReadOnly = true;
-            this.dataGridViewOrdersinProcess.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridViewOrdersinProcess.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewOrdersinProcess.RowHeadersVisible = false;
-            this.dataGridViewOrdersinProcess.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewOrdersinProcess.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridViewOrdersinProcess.RowTemplate.Height = 24;
-            this.dataGridViewOrdersinProcess.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewOrdersinProcess.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewOrdersinProcess_DataBindingComplete);
-            // 
-            // iservice_orders_status_id
-            // 
-            this.iservice_orders_status_id.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.iservice_orders_status_id, "iservice_orders_status_id");
-            this.iservice_orders_status_id.Name = "iservice_orders_status_id";
-            this.iservice_orders_status_id.ReadOnly = true;
-            // 
-            // iservice_orders_status_name1
-            // 
-            this.iservice_orders_status_name1.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.iservice_orders_status_name1, "iservice_orders_status_name1");
-            this.iservice_orders_status_name1.Name = "iservice_orders_status_name1";
-            this.iservice_orders_status_name1.ReadOnly = true;
-            // 
-            // dataGridView_lastactivecars
-            // 
-            this.dataGridView_lastactivecars.AllowUserToAddRows = false;
-            this.dataGridView_lastactivecars.AllowUserToDeleteRows = false;
-            this.dataGridView_lastactivecars.AllowUserToResizeColumns = false;
-            this.dataGridView_lastactivecars.AllowUserToResizeRows = false;
-            this.dataGridView_lastactivecars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_lastactivecars.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_lastactivecars.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_lastactivecars.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView_lastactivecars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_lastactivecars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            resources.ApplyResources(this.dataGridView_lastactivecars, "dataGridView_lastactivecars");
-            this.dataGridView_lastactivecars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView_lastactivecars.ColumnHeadersVisible = false;
-            this.dataGridView_lastactivecars.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_lastactivecars.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView_lastactivecars.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_lastactivecars.MultiSelect = false;
-            this.dataGridView_lastactivecars.Name = "dataGridView_lastactivecars";
-            this.dataGridView_lastactivecars.ReadOnly = true;
-            this.dataGridView_lastactivecars.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_lastactivecars.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridView_lastactivecars.RowHeadersVisible = false;
-            this.dataGridView_lastactivecars.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_lastactivecars.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView_lastactivecars.RowTemplate.Height = 24;
-            this.dataGridView_lastactivecars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridView_lastactivecustomers
-            // 
-            this.dataGridView_lastactivecustomers.AllowUserToAddRows = false;
-            this.dataGridView_lastactivecustomers.AllowUserToDeleteRows = false;
-            this.dataGridView_lastactivecustomers.AllowUserToResizeColumns = false;
-            this.dataGridView_lastactivecustomers.AllowUserToResizeRows = false;
-            this.dataGridView_lastactivecustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_lastactivecustomers.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_lastactivecustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_lastactivecustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView_lastactivecustomers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_lastactivecustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            resources.ApplyResources(this.dataGridView_lastactivecustomers, "dataGridView_lastactivecustomers");
-            this.dataGridView_lastactivecustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView_lastactivecustomers.ColumnHeadersVisible = false;
-            this.dataGridView_lastactivecustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_lastactivecustomers.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridView_lastactivecustomers.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_lastactivecustomers.MultiSelect = false;
-            this.dataGridView_lastactivecustomers.Name = "dataGridView_lastactivecustomers";
-            this.dataGridView_lastactivecustomers.ReadOnly = true;
-            this.dataGridView_lastactivecustomers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle23.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_lastactivecustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView_lastactivecustomers.RowHeadersVisible = false;
-            this.dataGridView_lastactivecustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_lastactivecustomers.RowsDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView_lastactivecustomers.RowTemplate.Height = 24;
-            this.dataGridView_lastactivecustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridView_lastclosedorders
-            // 
-            this.dataGridView_lastclosedorders.AllowUserToAddRows = false;
-            this.dataGridView_lastclosedorders.AllowUserToDeleteRows = false;
-            this.dataGridView_lastclosedorders.AllowUserToResizeColumns = false;
-            this.dataGridView_lastclosedorders.AllowUserToResizeRows = false;
-            this.dataGridView_lastclosedorders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_lastclosedorders.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_lastclosedorders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_lastclosedorders.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView_lastclosedorders.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_lastclosedorders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            resources.ApplyResources(this.dataGridView_lastclosedorders, "dataGridView_lastclosedorders");
-            this.dataGridView_lastclosedorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView_lastclosedorders.ColumnHeadersVisible = false;
-            this.dataGridView_lastclosedorders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_lastclosedorders.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView_lastclosedorders.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_lastclosedorders.MultiSelect = false;
-            this.dataGridView_lastclosedorders.Name = "dataGridView_lastclosedorders";
-            this.dataGridView_lastclosedorders.ReadOnly = true;
-            this.dataGridView_lastclosedorders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_lastclosedorders.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView_lastclosedorders.RowHeadersVisible = false;
-            this.dataGridView_lastclosedorders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_lastclosedorders.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView_lastclosedorders.RowTemplate.Height = 24;
-            this.dataGridView_lastclosedorders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridView_lastmadejobs
-            // 
-            this.dataGridView_lastmadejobs.AllowUserToAddRows = false;
-            this.dataGridView_lastmadejobs.AllowUserToDeleteRows = false;
-            this.dataGridView_lastmadejobs.AllowUserToResizeColumns = false;
-            this.dataGridView_lastmadejobs.AllowUserToResizeRows = false;
-            this.dataGridView_lastmadejobs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_lastmadejobs.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_lastmadejobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_lastmadejobs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView_lastmadejobs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_lastmadejobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
-            resources.ApplyResources(this.dataGridView_lastmadejobs, "dataGridView_lastmadejobs");
-            this.dataGridView_lastmadejobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView_lastmadejobs.ColumnHeadersVisible = false;
-            this.dataGridView_lastmadejobs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_lastmadejobs.DefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridView_lastmadejobs.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_lastmadejobs.MultiSelect = false;
-            this.dataGridView_lastmadejobs.Name = "dataGridView_lastmadejobs";
-            this.dataGridView_lastmadejobs.ReadOnly = true;
-            this.dataGridView_lastmadejobs.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_lastmadejobs.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            this.dataGridView_lastmadejobs.RowHeadersVisible = false;
-            this.dataGridView_lastmadejobs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_lastmadejobs.RowsDefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridView_lastmadejobs.RowTemplate.Height = 24;
-            this.dataGridView_lastmadejobs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridView_lastsolddetails
-            // 
-            this.dataGridView_lastsolddetails.AllowUserToAddRows = false;
-            this.dataGridView_lastsolddetails.AllowUserToDeleteRows = false;
-            this.dataGridView_lastsolddetails.AllowUserToResizeColumns = false;
-            this.dataGridView_lastsolddetails.AllowUserToResizeRows = false;
-            this.dataGridView_lastsolddetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_lastsolddetails.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_lastsolddetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_lastsolddetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView_lastsolddetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_lastsolddetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
-            resources.ApplyResources(this.dataGridView_lastsolddetails, "dataGridView_lastsolddetails");
-            this.dataGridView_lastsolddetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView_lastsolddetails.ColumnHeadersVisible = false;
-            this.dataGridView_lastsolddetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_lastsolddetails.DefaultCellStyle = dataGridViewCellStyle34;
-            this.dataGridView_lastsolddetails.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_lastsolddetails.MultiSelect = false;
-            this.dataGridView_lastsolddetails.Name = "dataGridView_lastsolddetails";
-            this.dataGridView_lastsolddetails.ReadOnly = true;
-            this.dataGridView_lastsolddetails.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView_lastsolddetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
-            this.dataGridView_lastsolddetails.RowHeadersVisible = false;
-            this.dataGridView_lastsolddetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView_lastsolddetails.RowsDefaultCellStyle = dataGridViewCellStyle36;
-            this.dataGridView_lastsolddetails.RowTemplate.Height = 24;
-            this.dataGridView_lastsolddetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "iservice_orders_status_id";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::iservice5.Properties.Resources.bg;
-            this.Controls.Add(this.panel_dashboard);
-            this.Controls.Add(this.panelCompanySetting);
+            this.Controls.Add(this.panel_timeline);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel_dashboard);
+            this.Controls.Add(this.panel_setting_orders);
+            this.Controls.Add(this.panel_setting_employee);
+            this.Controls.Add(this.panelCompanySetting);
             this.Controls.Add(this.panel3_bottom);
             this.Controls.Add(this.panel_top);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.DisplayHeader = false;
             this.Name = "Form1";
+            this.Resizable = false;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -2069,23 +2122,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_customers_email;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_customers_date_of_creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_customers_employee;
-        public System.Windows.Forms.DataGridView dataGridViewCars;
         public System.Windows.Forms.DataGridView dataGridViewOrders;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_cars_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_user_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_of_work;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_of_payment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_payment_status_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_date_of_creation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_date_of_last_update;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_expiry_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_prepayment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_netto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_brutto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_mileage;
         private System.Windows.Forms.Button button_orders;
         private System.Windows.Forms.Button button_employee;
         private System.Windows.Forms.Panel panel_dashboard;
@@ -2099,6 +2136,9 @@
         public System.Windows.Forms.DataGridView dataGridViewOrdersinProcess;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_name1;
+        private System.Windows.Forms.Panel panel_timeline;
+        private System.Windows.Forms.Panel panel_setting_employee;
+        private System.Windows.Forms.Panel panel_setting_orders;
         public System.Windows.Forms.DataGridView dataGridView_lastactivecars;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -2114,6 +2154,22 @@
         public System.Windows.Forms.DataGridView dataGridView_lastsolddetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridView dataGridViewCars;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_cars_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_user_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_of_work;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_status_of_payment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_payment_status_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_date_of_creation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_date_of_last_update;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_expiry_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_prepayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_netto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_brutto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_mileage;
     }
 }
 

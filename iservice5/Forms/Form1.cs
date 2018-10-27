@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace iservice5
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         public Form1()
         {
@@ -62,6 +62,9 @@ namespace iservice5
             panel4.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             panelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             TextStatus.Text = btnDashboard.Text;
         }
@@ -163,6 +166,7 @@ namespace iservice5
             dataGridView_lastclosedorders.ClearSelection();
             dataGridView_lastmadejobs.ClearSelection();
             dataGridView_lastsolddetails.ClearSelection();
+
             labelEmployee.Text = GlobalVars.Employee;
             
             textBoxSettingsName.Text = GlobalVars.iservice_company_name;
@@ -696,6 +700,26 @@ namespace iservice5
             }
 
             dataGridViewOrdersinProcess.Height = height;
+        }
+
+        private void tableLayoutPanel6_Paint(object sender, EventArgs e)
+        {
+            dataGridViewOrdersinProcess.ClearSelection();
+            dataGridView_lastactivecars.ClearSelection();
+            dataGridView_lastactivecustomers.ClearSelection();
+            dataGridView_lastclosedorders.ClearSelection();
+            dataGridView_lastmadejobs.ClearSelection();
+            dataGridView_lastsolddetails.ClearSelection();
+        }
+
+        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        {
+            dataGridViewOrdersinProcess.ClearSelection();
+            dataGridView_lastactivecars.ClearSelection();
+            dataGridView_lastactivecustomers.ClearSelection();
+            dataGridView_lastclosedorders.ClearSelection();
+            dataGridView_lastmadejobs.ClearSelection();
+            dataGridView_lastsolddetails.ClearSelection();
         }
     }
 
