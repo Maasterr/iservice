@@ -137,7 +137,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_orders values (N'" + iservice_orders_cars_id + "',N'" + iservice_orders_user_id + "',(Select MAX(iservice_orders_number)+1 from iservice_orders),N'" + iservice_orders_date_of_creation + " ',N'" + iservice_orders_date_of_last_update + " ',N'" + iservice_orders_expiry_date + " ',N'" + iservice_orders_status_of_payment + " ',N'" + iservice_orders_status_of_work + " ',N'" + iservice_orders_prepayment + "',N'" + iservice_orders_total_netto + "',N'" + iservice_orders_total_brutto + "',N'" + iservice_orders_mileage + "')");
+                db.Execute("Insert into iservice_orders values (N'" + iservice_orders_cars_id + "',N'" + iservice_orders_user_id + "',(Select MAX(iservice_orders_number)+1 from iservice_orders), N'" + iservice_orders_status_of_payment + " ',N'" + iservice_orders_status_of_work + " ',N'" + iservice_orders_date_of_creation + " ',N'" + iservice_orders_date_of_last_update + " ',N'" + iservice_orders_expiry_date + " ',N'" + iservice_orders_prepayment + "',N'" + iservice_orders_total_netto + "',N'" + iservice_orders_total_brutto + "',N'" + iservice_orders_mileage + "')");
                 return null;
             }
         }

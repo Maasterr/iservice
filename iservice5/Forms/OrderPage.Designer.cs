@@ -80,6 +80,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.labelEmployee = new System.Windows.Forms.Label();
             this.comboBoxOrderStatus = new MetroFramework.Controls.MetroComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.dataGridViewItemsWorks = new System.Windows.Forms.DataGridView();
             this.iservice_items_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_items_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,7 +113,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.label_lastupdate = new System.Windows.Forms.Label();
+            this.label_date_of_close = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -603,6 +605,8 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.03837F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.00903F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32957F));
+            this.tableLayoutPanel10.Controls.Add(this.label_date_of_close, 3, 4);
+            this.tableLayoutPanel10.Controls.Add(this.label_lastupdate, 3, 3);
             this.tableLayoutPanel10.Controls.Add(this.labelCreationDate, 3, 2);
             this.tableLayoutPanel10.Controls.Add(this.ComboBoxPaymentStatus, 1, 2);
             this.tableLayoutPanel10.Controls.Add(this.label10, 0, 1);
@@ -802,6 +806,14 @@
             this.comboBoxOrderStatus.TabIndex = 44;
             this.comboBoxOrderStatus.UseSelectable = true;
             this.comboBoxOrderStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrderStatus_SelectedIndexChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(166, 198);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(255, 33);
+            this.listView1.TabIndex = 46;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // dataGridViewItemsWorks
             // 
@@ -1184,13 +1196,29 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // listView1
+            // label_lastupdate
             // 
-            this.listView1.Location = new System.Drawing.Point(166, 198);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(255, 33);
-            this.listView1.TabIndex = 46;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.label_lastupdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_lastupdate.AutoSize = true;
+            this.label_lastupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label_lastupdate.Location = new System.Drawing.Point(626, 127);
+            this.label_lastupdate.Name = "label_lastupdate";
+            this.label_lastupdate.Size = new System.Drawing.Size(39, 18);
+            this.label_lastupdate.TabIndex = 19;
+            this.label_lastupdate.Text = "Date";
+            this.label_lastupdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_date_of_close
+            // 
+            this.label_date_of_close.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_date_of_close.AutoSize = true;
+            this.label_date_of_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label_date_of_close.Location = new System.Drawing.Point(626, 166);
+            this.label_date_of_close.Name = "label_date_of_close";
+            this.label_date_of_close.Size = new System.Drawing.Size(39, 18);
+            this.label_date_of_close.TabIndex = 19;
+            this.label_date_of_close.Text = "Date";
+            this.label_date_of_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OrderPage
             // 
@@ -1312,5 +1340,7 @@
         private System.Windows.Forms.TextBox textBoxMileage;
         private System.Windows.Forms.Label labelOrderNumber;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label_date_of_close;
+        private System.Windows.Forms.Label label_lastupdate;
     }
 }

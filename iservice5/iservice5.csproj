@@ -120,6 +120,7 @@
     <Compile Include="iservice_db\iservice_company.cs" />
     <Compile Include="iservice_db\iservice_customers.cs" />
     <Compile Include="iservice_db\iservice_items.cs" />
+    <Compile Include="iservice_db\iservice_orders_items.cs" />
     <Compile Include="iservice_db\iservice_orders_payment_status.cs" />
     <Compile Include="iservice_db\iservice_orders_status.cs" />
     <Compile Include="iservice_db\iservice_orders.cs" />
