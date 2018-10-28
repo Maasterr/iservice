@@ -141,13 +141,13 @@ namespace iservice5
                 return null;
             }
         }
-        public static List<iservice_orders_items> NewOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_id, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
+        public static List<iservice_orders_items> NewOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_number, String iservice_orders_items_qty, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_orders_items values (N'" + iservice_orders_items_orders_id + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_price_netto  + " ',N'" + iservice_orders_items_price_brutto + " ')");
+                db.Execute("Insert into iservice_orders_items values (N'" + iservice_orders_items_orders_number + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_qty + "',N'" + iservice_orders_items_price_netto  + " ',N'" + iservice_orders_items_price_brutto + " ')");
                 return null;
             }
         }
@@ -157,7 +157,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_items>("Select iservice_items.* from iservice_items where iservice_items_type='" + ItemType+ "' and iservice_items_id = (select iservice_orders_item_id from iservice_orders_items where iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id)").ToList();
+                return db.Query<iservice_items>("Select iservice_items.*,iservice_orders_items.iservice_orders_items_qty from iservice_items LEFT JOIN iservice_orders_items ON iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id where iservice_items_type='" + ItemType+ "' and iservice_items_id = (select iservice_orders_item_id from iservice_orders_items where iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id)").ToList();
 
 
             }
@@ -187,7 +187,7 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_orders>("SELECT MAX(iservice_orders_number) FROM iservice_orders ").ToList();
+                return db.Query<iservice_orders>("SELECT * FROM iservice_orders where (iservice_orders_number) IN (select MAX(iservice_orders_number) from iservice_orders)").ToList();
             }
         }
         public static List<iservice_orders> GetAllOrders()

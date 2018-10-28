@@ -676,13 +676,13 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 2</value>
+    <value>208, 2</value>
   </data>
   <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 37</value>
+    <value>96, 37</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -736,7 +736,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelEmployee" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="button4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,57.40741,Percent,42.59259,Absolute,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,41" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelEmployee" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="button4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,57.40741,Percent,42.59259,Absolute,101" /&gt;&lt;Rows Styles="Percent,100,Absolute,41" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="btnDashboard.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1600,6 +1600,9 @@
   <data name="iservice_orders_date_of_creation.HeaderText" xml:space="preserve">
     <value>Creation</value>
   </data>
+  <data name="iservice_orders_date_of_creation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="iservice_orders_date_of_last_update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1611,6 +1614,9 @@
   </metadata>
   <data name="iservice_orders_expiry_date.HeaderText" xml:space="preserve">
     <value>Expiry date</value>
+  </data>
+  <data name="iservice_orders_expiry_date.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="iservice_orders_prepayment.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2414,7 +2420,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel18.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelClients" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button17" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button18" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,91.26637,Percent,8.733624,Absolute,10" /&gt;&lt;Rows Styles="Absolute,25,Absolute,39,Absolute,39,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelClients" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button17" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="button18" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,91.26637,Percent,8.733624,Absolute,11" /&gt;&lt;Rows Styles="Absolute,25,Absolute,39,Absolute,39,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel19.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>

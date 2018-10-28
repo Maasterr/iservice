@@ -53,6 +53,7 @@ namespace iservice5
         public static String selected_iservice_cars_color;
         public static String selected_iservice_cars_employee;
         
+        public static int selected_iservice_orders_id_new;
         public static int selected_iservice_orders_id;
         public static int selected_iservice_orders_cars_id;
         public static int selected_iservice_orders_user_id;

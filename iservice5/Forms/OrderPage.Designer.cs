@@ -187,7 +187,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 42);
             this.label12.TabIndex = 4;
-            this.label12.Text = "Deteils";
+            this.label12.Text = "Details";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox5
@@ -1106,13 +1106,14 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "iservice_items_description";
             this.dataGridViewTextBoxColumn5.HeaderText = "Description";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // QTY
             // 
-            this.QTY.DataPropertyName = "QTY";
+            this.QTY.DataPropertyName = "iservice_orders_item_qty";
             this.QTY.HeaderText = "QTY";
             this.QTY.Name = "QTY";
             this.QTY.ReadOnly = true;
@@ -1191,6 +1192,7 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "iservice_orders_item_qty";
             this.dataGridViewTextBoxColumn10.HeaderText = "QTY";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
@@ -1331,17 +1333,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label_date_of_close;
         private System.Windows.Forms.Label label_lastupdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_subcategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_purchase_price_netto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_purchase_price_brutto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_netto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_brutto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1353,5 +1344,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_subcategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_purchase_price_netto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_purchase_price_brutto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_netto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_brutto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }

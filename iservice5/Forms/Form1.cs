@@ -101,6 +101,8 @@ namespace iservice5
             
             if (GlobalVars.regnumber != null)
             {
+                DataService.NewOrder(GlobalVars.selected_iservice_cars_id, GlobalVars.Employee_id, "", DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", "", "", "", "", "","");
+                GlobalVars.selected_iservice_orders_id_new = DataService.GetLastOrderNumber()[0].iservice_orders_id;
                 OrderPage orderpage = new OrderPage(this,"Add");
                 orderpage.Show();
 
@@ -272,7 +274,7 @@ namespace iservice5
                         {
 
                             dataGridViewOrders.DataSource = DataService.GetOrdersByCar(Int32.Parse(s2));
-                          
+                            dataGridViewOrders.ClearSelection();
 
 
 
@@ -515,15 +517,27 @@ namespace iservice5
         {
             dataGridViewClients.DataSource = DataService.GetAllCustomers();
             dataGridViewClients.ClearSelection();
+            labelClients.Text = "Please select clients";
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
+
         }
         public void updatecarsdata()
         {
             dataGridViewCars.DataSource = DataService.GetCarsByCustomer(GlobalVars.selected_iservice_customers_id);
             dataGridViewCars.ClearSelection();
-        }
-       
+            labelCars.Text = "Please select car";
+            labelOrders.Text = "Please select order";
 
-      
+        }
+        public void updateordersdata()
+        {
+            labelOrders.Text = "Please select order";
+            dataGridViewOrders.DataSource = DataService.GetOrdersByCar(GlobalVars.selected_iservice_cars_id);
+            dataGridViewOrders.ClearSelection();
+        }
+
+
 
         private void textBox3_Enter(object sender, DragEventArgs e)
         {

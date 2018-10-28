@@ -51,14 +51,14 @@ namespace iservice5
             {
                 foreach (DataGridViewRow row in frm1.dataGridViewItemsWorks.Rows)
                 {
-                    
+
                     if (Convert.ToString(row.Cells[0].Value) == Convert.ToString(dataGridViewItemsWorks.SelectedCells[0].Value))
                     {
                         row.Cells[5].Value = Convert.ToString(1 + Convert.ToInt32(row.Cells[5].Value));
                         row.Cells[10].Value = (Convert.ToInt32(row.Cells[5].Value) * Convert.ToInt32(row.Cells[9].Value)).ToString();
                         Found = true;
                     }
-                }         
+                }
             }
             if (!Found)
             {
