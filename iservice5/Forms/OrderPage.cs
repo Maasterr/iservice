@@ -42,14 +42,22 @@ namespace iservice5
                // else if (DataService.NewOrder(GlobalVars.selected_iservice_cars_id, GlobalVars.Employee_id, labelCreationDate.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                  else if (DataService.UpdateOrder(GlobalVars.selected_iservice_orders_id, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                 {
+                  //  for (int i = 0; i < DataService.GetOrderItems("Details", labelOrderNumber.Text).Count; i++)
+                  //  {
+                    //    dataGridViewItemsDetails.Rows.Add(DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_id, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_type, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_category, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_subcategory, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_description, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_orders_items_qty, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_purchase_price_netto, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_purchase_price_brutto, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_price_netto, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_price_brutto, DataService.GetOrderItems("Details", labelOrderNumber.Text)[i].iservice_items_price_brutto);
+                        foreach (DataGridViewRow row in dataGridViewItemsDetails.Rows)
+                        {
+                            if (DataService.CheckOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text)).Count == 0)
+                              DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                            else
+                                DataService.UpdateOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                        }
+                   // }
 
-                    foreach (DataGridViewRow row in dataGridViewItemsDetails.Rows)
-                    {
-                        DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value),Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
-                    }
+                    
                     foreach (DataGridViewRow row in dataGridViewItemsWorks.Rows)
                     {
-                        DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                       // DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
                     }
                     frm1.updateordersdata();
                     this.Close();
@@ -66,6 +74,17 @@ namespace iservice5
             }
             else if (DataService.UpdateOrder(GlobalVars.selected_iservice_orders_id, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
             {
+                foreach (DataGridViewRow row in dataGridViewItemsDetails.Rows)
+                {
+                   if (DataService.CheckOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text)).Count == 0)
+                       DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                    else
+                        DataService.UpdateOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                }
+                foreach (DataGridViewRow row in dataGridViewItemsWorks.Rows)
+                {
+                   // DataService.NewOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value));
+                }
                 frm1.updateordersdata();
                 this.Close();
                 MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
@@ -173,7 +192,7 @@ namespace iservice5
                 labelEmployee.Text = GlobalVars.Employee;
                 labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                 //labelOrderNumber.Text = "-";
-                labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id_new)[0].iservice_orders_number);
+                labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number);
 
 
             }
@@ -221,8 +240,11 @@ namespace iservice5
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            foreach ( DataGridViewRow row in dataGridViewItemsDetails.SelectedRows)
-            dataGridViewItemsDetails.Rows.RemoveAt(row.Index);
+            foreach (DataGridViewRow row in dataGridViewItemsDetails.SelectedRows)
+            {
+                dataGridViewItemsDetails.Rows.RemoveAt(row.Index);
+                DataService.DelteOrderItem(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(labelOrderNumber.Text));
+            }
             updatedetailstotal();
         }
 

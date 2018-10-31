@@ -151,13 +151,53 @@ namespace iservice5
                 return null;
             }
         }
+
+        public static List<iservice_orders_items> UpdateOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_number, String iservice_orders_items_qty, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Update iservice_orders_items set iservice_orders_items_qty=N'" + iservice_orders_items_qty + "',iservice_orders_items_price_netto=N'" + iservice_orders_items_price_netto + " ',iservice_orders_items_price_brutto=N'" + iservice_orders_items_price_brutto + " ' where iservice_orders_items_orders_id = N'" + iservice_orders_items_orders_number + "' and iservice_orders_item_id=N'" + iservice_orders_item_id + "'");
+                return null;
+            }
+        }
+        public static List<iservice_orders_items> DelteOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_number)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Delete from iservice_orders_items where iservice_orders_items_orders_id = N'" + iservice_orders_items_orders_number + "' and iservice_orders_item_id=N'" + iservice_orders_item_id + "'");
+                return null;
+            }
+        }
+        public static List<iservice_orders_items> CheckOrderItem(int iservice_orders_item_id, int iservice_orders_items_orders_number)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_orders_items>("SELECT * FROM iservice_orders_items where iservice_orders_items_orders_id = N'" + iservice_orders_items_orders_number + "' and iservice_orders_item_id=N'" + iservice_orders_item_id + "'").ToList();
+            }
+        }
+        public static List<iservice_items> NewItem(int iservice_orders_item_id, int iservice_orders_items_orders_number, String iservice_orders_items_qty, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Insert into iservice_items values (N'" + iservice_orders_items_orders_number + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_qty + "',N'" + iservice_orders_items_price_netto + " ',N'" + iservice_orders_items_price_brutto + " ')");
+                return null;
+            }
+        }
         public static List<iservice_items> GetOrderItems( String ItemType, String OrderNumber)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_items>("Select iservice_items.*,iservice_orders_items.iservice_orders_items_qty from iservice_items LEFT JOIN iservice_orders_items ON iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id where iservice_items_type='" + ItemType+ "' and iservice_items_id = (select iservice_orders_item_id from iservice_orders_items where iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id)").ToList();
+                return db.Query<iservice_items>("Select iservice_items.*,iservice_orders_items.iservice_orders_items_qty from iservice_items LEFT JOIN iservice_orders_items ON iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id where iservice_items_type='" + ItemType+ "' and iservice_items_id = (select iservice_orders_item_id from iservice_orders_items where iservice_orders_items_orders_id = '" + OrderNumber + "' and iservice_orders_item_id = iservice_items.iservice_items_id) ").ToList();
 
 
             }

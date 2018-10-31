@@ -68,7 +68,9 @@ namespace iservice5
         public static String selected_iservice_orders_total_netto;
         public static String selected_iservice_orders_total_brutto;
         public static String selected_iservice_orders_mileage;
-        
+
+        public static int selected_iservice_items_id;
+
 
 
     }

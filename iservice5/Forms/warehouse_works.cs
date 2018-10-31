@@ -20,22 +20,11 @@ namespace iservice5
 
         private void warehouse_works_Load(object sender, EventArgs e)
         {
-            dataGridViewItemsWorks.DataSource = DataService.ItemsWorksGetData();
-            dataGridViewItemsWorks.Columns[0].Visible = false;
-            dataGridViewItemsWorks.Columns[1].Visible = false;
-            dataGridViewItemsWorks.Columns[2].Visible = false;
-            dataGridViewItemsWorks.Columns[3].Visible = false;
-            dataGridViewItemsWorks.Columns[5].Visible = false;
-            dataGridViewItemsWorks.Columns[6].Visible = false;
-            dataGridViewItemsWorks.Columns[9].Visible = false;
-            dataGridViewItemsWorks.Columns[10].Visible = false;
-            dataGridViewItemsWorks.Columns[11].Visible = false;
-            dataGridViewItemsWorks.Columns[4].HeaderCell.Value = "Description";
-            dataGridViewItemsWorks.Columns[7].HeaderCell.Value = "Price netto";
-            dataGridViewItemsWorks.Columns[8].HeaderCell.Value = "Price brutto";
-            dataGridViewItemsWorks.EnableHeadersVisualStyles = false;
+            for (int i = 0; i < DataService.ItemsWorksGetData().Count; i++)
+            {
+                dataGridViewItemsWorks.Rows.Add(DataService.ItemsWorksGetData()[i].iservice_items_id, DataService.ItemsWorksGetData()[i].iservice_items_type, DataService.ItemsWorksGetData()[i].iservice_items_category, DataService.ItemsWorksGetData()[i].iservice_items_subcategory, DataService.ItemsWorksGetData()[i].iservice_items_description, DataService.ItemsWorksGetData()[i].iservice_items_qty, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsWorksGetData()[i].iservice_items_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_price_brutto);
+            }
             dataGridViewItemsWorks.RowHeadersVisible = false;
-            dataGridViewItemsWorks.AllowUserToAddRows = false;
         }
         private readonly OrderPage frm1;
         public warehouse_works(OrderPage frm)
@@ -62,7 +51,7 @@ namespace iservice5
             }
             if (!Found)
             {
-                frm1.dataGridViewItemsWorks.Rows.Add(dataGridViewItemsWorks.SelectedCells[0].Value, dataGridViewItemsWorks.SelectedCells[1].Value, dataGridViewItemsWorks.SelectedCells[2].Value, dataGridViewItemsWorks.SelectedCells[3].Value, dataGridViewItemsWorks.SelectedCells[4].Value, "1", dataGridViewItemsWorks.SelectedCells[5].Value, dataGridViewItemsWorks.SelectedCells[6].Value, dataGridViewItemsWorks.SelectedCells[7].Value, dataGridViewItemsWorks.SelectedCells[8].Value, dataGridViewItemsWorks.SelectedCells[8].Value);
+                frm1.dataGridViewItemsWorks.Rows.Add(dataGridViewItemsWorks.SelectedCells[0].Value, dataGridViewItemsWorks.SelectedCells[1].Value, dataGridViewItemsWorks.SelectedCells[2].Value, dataGridViewItemsWorks.SelectedCells[3].Value, dataGridViewItemsWorks.SelectedCells[4].Value, "1", dataGridViewItemsWorks.SelectedCells[5].Value, dataGridViewItemsWorks.SelectedCells[6].Value, dataGridViewItemsWorks.SelectedCells[8].Value, dataGridViewItemsWorks.SelectedCells[9].Value, dataGridViewItemsWorks.SelectedCells[9].Value);
             }
 
             frm1.updateworkstotal();
@@ -77,7 +66,25 @@ namespace iservice5
 
         private void dataGridViewItemsWorks_Click(object sender, EventArgs e)
         {
+            if (dataGridViewItemsWorks.SelectedRows.Count > 0)
+            {
+
+               
+                labeltext.Text = dataGridViewItemsWorks.SelectedRows[0].Cells[4].Value.ToString();
+                
+                GlobalVars.selected_iservice_items_id = Convert.ToInt32(dataGridViewItemsWorks.SelectedRows[0].Cells[0].Value);
+                 }
+            else
+                labeltext.Text = "Please select item";
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
            
+            forms.NewWorkItem newitem = new forms.NewWorkItem(this, "Add");
+            newitem.Show();
+
         }
     }
 }

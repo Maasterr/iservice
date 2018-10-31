@@ -104,6 +104,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_items_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_items_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_items_category = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,6 +116,7 @@
             this.iservice_items_price_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_items_price_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_items_qty1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -867,7 +869,8 @@
             this.iservice_items_purchase_price_brutto,
             this.iservice_items_price_netto,
             this.iservice_items_price_brutto,
-            this.dataGridViewTextBoxColumn11});
+            this.dataGridViewTextBoxColumn11,
+            this.iservice_items_qty1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -927,7 +930,8 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
-            this.Total});
+            this.Total,
+            this.iservice_items_qty});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1151,6 +1155,14 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+            // iservice_items_qty
+            // 
+            this.iservice_items_qty.DataPropertyName = "iservice_items_qty";
+            this.iservice_items_qty.HeaderText = "iservice_items_qty";
+            this.iservice_items_qty.Name = "iservice_items_qty";
+            this.iservice_items_qty.ReadOnly = true;
+            this.iservice_items_qty.Visible = false;
+            // 
             // iservice_items_id
             // 
             this.iservice_items_id.DataPropertyName = "iservice_items_id";
@@ -1232,6 +1244,14 @@
             this.dataGridViewTextBoxColumn11.HeaderText = "Total";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // iservice_items_qty1
+            // 
+            this.iservice_items_qty1.DataPropertyName = "iservice_items_qty";
+            this.iservice_items_qty1.HeaderText = "iservice_items_qty";
+            this.iservice_items_qty1.Name = "iservice_items_qty1";
+            this.iservice_items_qty1.ReadOnly = true;
+            this.iservice_items_qty1.Visible = false;
             // 
             // OrderPage
             // 
@@ -1333,17 +1353,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label_date_of_close;
         private System.Windows.Forms.Label label_lastupdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_category;
@@ -1355,5 +1364,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_netto;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_price_brutto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_qty1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iservice_items_qty;
     }
 }

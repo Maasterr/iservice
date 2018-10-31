@@ -19,10 +19,14 @@ namespace iservice5
 
         private void warehouse_details_Load(object sender, EventArgs e)
         {
-            dataGridViewItemsDetails.DataSource = DataService.ItemsDetailsGetData();
-            
-            
-            
+            //dataGridViewItemsDetails.DataSource = DataService.ItemsDetailsGetData();
+
+            for (int i = 0; i < DataService.ItemsDetailsGetData().Count; i++)
+            {
+                dataGridViewItemsDetails.Rows.Add(DataService.ItemsDetailsGetData()[i].iservice_items_id, DataService.ItemsDetailsGetData()[i].iservice_items_type, DataService.ItemsDetailsGetData()[i].iservice_items_category, DataService.ItemsDetailsGetData()[i].iservice_items_subcategory, DataService.ItemsDetailsGetData()[i].iservice_items_description, DataService.ItemsDetailsGetData()[i].iservice_items_qty, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsDetailsGetData()[i].iservice_items_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_price_brutto);
+            }
+            dataGridViewItemsDetails.RowHeadersVisible = false;
+            /*
             dataGridViewItemsDetails.Columns[0].Visible = false;
             dataGridViewItemsDetails.Columns[1].Visible = false;
             dataGridViewItemsDetails.Columns[2].Visible = false;
@@ -35,6 +39,7 @@ namespace iservice5
             //dataGridViewItemsDetails.EnableHeadersVisualStyles = false;
             dataGridViewItemsDetails.RowHeadersVisible = false;
             dataGridViewItemsDetails.AllowUserToAddRows = false;
+            */
         }
         private readonly OrderPage frm1;
         public warehouse_details(OrderPage frm)
@@ -61,7 +66,7 @@ namespace iservice5
             }
             if (!Found)
             {
-                frm1.dataGridViewItemsDetails.Rows.Add(dataGridViewItemsDetails.SelectedCells[0].Value, dataGridViewItemsDetails.SelectedCells[1].Value, dataGridViewItemsDetails.SelectedCells[2].Value, dataGridViewItemsDetails.SelectedCells[3].Value, dataGridViewItemsDetails.SelectedCells[4].Value, "1", dataGridViewItemsDetails.SelectedCells[5].Value, dataGridViewItemsDetails.SelectedCells[6].Value, dataGridViewItemsDetails.SelectedCells[7].Value, dataGridViewItemsDetails.SelectedCells[8].Value, dataGridViewItemsDetails.SelectedCells[8].Value);
+                frm1.dataGridViewItemsDetails.Rows.Add(dataGridViewItemsDetails.SelectedCells[0].Value, dataGridViewItemsDetails.SelectedCells[1].Value, dataGridViewItemsDetails.SelectedCells[2].Value, dataGridViewItemsDetails.SelectedCells[3].Value, dataGridViewItemsDetails.SelectedCells[4].Value, "1", dataGridViewItemsDetails.SelectedCells[5].Value, dataGridViewItemsDetails.SelectedCells[6].Value, dataGridViewItemsDetails.SelectedCells[8].Value, dataGridViewItemsDetails.SelectedCells[9].Value, dataGridViewItemsDetails.SelectedCells[9].Value);
             }
          
             frm1.updatedetailstotal();
@@ -72,6 +77,11 @@ namespace iservice5
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridViewItemsDetails_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

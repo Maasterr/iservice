@@ -102,7 +102,9 @@ namespace iservice5
             if (GlobalVars.regnumber != null)
             {
                 DataService.NewOrder(GlobalVars.selected_iservice_cars_id, GlobalVars.Employee_id, "", DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", "", "", "", "", "","");
-                GlobalVars.selected_iservice_orders_id_new = DataService.GetLastOrderNumber()[0].iservice_orders_id;
+                GlobalVars.selected_iservice_orders_id = DataService.GetLastOrderNumber()[0].iservice_orders_id;
+                dataGridViewOrders.ClearSelection();
+                labelOrders.Text = "Please select order";
                 OrderPage orderpage = new OrderPage(this,"Add");
                 orderpage.Show();
 
