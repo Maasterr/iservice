@@ -22,7 +22,7 @@ namespace iservice5
         {
             for (int i = 0; i < DataService.ItemsWorksGetData().Count; i++)
             {
-                dataGridViewItemsWorks.Rows.Add(DataService.ItemsWorksGetData()[i].iservice_items_id, DataService.ItemsWorksGetData()[i].iservice_items_type, DataService.ItemsWorksGetData()[i].iservice_items_category, DataService.ItemsWorksGetData()[i].iservice_items_subcategory, DataService.ItemsWorksGetData()[i].iservice_items_description, DataService.ItemsWorksGetData()[i].iservice_items_qty, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsWorksGetData()[i].iservice_items_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_price_brutto);
+                dataGridViewItemsWorks.Rows.Add(DataService.ItemsWorksGetData()[i].iservice_items_id, DataService.ItemsWorksGetData()[i].iservice_items_type, DataService.ItemsWorksGetData()[i].iservice_items_category, DataService.ItemsWorksGetData()[i].iservice_items_subcategory, DataService.ItemsWorksGetData()[i].iservice_items_description, DataService.ItemsWorksGetData()[i].iservice_items_qty, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsWorksGetData()[i].iservice_items_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_price_brutto, "", DataService.ItemsWorksGetData()[i].iservice_items_qty_type);
             }
             dataGridViewItemsWorks.RowHeadersVisible = false;
         }
@@ -85,6 +85,29 @@ namespace iservice5
             forms.NewWorkItem newitem = new forms.NewWorkItem(this, "Add");
             newitem.Show();
 
+        }
+        public void updateitemsdata()
+        {
+            dataGridViewItemsWorks.Rows.Clear();
+            for (int i = 0; i < DataService.ItemsWorksGetData().Count; i++)
+            {
+                dataGridViewItemsWorks.Rows.Add(DataService.ItemsWorksGetData()[i].iservice_items_id, DataService.ItemsWorksGetData()[i].iservice_items_type, DataService.ItemsWorksGetData()[i].iservice_items_category, DataService.ItemsWorksGetData()[i].iservice_items_subcategory, DataService.ItemsWorksGetData()[i].iservice_items_description, DataService.ItemsWorksGetData()[i].iservice_items_qty, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsWorksGetData()[i].iservice_items_price_netto, DataService.ItemsWorksGetData()[i].iservice_items_price_brutto, "", DataService.ItemsWorksGetData()[i].iservice_items_qty_type);
+            }
+            dataGridViewItemsWorks.ClearSelection();
+            labeltext.Text = "Please select item";
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            forms.NewWorkItem newitem = new forms.NewWorkItem(this, "Edit");
+            newitem.Show();
+        }
+
+        private void dataGridViewItemsWorks_Click_1(object sender, EventArgs e)
+        {
+            labeltext.Text = dataGridViewItemsWorks.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }

@@ -13,7 +13,6 @@ namespace iservice5
         public int iservice_items_category { get; set; }
         public int iservice_items_subcategory { get; set; }
         public string iservice_orders_items_qty { get; set; }
-        public string iservice_items_qty { get; set; }
         public string iservice_items_description { get; set; }
         public string iservice_items_purchase_price_netto { get; set; }
         public string iservice_items_purchase_price_brutto { get; set; }
@@ -22,6 +21,8 @@ namespace iservice5
         public string iservice_items_employee { get; set; }
         public string iservice_items_date_of_creation { get; set; }
         public string iservice_items_last_update { get; set; }
-     
+        public string iservice_items_qty { get; set; }
+        public string iservice_items_qty_type { get; set; }
+
     }
 }

@@ -48,5 +48,27 @@ namespace iservice5.forms
         {
             this.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (Status == "Add")
+            {
+                if ((textBoxDesc.Text == "") || (textBoxPriceNetto.Text == "") || (textBoxPriceBrutto.Text == "") || (textBoxqty.Text == ""))
+                    MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
+                else if (DataService.NewItem("Works", 1, 1, textBoxDesc.Text, textBoxPricePNetto.Text, textBoxPricePBrutto.Text, textBoxPriceNetto.Text, textBoxPriceBrutto.Text, GlobalVars.Employee, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), DateTime.Now.ToString("yyyy-MM-dd hh:mm"), textBoxqty.Text, comboBoxqtytype.SelectedIndex.ToString()) == null)
+                {
+                    frm1.updateitemsdata();
+                    this.Close();
+                    MessageBox.Show("Succesfully added" + comboBoxqtytype.SelectedIndex.ToString(), "Notification", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    this.Close();
+                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+
+
+                }
+            }
+        }
     }
 }

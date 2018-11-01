@@ -181,13 +181,13 @@ namespace iservice5
                 return db.Query<iservice_orders_items>("SELECT * FROM iservice_orders_items where iservice_orders_items_orders_id = N'" + iservice_orders_items_orders_number + "' and iservice_orders_item_id=N'" + iservice_orders_item_id + "'").ToList();
             }
         }
-        public static List<iservice_items> NewItem(int iservice_orders_item_id, int iservice_orders_items_orders_number, String iservice_orders_items_qty, String iservice_orders_items_price_netto, String iservice_orders_items_price_brutto)
+        public static List<iservice_items> NewItem(string iservice_items_type, int iservice_items_category, int iservice_items_subcategory, String iservice_items_description,String iservice_items_purchase_price_netto, String iservice_items_purchase_price_brutto, String iservice_items_price_netto, String iservice_items_price_brutto,String iservice_items_employee, String iservice_items_date_of_creation, String iservice_items_last_update, String iservice_items_qty, String iservice_items_qty_type)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_items values (N'" + iservice_orders_items_orders_number + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_qty + "',N'" + iservice_orders_items_price_netto + " ',N'" + iservice_orders_items_price_brutto + " ')");
+                db.Execute("Insert into iservice_items values (N'" + iservice_items_type + "',N'" + iservice_items_category + "',N'" + iservice_items_subcategory + " ',N'" + iservice_items_description + " ',N'" + iservice_items_purchase_price_netto + " ',N'" + iservice_items_purchase_price_brutto + " ',N'" + iservice_items_price_netto + "',N'" + iservice_items_price_brutto + "',N'" + iservice_items_employee + "',N'" + iservice_items_date_of_creation + "',N'" + iservice_items_last_update + "',N'" + iservice_items_qty + "',N'" + iservice_items_qty_type + "')");
                 return null;
             }
         }

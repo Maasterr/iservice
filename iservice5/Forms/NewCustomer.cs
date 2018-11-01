@@ -65,7 +65,7 @@ namespace iservice5
             {
                 if ((textBoxName.Text == "") || (textBoxSurname.Text == ""))
                     MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
-                else if (DataService.NewCustomer(textBoxName.Text, textBoxSurname.Text, textBoxPatr.Text, textBoxCountry.Text, textBoxCity.Text, textBoxStreet.Text, textBoxZipCode.Text, textBoxPhone.Text, textBoxPhonehome.Text, dateTimePickerBirthay.Value.Date.ToString("dd/MM/yyyy"), textBoxEmail.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"), labelEmployee.Text, textBoxCompany.Text) == null)
+                else if (DataService.NewCustomer(textBoxName.Text, textBoxSurname.Text, textBoxPatr.Text, textBoxCountry.Text, textBoxCity.Text, textBoxStreet.Text, textBoxZipCode.Text, textBoxPhone.Text, textBoxPhonehome.Text, dateTimePickerBirthay.Value.Date.ToString("dd/MM/yyyy"), textBoxEmail.Text, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), labelEmployee.Text, textBoxCompany.Text) == null)
                 {
                     frm1.updateclientsdata();
                     this.Close();

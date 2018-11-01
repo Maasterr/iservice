@@ -110,6 +110,12 @@
     <Compile Include="forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\NewDetailItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\NewDetailItem.Designer.cs">
+      <DependentUpon>NewDetailItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\NewWorkItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\NewCustomer.resx">
       <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\NewDetailItem.resx">
+      <DependentUpon>NewDetailItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\NewWorkItem.resx">
       <DependentUpon>NewWorkItem.cs</DependentUpon>

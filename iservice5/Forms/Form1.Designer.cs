@@ -66,6 +66,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,6 +82,7 @@
             this.button_orders = new System.Windows.Forms.Button();
             this.button_employee = new System.Windows.Forms.Button();
             this.button_company = new System.Windows.Forms.Button();
+            this.button_setting_import = new System.Windows.Forms.Button();
             this.btnWarehouse = new System.Windows.Forms.Button();
             this.btnTimeLine = new System.Windows.Forms.Button();
             this.btnService = new System.Windows.Forms.Button();
@@ -97,6 +102,22 @@
             this.button_search_cars = new System.Windows.Forms.Button();
             this.textBox_search_cars = new System.Windows.Forms.TextBox();
             this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
+            this.iservice_orders_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_of_work = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_status_of_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_payment_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_date_of_last_update = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_expiry_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_prepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_total_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_total_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_orders_mileage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iservice_users_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCars = new System.Windows.Forms.DataGridView();
             this.iservice_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iservice_cars_customers_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -205,22 +226,23 @@
             this.panel_timeline = new System.Windows.Forms.Panel();
             this.panel_setting_employee = new System.Windows.Forms.Panel();
             this.panel_setting_orders = new System.Windows.Forms.Panel();
-            this.iservice_orders_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_cars_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_of_work = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_status_of_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_payment_status_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_date_of_creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_date_of_last_update = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_expiry_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_prepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_total_netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_total_brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_orders_mileage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iservice_users_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_setting_import = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -256,6 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastclosedorders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastmadejobs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastsolddetails)).BeginInit();
+            this.panel_setting_import.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -338,6 +362,7 @@
             this.tableLayoutPanelCompanySetting.Controls.Add(this.button_orders, 0, 0);
             this.tableLayoutPanelCompanySetting.Controls.Add(this.button_employee, 0, 0);
             this.tableLayoutPanelCompanySetting.Controls.Add(this.button_company, 0, 0);
+            this.tableLayoutPanelCompanySetting.Controls.Add(this.button_setting_import, 3, 0);
             this.tableLayoutPanelCompanySetting.Name = "tableLayoutPanelCompanySetting";
             // 
             // button_orders
@@ -369,6 +394,16 @@
             this.button_company.Name = "button_company";
             this.button_company.UseVisualStyleBackColor = false;
             this.button_company.Click += new System.EventHandler(this.button_company_Click);
+            // 
+            // button_setting_import
+            // 
+            this.button_setting_import.AutoEllipsis = true;
+            this.button_setting_import.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.button_setting_import, "button_setting_import");
+            this.button_setting_import.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_setting_import.Name = "button_setting_import";
+            this.button_setting_import.UseVisualStyleBackColor = false;
+            this.button_setting_import.Click += new System.EventHandler(this.button_setting_import_Click);
             // 
             // btnWarehouse
             // 
@@ -598,6 +633,132 @@
             this.dataGridViewOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOrders.CurrentCellChanged += new System.EventHandler(this.dataGridViewOrders_CurrentCellChanged);
             this.dataGridViewOrders.Click += new System.EventHandler(this.dataGridViewOrders_Click);
+            // 
+            // iservice_orders_id
+            // 
+            this.iservice_orders_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_id.DataPropertyName = "iservice_orders_id";
+            resources.ApplyResources(this.iservice_orders_id, "iservice_orders_id");
+            this.iservice_orders_id.Name = "iservice_orders_id";
+            this.iservice_orders_id.ReadOnly = true;
+            // 
+            // iservice_orders_cars_id
+            // 
+            this.iservice_orders_cars_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_cars_id.DataPropertyName = "iservice_orders_cars_id";
+            resources.ApplyResources(this.iservice_orders_cars_id, "iservice_orders_cars_id");
+            this.iservice_orders_cars_id.Name = "iservice_orders_cars_id";
+            this.iservice_orders_cars_id.ReadOnly = true;
+            // 
+            // iservice_orders_user_id
+            // 
+            this.iservice_orders_user_id.DataPropertyName = "iservice_orders_user_id";
+            resources.ApplyResources(this.iservice_orders_user_id, "iservice_orders_user_id");
+            this.iservice_orders_user_id.Name = "iservice_orders_user_id";
+            this.iservice_orders_user_id.ReadOnly = true;
+            // 
+            // iservice_orders_number
+            // 
+            this.iservice_orders_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_number.DataPropertyName = "iservice_orders_number";
+            resources.ApplyResources(this.iservice_orders_number, "iservice_orders_number");
+            this.iservice_orders_number.Name = "iservice_orders_number";
+            this.iservice_orders_number.ReadOnly = true;
+            // 
+            // iservice_orders_status_of_work
+            // 
+            this.iservice_orders_status_of_work.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_status_of_work.DataPropertyName = "iservice_orders_status_of_work";
+            resources.ApplyResources(this.iservice_orders_status_of_work, "iservice_orders_status_of_work");
+            this.iservice_orders_status_of_work.Name = "iservice_orders_status_of_work";
+            this.iservice_orders_status_of_work.ReadOnly = true;
+            // 
+            // iservice_orders_status_name
+            // 
+            this.iservice_orders_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_status_name.DataPropertyName = "iservice_orders_status_name";
+            resources.ApplyResources(this.iservice_orders_status_name, "iservice_orders_status_name");
+            this.iservice_orders_status_name.Name = "iservice_orders_status_name";
+            this.iservice_orders_status_name.ReadOnly = true;
+            // 
+            // iservice_orders_status_of_payment
+            // 
+            this.iservice_orders_status_of_payment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_status_of_payment.DataPropertyName = "iservice_orders_status_of_payment";
+            resources.ApplyResources(this.iservice_orders_status_of_payment, "iservice_orders_status_of_payment");
+            this.iservice_orders_status_of_payment.Name = "iservice_orders_status_of_payment";
+            this.iservice_orders_status_of_payment.ReadOnly = true;
+            // 
+            // iservice_orders_payment_status_name
+            // 
+            this.iservice_orders_payment_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_payment_status_name.DataPropertyName = "iservice_orders_payment_status_name";
+            resources.ApplyResources(this.iservice_orders_payment_status_name, "iservice_orders_payment_status_name");
+            this.iservice_orders_payment_status_name.Name = "iservice_orders_payment_status_name";
+            this.iservice_orders_payment_status_name.ReadOnly = true;
+            // 
+            // iservice_orders_date_of_creation
+            // 
+            this.iservice_orders_date_of_creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_date_of_creation.DataPropertyName = "iservice_orders_date_of_creation";
+            resources.ApplyResources(this.iservice_orders_date_of_creation, "iservice_orders_date_of_creation");
+            this.iservice_orders_date_of_creation.Name = "iservice_orders_date_of_creation";
+            this.iservice_orders_date_of_creation.ReadOnly = true;
+            // 
+            // iservice_orders_date_of_last_update
+            // 
+            this.iservice_orders_date_of_last_update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_date_of_last_update.DataPropertyName = "iservice_orders_date_of_last_update";
+            resources.ApplyResources(this.iservice_orders_date_of_last_update, "iservice_orders_date_of_last_update");
+            this.iservice_orders_date_of_last_update.Name = "iservice_orders_date_of_last_update";
+            this.iservice_orders_date_of_last_update.ReadOnly = true;
+            // 
+            // iservice_orders_expiry_date
+            // 
+            this.iservice_orders_expiry_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_expiry_date.DataPropertyName = "iservice_orders_expiry_date";
+            resources.ApplyResources(this.iservice_orders_expiry_date, "iservice_orders_expiry_date");
+            this.iservice_orders_expiry_date.Name = "iservice_orders_expiry_date";
+            this.iservice_orders_expiry_date.ReadOnly = true;
+            // 
+            // iservice_orders_prepayment
+            // 
+            this.iservice_orders_prepayment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_prepayment.DataPropertyName = "iservice_orders_prepayment";
+            resources.ApplyResources(this.iservice_orders_prepayment, "iservice_orders_prepayment");
+            this.iservice_orders_prepayment.Name = "iservice_orders_prepayment";
+            this.iservice_orders_prepayment.ReadOnly = true;
+            // 
+            // iservice_orders_total_netto
+            // 
+            this.iservice_orders_total_netto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_total_netto.DataPropertyName = "iservice_orders_total_netto";
+            resources.ApplyResources(this.iservice_orders_total_netto, "iservice_orders_total_netto");
+            this.iservice_orders_total_netto.Name = "iservice_orders_total_netto";
+            this.iservice_orders_total_netto.ReadOnly = true;
+            // 
+            // iservice_orders_total_brutto
+            // 
+            this.iservice_orders_total_brutto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_total_brutto.DataPropertyName = "iservice_orders_total_brutto";
+            resources.ApplyResources(this.iservice_orders_total_brutto, "iservice_orders_total_brutto");
+            this.iservice_orders_total_brutto.Name = "iservice_orders_total_brutto";
+            this.iservice_orders_total_brutto.ReadOnly = true;
+            // 
+            // iservice_orders_mileage
+            // 
+            this.iservice_orders_mileage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.iservice_orders_mileage.DataPropertyName = "iservice_orders_mileage";
+            resources.ApplyResources(this.iservice_orders_mileage, "iservice_orders_mileage");
+            this.iservice_orders_mileage.Name = "iservice_orders_mileage";
+            this.iservice_orders_mileage.ReadOnly = true;
+            // 
+            // iservice_users_name
+            // 
+            this.iservice_users_name.DataPropertyName = "iservice_users_name";
+            resources.ApplyResources(this.iservice_users_name, "iservice_users_name");
+            this.iservice_users_name.Name = "iservice_users_name";
+            this.iservice_users_name.ReadOnly = true;
             // 
             // dataGridViewCars
             // 
@@ -1828,141 +1989,200 @@
             resources.ApplyResources(this.panel_setting_orders, "panel_setting_orders");
             this.panel_setting_orders.Name = "panel_setting_orders";
             // 
-            // iservice_orders_id
+            // panel_setting_import
             // 
-            this.iservice_orders_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_id.DataPropertyName = "iservice_orders_id";
-            resources.ApplyResources(this.iservice_orders_id, "iservice_orders_id");
-            this.iservice_orders_id.Name = "iservice_orders_id";
-            this.iservice_orders_id.ReadOnly = true;
+            this.panel_setting_import.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel_setting_import.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.panel_setting_import, "panel_setting_import");
+            this.panel_setting_import.Name = "panel_setting_import";
             // 
-            // iservice_orders_cars_id
+            // dataGridView1
             // 
-            this.iservice_orders_cars_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_cars_id.DataPropertyName = "iservice_orders_cars_id";
-            resources.ApplyResources(this.iservice_orders_cars_id, "iservice_orders_cars_id");
-            this.iservice_orders_cars_id.Name = "iservice_orders_cars_id";
-            this.iservice_orders_cars_id.ReadOnly = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25});
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle38;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.AliceBlue;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
-            // iservice_orders_user_id
+            // dataGridViewTextBoxColumn11
             // 
-            this.iservice_orders_user_id.DataPropertyName = "iservice_orders_user_id";
-            resources.ApplyResources(this.iservice_orders_user_id, "iservice_orders_user_id");
-            this.iservice_orders_user_id.Name = "iservice_orders_user_id";
-            this.iservice_orders_user_id.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "iservice_customers_id";
+            this.dataGridViewTextBoxColumn11.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn11, "dataGridViewTextBoxColumn11");
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
-            // iservice_orders_number
+            // dataGridViewTextBoxColumn12
             // 
-            this.iservice_orders_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_number.DataPropertyName = "iservice_orders_number";
-            resources.ApplyResources(this.iservice_orders_number, "iservice_orders_number");
-            this.iservice_orders_number.Name = "iservice_orders_number";
-            this.iservice_orders_number.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "iservice_customers_company";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn12, "dataGridViewTextBoxColumn12");
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
-            // iservice_orders_status_of_work
+            // dataGridViewTextBoxColumn13
             // 
-            this.iservice_orders_status_of_work.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_status_of_work.DataPropertyName = "iservice_orders_status_of_work";
-            resources.ApplyResources(this.iservice_orders_status_of_work, "iservice_orders_status_of_work");
-            this.iservice_orders_status_of_work.Name = "iservice_orders_status_of_work";
-            this.iservice_orders_status_of_work.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "iservice_customers_name";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn13, "dataGridViewTextBoxColumn13");
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // iservice_orders_status_name
+            // dataGridViewTextBoxColumn14
             // 
-            this.iservice_orders_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_status_name.DataPropertyName = "iservice_orders_status_name";
-            resources.ApplyResources(this.iservice_orders_status_name, "iservice_orders_status_name");
-            this.iservice_orders_status_name.Name = "iservice_orders_status_name";
-            this.iservice_orders_status_name.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "iservice_customers_surname";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn14, "dataGridViewTextBoxColumn14");
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // iservice_orders_status_of_payment
+            // dataGridViewTextBoxColumn15
             // 
-            this.iservice_orders_status_of_payment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_status_of_payment.DataPropertyName = "iservice_orders_status_of_payment";
-            resources.ApplyResources(this.iservice_orders_status_of_payment, "iservice_orders_status_of_payment");
-            this.iservice_orders_status_of_payment.Name = "iservice_orders_status_of_payment";
-            this.iservice_orders_status_of_payment.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "iservice_customers_patronymic";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn15, "dataGridViewTextBoxColumn15");
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
             // 
-            // iservice_orders_payment_status_name
+            // dataGridViewTextBoxColumn16
             // 
-            this.iservice_orders_payment_status_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_payment_status_name.DataPropertyName = "iservice_orders_payment_status_name";
-            resources.ApplyResources(this.iservice_orders_payment_status_name, "iservice_orders_payment_status_name");
-            this.iservice_orders_payment_status_name.Name = "iservice_orders_payment_status_name";
-            this.iservice_orders_payment_status_name.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "iservice_customers_country";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
-            // iservice_orders_date_of_creation
+            // dataGridViewTextBoxColumn17
             // 
-            this.iservice_orders_date_of_creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_date_of_creation.DataPropertyName = "iservice_orders_date_of_creation";
-            resources.ApplyResources(this.iservice_orders_date_of_creation, "iservice_orders_date_of_creation");
-            this.iservice_orders_date_of_creation.Name = "iservice_orders_date_of_creation";
-            this.iservice_orders_date_of_creation.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "iservice_customers_city";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
-            // iservice_orders_date_of_last_update
+            // dataGridViewTextBoxColumn18
             // 
-            this.iservice_orders_date_of_last_update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_date_of_last_update.DataPropertyName = "iservice_orders_date_of_last_update";
-            resources.ApplyResources(this.iservice_orders_date_of_last_update, "iservice_orders_date_of_last_update");
-            this.iservice_orders_date_of_last_update.Name = "iservice_orders_date_of_last_update";
-            this.iservice_orders_date_of_last_update.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "iservice_customers_street";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
             // 
-            // iservice_orders_expiry_date
+            // dataGridViewTextBoxColumn19
             // 
-            this.iservice_orders_expiry_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_expiry_date.DataPropertyName = "iservice_orders_expiry_date";
-            resources.ApplyResources(this.iservice_orders_expiry_date, "iservice_orders_expiry_date");
-            this.iservice_orders_expiry_date.Name = "iservice_orders_expiry_date";
-            this.iservice_orders_expiry_date.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "iservice_customers_zipcode";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             // 
-            // iservice_orders_prepayment
+            // dataGridViewTextBoxColumn20
             // 
-            this.iservice_orders_prepayment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_prepayment.DataPropertyName = "iservice_orders_prepayment";
-            resources.ApplyResources(this.iservice_orders_prepayment, "iservice_orders_prepayment");
-            this.iservice_orders_prepayment.Name = "iservice_orders_prepayment";
-            this.iservice_orders_prepayment.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "iservice_customers_telephone";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             // 
-            // iservice_orders_total_netto
+            // dataGridViewTextBoxColumn21
             // 
-            this.iservice_orders_total_netto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_total_netto.DataPropertyName = "iservice_orders_total_netto";
-            resources.ApplyResources(this.iservice_orders_total_netto, "iservice_orders_total_netto");
-            this.iservice_orders_total_netto.Name = "iservice_orders_total_netto";
-            this.iservice_orders_total_netto.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "iservice_customers_telephone_home";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
             // 
-            // iservice_orders_total_brutto
+            // dataGridViewTextBoxColumn22
             // 
-            this.iservice_orders_total_brutto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_total_brutto.DataPropertyName = "iservice_orders_total_brutto";
-            resources.ApplyResources(this.iservice_orders_total_brutto, "iservice_orders_total_brutto");
-            this.iservice_orders_total_brutto.Name = "iservice_orders_total_brutto";
-            this.iservice_orders_total_brutto.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "iservice_customers_date_of_birthday";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
             // 
-            // iservice_orders_mileage
+            // dataGridViewTextBoxColumn23
             // 
-            this.iservice_orders_mileage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.iservice_orders_mileage.DataPropertyName = "iservice_orders_mileage";
-            resources.ApplyResources(this.iservice_orders_mileage, "iservice_orders_mileage");
-            this.iservice_orders_mileage.Name = "iservice_orders_mileage";
-            this.iservice_orders_mileage.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "iservice_customers_email";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
             // 
-            // iservice_users_name
+            // dataGridViewTextBoxColumn24
             // 
-            this.iservice_users_name.DataPropertyName = "iservice_users_name";
-            resources.ApplyResources(this.iservice_users_name, "iservice_users_name");
-            this.iservice_users_name.Name = "iservice_users_name";
-            this.iservice_users_name.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "iservice_customers_date_of_creation";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn24, "dataGridViewTextBoxColumn24");
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "iservice_customers_employee";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn25, "dataGridViewTextBoxColumn25");
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::iservice5.Properties.Resources.bg;
+            this.Controls.Add(this.panel_setting_import);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel_setting_orders);
             this.Controls.Add(this.panel_timeline);
             this.Controls.Add(this.panel_dashboard);
-            this.Controls.Add(this.panel_setting_orders);
             this.Controls.Add(this.panel_setting_employee);
             this.Controls.Add(this.panelCompanySetting);
             this.Controls.Add(this.panel3_bottom);
@@ -2020,6 +2240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastclosedorders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastmadejobs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lastsolddetails)).EndInit();
+            this.panel_setting_import.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2180,6 +2402,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_total_brutto;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_orders_mileage;
         private System.Windows.Forms.DataGridViewTextBoxColumn iservice_users_name;
+        private System.Windows.Forms.Button button_setting_import;
+        private System.Windows.Forms.Panel panel_setting_import;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
     }
 }
 
