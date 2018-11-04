@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace iservice5.forms
 {
-    public partial class Calendar : Form
+    public partial class Calendar : MetroFramework.Forms.MetroForm
     {
         public Calendar()
         {
             InitializeComponent();
+        }
+
+        private void Calendar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

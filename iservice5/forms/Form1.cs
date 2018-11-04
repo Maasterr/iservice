@@ -21,13 +21,16 @@ namespace iservice5
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            panel_dashboard.Visible = false;
             TextStatus.Text = btnService.Text;
-           // panel1.Visible = false;
-            panelCompanySetting.Visible = false;
-            tableLayoutPanelCompanySetting.Visible = false;
+            panel_dashboard.Visible = false;
             panel4.Visible = true;
             tableLayoutPanelCompanySetting.Visible = false;
+            panelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
         }
 
         private void btnTimeLine_Click(object sender, EventArgs e)
@@ -66,6 +69,7 @@ namespace iservice5
             panel_setting_employee.Visible = false;
             panel_setting_orders.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
             TextStatus.Text = btnDashboard.Text;
         }
 
@@ -82,6 +86,11 @@ namespace iservice5
         {
             panel_dashboard.Visible = false;
             panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            panel_setting_import.Visible = false;
             panelCompanySetting.Visible = true;
             tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
@@ -699,12 +708,30 @@ namespace iservice5
 
         private void button_employee_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = false;
+            panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = true;
+            panel_setting_orders.Visible = false;
+            panel_setting_import.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_employee.Text;
 
         }
 
         private void button_orders_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = false;
+            panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = true;
+            panel_setting_import.Visible = false;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_orders.Text;
 
         }
@@ -743,11 +770,65 @@ namespace iservice5
         private void button_setting_import_Click(object sender, EventArgs e)
         {
             panel_dashboard.Visible = false;
-            panel_setting_import.Visible = true;
             panel4.Visible = false;
-            panelCompanySetting.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            panel_setting_import.Visible = true;
+            panelCompanySetting.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_setting_import.Text;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "CSV File (*.csv)|*.csv;";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                String[] row = System.IO.File.ReadAllLines(opnfd.FileName);
+                String[] data_col = null;
+                int header = 0;
+                // String st = File.ReadAllText(opnfd.FileName);
+                foreach (string line in row)
+                {
+                    if (header == 1) { 
+
+                        data_col = line.Split(';');
+                        Array.Resize(ref data_col, data_col.Length + 1);
+                        if (DataService.CheckCustomer(data_col[0], data_col[1], data_col[2]).Count > 0)
+                        {
+                            data_col[data_col.Length - 1] = "Exist";
+                        }else data_col[data_col.Length - 1] = "Not exist";
+                        // {
+                        //    fo
+                        // }
+                        // else
+                        //{
+                       
+                       
+                        dataGridView1.Rows.Add(data_col);
+                }
+                    header = 1;
+                   // }
+                  //  MessageBox.Show(line);
+                }
+               // dataGridView1.DataSource = sr;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            forms.Calendar newcustomer = new forms.Calendar();
+            newcustomer.Show();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            forms.Documents doc = new forms.Documents();
+            doc.Show();
         }
     }
 

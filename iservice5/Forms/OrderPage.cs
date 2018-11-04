@@ -106,49 +106,59 @@ namespace iservice5
            
 
         }
-
+        private int Heightcheck = 1;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            Bitmap bmp = Properties.Resources.iService;
-            Image newImg = bmp;
-
-            e.Graphics.DrawImage(newImg, 20, 20, newImg.Width, newImg.Height);
-            e.Graphics.DrawString("Order number: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 180));
-            e.Graphics.DrawString("Client: " + GlobalVars.Client, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 205));
-            e.Graphics.DrawString("Car: " + GlobalVars.regnumber, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 230));
-            e.Graphics.DrawString("Orders status: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, 180));
-            e.Graphics.DrawString("Payment status: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, 205));
-            e.Graphics.DrawString("Comments: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, 230));
-            e.Graphics.DrawString("Employee:" + GlobalVars.Employee, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(600, 180));
 
             int height = 350;
+            Bitmap bmp = Properties.Resources.iService;
+            Image newImg = bmp;
+            e.Graphics.DrawImage(newImg, 600, 25, newImg.Width, newImg.Height);
+            e.Graphics.DrawString(GlobalVars.iservice_company_name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 25));
+            e.Graphics.DrawString(GlobalVars.iservice_company_country +"," + GlobalVars.iservice_company_city + "," + GlobalVars.iservice_company_street + "," + GlobalVars.iservice_company_zipcode, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 50));
+            e.Graphics.DrawString(GlobalVars.iservice_company_phone + "," + GlobalVars.iservice_company_email, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 75));
+            e.Graphics.DrawString(GlobalVars.iservice_company_website, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 100));
+            e.Graphics.DrawString("Invoice #" + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number+"/1", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 140));
+            e.Graphics.DrawString("04.11.2018", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 140));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 155));
+
+
+            e.Graphics.DrawString("Order number: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 180));
+            e.Graphics.DrawString("Orders status: " + comboBoxOrderStatus.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 205));
+            e.Graphics.DrawString("Payment status: " + ComboBoxPaymentStatus.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 230));
+            e.Graphics.DrawString("Client: " +GlobalVars.Client, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 180));
+            e.Graphics.DrawString("Car: " + GlobalVars.regnumber, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 205));
+            e.Graphics.DrawString("Mileage: " + GlobalVars.selected_iservice_orders_mileage, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 230));
+            
             if (dataGridViewItemsWorks.Rows.Count > 0) {
-                e.Graphics.DrawString("Works", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(35, 300));
-                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 325));
+                e.Graphics.DrawString("Works", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, 310));
+                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 325));
                 e.Graphics.DrawString("#", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, 350));
                 e.Graphics.DrawString("Description", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, 350));
                 e.Graphics.DrawString("QTY", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, 350));
                 e.Graphics.DrawString("Price netto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 350));
                 e.Graphics.DrawString("Price brutto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, 350));
                 e.Graphics.DrawString("Total", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 350));
-                for (int i = 1; i <= dataGridViewItemsWorks.Rows.Count; i++)
+                for (int i = 0; i < dataGridViewItemsWorks.Rows.Count; i++)
             {
                     height = height + 25;
                 e.Graphics.DrawString(i.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, height));
-                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[4].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
-                e.Graphics.DrawString("2", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
-                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[7].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
-                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[8].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
-                e.Graphics.DrawString("500", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
-                
+                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[i].Cells[4].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[i].Cells[5].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
+                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[i].Cells[8].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
+                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[i].Cells[9].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+                e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[i].Cells[10].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));                
             }
+                height = height + 25;
+                e.Graphics.DrawString("Sum", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+                e.Graphics.DrawString(labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             }
             if (dataGridViewItemsDetails.Rows.Count > 0)
             {
                 height = height + 50;
-                e.Graphics.DrawString("Details", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(35, height));
-                height = height + 25;
-                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
+                e.Graphics.DrawString("Details", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, height));
+                height = height + 15;
+                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
                 height = height + 25;
                 e.Graphics.DrawString("#", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, height));
                 e.Graphics.DrawString("Description", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
@@ -157,18 +167,51 @@ namespace iservice5
                 e.Graphics.DrawString("Price brutto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
                 e.Graphics.DrawString("Total", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
-                for (int i = 1; i <= dataGridViewItemsDetails.Rows.Count; i++)
+                for (int i = 0; i < dataGridViewItemsDetails.Rows.Count; i++)
                 {
                     height = height + 25;
                     e.Graphics.DrawString(i.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, height));
-                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[4].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
-                    e.Graphics.DrawString("2", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
-                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[7].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
-                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsWorks.Rows[0].Cells[8].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
-                    e.Graphics.DrawString("500", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
+                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsDetails.Rows[i].Cells[4].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsDetails.Rows[i].Cells[5].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
+                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsDetails.Rows[i].Cells[8].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
+                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsDetails.Rows[i].Cells[9].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+                    e.Graphics.DrawString(Convert.ToString(dataGridViewItemsDetails.Rows[i].Cells[10].Value), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
                     
                 }
             }
+            height = height + 25;
+            e.Graphics.DrawString("Sum", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+            e.Graphics.DrawString(labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
+
+            height = height + 100;
+             e.Graphics.DrawString("Sum of Details: " + labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+             height = height + 25;
+            e.Graphics.DrawString("Sum of Works: " + labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            height = height + 25;
+            e.Graphics.DrawString("Sum: "+ labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            height = height + 25;
+            e.Graphics.DrawString("Paid: 0", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            height = height + 25;
+            e.Graphics.DrawString("To pay: " + labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+
+
+
+            float pageHeight = e.PageSettings.PrintableArea.Height;
+            height = height + 150;
+        /*
+            if (height >= pageHeight)
+            {
+                e.HasMorePages = false;                       
+            }
+            else
+            {
+                e.HasMorePages = true;
+                height = 30;
+            }*/
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height - 25));
+            e.Graphics.DrawString("Employee: " + GlobalVars.Employee, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
+            e.Graphics.DrawString("Comments: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, height));
+
 
         }
 

@@ -52,6 +52,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.labelEmployee = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iservicecustomersBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -122,10 +123,10 @@
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -133,9 +134,9 @@
             // 
             // btnAdd
             // 
-            resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -144,20 +145,20 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxReg, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelName, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxColor, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxVin, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxModel, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxBrand, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxReg, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxColor, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxVin, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxModel, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxBrand, 1, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // label7
@@ -209,10 +210,17 @@
             this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label13.Name = "label13";
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Name = "label8";
+            // 
             // NewCar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.labelEmployee);
@@ -220,6 +228,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnCancel);
+            this.DisplayHeader = false;
             this.Name = "NewCar";
             this.Resizable = false;
             this.Load += new System.EventHandler(this.NewCar_Load);
@@ -255,5 +264,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxColor;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -39,7 +39,16 @@ namespace iservice5
                 return db.Query<iservice_customers>("Select * from iservice_customers").ToList();
             }
         }
-         public static List<iservice_customers> NewCustomer(String iservice_customers_name,String iservice_customers_surname,String iservice_customers_patronymic, String iservice_customers_country, String iservice_customers_city, String iservice_customers_street, String iservice_customers_zipcode, String iservice_customers_telephone, String iservice_customers_telephone_home, String iservice_customers_date_of_birthday, String iservice_customers_email, String iservice_customers_date_of_creation,String iservice_customers_employee, String iservice_customers_company)
+        public static List<iservice_customers> CheckCustomer(String name,String surname,String patronymic)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_customers>("Select * from iservice_customers where iservice_customers_name= '"+name+"'and iservice_customers_surname = '"+surname+"' and iservice_customers_patronymic='"+patronymic+"'").ToList();
+            }
+        }
+        public static List<iservice_customers> NewCustomer(String iservice_customers_name,String iservice_customers_surname,String iservice_customers_patronymic, String iservice_customers_country, String iservice_customers_city, String iservice_customers_street, String iservice_customers_zipcode, String iservice_customers_telephone, String iservice_customers_telephone_home, String iservice_customers_date_of_birthday, String iservice_customers_email, String iservice_customers_date_of_creation,String iservice_customers_employee, String iservice_customers_company)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {

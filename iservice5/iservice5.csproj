@@ -104,6 +104,12 @@
     <Compile Include="forms\Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Documents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     <Compile Include="forms\warehouse_works.Designer.cs">
       <DependentUpon>warehouse_works.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="forms\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
