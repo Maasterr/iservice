@@ -52,8 +52,15 @@ namespace iservice5
                 textBoxCompany.Text = GlobalVars.selected_iservice_customers_company;
                 if (textBoxCompany.Text != "")
                     checkBox1.Checked = true;
-                dateTimePickerBirthay.Value = Convert.ToDateTime(GlobalVars.selected_iservice_customers_date_of_birthday);
-                labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;
+                try {
+                    dateTimePickerBirthay.Value = Convert.ToDateTime(GlobalVars.selected_iservice_customers_date_of_birthday);
+                }
+                catch (Exception ex)
+                {
+                  
+                }
+            
+                 labelEmployee.Text = GlobalVars.selected_iservice_customers_date_of_birthday;
                 labelDate.Text = GlobalVars.selected_iservice_customers_date_of_creation;
             }
 

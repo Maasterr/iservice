@@ -52,7 +52,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.labelEmployee = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iservicecustomersBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -210,17 +209,10 @@
             this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label13.Name = "label13";
             // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Name = "label8";
-            // 
             // NewCar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.labelEmployee);
@@ -228,7 +220,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnCancel);
-            this.DisplayHeader = false;
             this.Name = "NewCar";
             this.Resizable = false;
             this.Load += new System.EventHandler(this.NewCar_Load);
@@ -264,6 +255,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxColor;
-        private System.Windows.Forms.Label label8;
     }
 }

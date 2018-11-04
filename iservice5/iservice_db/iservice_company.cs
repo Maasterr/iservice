@@ -11,7 +11,7 @@ namespace iservice5
        
 
             public int iservice_company_id { get; set; }
-            public int iservice_company_inside_id { get; set; }
+            public int iservice_company_key{ get; set; }
             public string iservice_company_name { get; set; }
             public string iservice_company_country { get; set; }
             public string iservice_company_city { get; set; }

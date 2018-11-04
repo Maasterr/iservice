@@ -30,13 +30,13 @@ namespace iservice5.forms
             btnAdd.Text = Status;
             if (Status == "Add")
             {
-                this.Text = "New work item";
+                this.Text = "New detail";
                 labelEmployee.Text = GlobalVars.Employee;
                 labelDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm");
             }
             else
             {
-                this.Text = "Edit work item";
+                this.Text = "Edit detail";
 
 
                 labelEmployee.Text = GlobalVars.selected_iservice_customers_employee;

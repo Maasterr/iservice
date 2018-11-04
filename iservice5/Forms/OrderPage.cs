@@ -235,7 +235,7 @@ namespace iservice5
 
             if (Status == "Add")
             {
-                this.Text = "New customer";
+                //this.Text = "New customer";
                 labelEmployee.Text = GlobalVars.Employee;
                 labelCreationDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
                 //labelOrderNumber.Text = "-";
@@ -246,7 +246,7 @@ namespace iservice5
             else
             {               
                 labelEmployee.Text = GlobalVars.selected_iservice_orders_user_name;
-                this.Text = "Edit customer";
+                //this.Text = "Edit customer";
                 comboBoxOrderStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_work);
                 ComboBoxPaymentStatus.SelectedValue = Convert.ToInt32(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_of_payment);    
                 labelOrderNumber.Text = Convert.ToString(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number);
