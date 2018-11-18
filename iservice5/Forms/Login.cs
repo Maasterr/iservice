@@ -27,8 +27,9 @@ namespace iservice5
         }
         private void Login_Load(object sender, EventArgs e)
         {
-            pictureBox3.Visible = false;
-            pictureBox2.Visible = true;
+            metroTextBoxKey.Text = Convert.ToString(DataService.GetKey()[0].iservice_company_key);
+            metroButton3.Text = "Check";
+            checkkey();
             this.ControlBox = false;
             if (Username != null)
             {
@@ -63,21 +64,37 @@ namespace iservice5
             this.Close();
         }
 
-        private void metroButton3_Click(object sender, EventArgs e)
+        private void checkkey()
         {
-            if (DataService.CheckKey(metroTextBoxKey.Text).Count > 0)
+            if (metroButton3.Text == "Check")
             {
-                //   GlobalVars.iservice_company_key = metroTextBoxUsername.Text;
-                DataService.UpdateKey(metroTextBoxKey.Text);
-                GlobalVars.iservice_company_key = Convert.ToInt32(metroTextBoxKey.Text);
-                pictureBox2.Visible = false;
-                pictureBox3.Visible = true;
+                if (DataService.CheckKey(metroTextBoxKey.Text).Count > 0)
+                {                 
+                    DataService.UpdateKey(metroTextBoxKey.Text);
+                    GlobalVars.iservice_company_key = Convert.ToInt32(metroTextBoxKey.Text);
+                    pictureBox2.Visible = false;
+                    pictureBox3.Visible = true;
+                    metroTextBoxKey.Enabled = false;
+                    metroButton3.Text = "Change";
+                }
+                else
+                {
+                    pictureBox3.Visible = false;
+                    pictureBox2.Visible = true;
+                }
             }
-            else
+            else if (metroButton3.Text == "Change")
             {
                 pictureBox3.Visible = false;
                 pictureBox2.Visible = true;
+                metroTextBoxKey.Enabled = true;
+                metroButton3.Text = "Check";
             }
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            checkkey();
+         }
     }
 }

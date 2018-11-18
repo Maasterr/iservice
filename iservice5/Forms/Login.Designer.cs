@@ -69,9 +69,9 @@
             // metroButton3
             // 
             this.metroButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.metroButton3.Location = new System.Drawing.Point(206, 103);
+            this.metroButton3.Location = new System.Drawing.Point(193, 103);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(64, 28);
+            this.metroButton3.Size = new System.Drawing.Size(77, 28);
             this.metroButton3.TabIndex = 56;
             this.metroButton3.Text = "Check";
             this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -81,18 +81,18 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::iservice5.Properties.Resources.Tick_Box_16px;
-            this.pictureBox3.Location = new System.Drawing.Point(24, 109);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 107);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 18);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 24);
             this.pictureBox3.TabIndex = 58;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::iservice5.Properties.Resources.Error_16px;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 107);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 18);
+            this.pictureBox2.Size = new System.Drawing.Size(34, 24);
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
             // 
@@ -103,7 +103,7 @@
             // 
             // 
             this.metroTextBoxKey.CustomButton.Image = null;
-            this.metroTextBoxKey.CustomButton.Location = new System.Drawing.Point(126, 2);
+            this.metroTextBoxKey.CustomButton.Location = new System.Drawing.Point(113, 2);
             this.metroTextBoxKey.CustomButton.Name = "";
             this.metroTextBoxKey.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.metroTextBoxKey.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -113,7 +113,7 @@
             this.metroTextBoxKey.CustomButton.Visible = false;
             this.metroTextBoxKey.DisplayIcon = true;
             this.metroTextBoxKey.ForeColor = System.Drawing.Color.Black;
-            this.metroTextBoxKey.Icon = global::iservice5.Properties.Resources.YubiKey_16px;
+            this.metroTextBoxKey.Icon = global::iservice5.Properties.Resources.Usb_Memory_Stick_16px;
             this.metroTextBoxKey.Lines = new string[0];
             this.metroTextBoxKey.Location = new System.Drawing.Point(48, 103);
             this.metroTextBoxKey.MaxLength = 32767;
@@ -125,7 +125,7 @@
             this.metroTextBoxKey.SelectionLength = 0;
             this.metroTextBoxKey.SelectionStart = 0;
             this.metroTextBoxKey.ShortcutsEnabled = true;
-            this.metroTextBoxKey.Size = new System.Drawing.Size(152, 28);
+            this.metroTextBoxKey.Size = new System.Drawing.Size(139, 28);
             this.metroTextBoxKey.TabIndex = 55;
             this.metroTextBoxKey.UseSelectable = true;
             this.metroTextBoxKey.WaterMark = "Key";

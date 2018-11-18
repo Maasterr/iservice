@@ -9,7 +9,7 @@ namespace iservice5
 {
     public class GlobalVars
     {
-        public static int iservice_company_key = 111111;
+        public static int iservice_company_key = DataService.GetKey()[0].iservice_company_key;
         public static String Employee;
         public static int Employee_id;
         public static String regnumber;

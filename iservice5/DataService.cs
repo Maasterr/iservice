@@ -30,6 +30,15 @@ namespace iservice5
                 return db.Query<iservice_company>("Select * from iservice_company where iservice_company_key = '" + key+"'").ToList();
             }
         }
+        public static List<iservice_company> GetKey()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_company>("Select iservice_company_key from iservice_company where iservice_company_id = 1").ToList();
+            }
+        }
         public static List<iservice_company> UpdateKey(String key)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
@@ -341,7 +350,8 @@ namespace iservice5
 
                 return db.Query<iservice_items>("select * from iservice_items WHERE iservice_items_type = 'works'").ToList();
             }
-        }   public static List<iservice_items> ItemsDetailsGetData()
+        }
+        public static List<iservice_items> ItemsDetailsGetData()
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
@@ -351,7 +361,16 @@ namespace iservice5
                 return db.Query<iservice_items>("select * from iservice_items WHERE iservice_items_type = 'details'").ToList();
             }
         }
+        public static List<iservice_timeline> TimelineGetDayByDateandStation(String Date,String Station)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
 
+                return db.Query<iservice_timeline>("select * from iservice_timeline WHERE iservice_timeline_date= '" + Date + "' and iservice_timeline_station='" + Station+"'").ToList() ?? null;
+            }
+        }
 
     }
 }
