@@ -154,11 +154,17 @@
   <data name="Maintenance_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maintenance_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Key_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Key_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Delete_File_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete File_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Print_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Print_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="YubiKey_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YubiKey_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_List_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add List_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add_File_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add File_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +175,11 @@
   <data name="Box_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Box_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Error_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Error_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_List_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add List_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lock_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lock_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Key 2_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Key 2_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Maintenance_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maintenance_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +187,11 @@
   <data name="Profile_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Profile_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Print_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Print_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lock_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Print_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete_File_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete File_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -198,6 +204,9 @@
   </data>
   <data name="iService" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iService.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tick Box_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tick Box_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,16 +223,25 @@
   <data name="Settings_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Exit_18px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit_18px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Permanent_Job_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Permanent Job_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lock_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Print_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add_File_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add File_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Exit_18px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit_18px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Checkmark_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checkmark_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

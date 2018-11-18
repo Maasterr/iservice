@@ -9,22 +9,22 @@ namespace iservice5
 {
     public class GlobalVars
     {
-        public static int iservice_company_inside_id = 111111;
+        public static int iservice_company_key = 111111;
         public static String Employee;
         public static int Employee_id;
         public static String regnumber;
         public static String OrderNumber;
         public static String Client;
-        public static String iservice_company_name = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_name;
-        public static String iservice_company_country = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_country;
-        public static String iservice_company_city = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_city;
-        public static String iservice_company_street = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_street;
-        public static String iservice_company_zipcode = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_zipcode;
-        public static String iservice_company_phone = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_phone;
-        public static String iservice_company_fax = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_fax;
-        public static String iservice_company_email = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_email;
-        public static String iservice_company_vat_number = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_vat_number;
-        public static String iservice_company_website = DataService.CompanyGetData(GlobalVars.iservice_company_inside_id)[0].iservice_company_website;
+        public static String iservice_company_name = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_name;
+        public static String iservice_company_country = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_country;
+        public static String iservice_company_city = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_city;
+        public static String iservice_company_street = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_street;
+        public static String iservice_company_zipcode = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_zipcode;
+        public static String iservice_company_phone = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_phone;
+        public static String iservice_company_fax = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_fax;
+        public static String iservice_company_email = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_email;
+        public static String iservice_company_vat_number = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_vat_number;
+        public static String iservice_company_website = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_website;
 
         public static int selected_iservice_customers_id;
         public static String selected_iservice_customers_name;

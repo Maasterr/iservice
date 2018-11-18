@@ -62,6 +62,9 @@
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -83,9 +86,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\sync\Microsoft.Synchronization.Data.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataService.cs" />
+    <Compile Include="DataServiceMySql.cs" />
     <Compile Include="forms\Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +295,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>iservice.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Checkmark_16px.png" />
+    <None Include="Resources\Tick Box_16px.png" />
+    <None Include="Resources\Error_16px.png" />
+    <None Include="Resources\YubiKey_16px.png" />
+    <None Include="Resources\Key_16px.png" />
+    <None Include="Resources\Key 2_16px.png" />
     <None Include="Resources\Exit_18px1.png" />
     <None Include="Resources\Exit_18px.png" />
     <None Include="Resources\box_grey.png" />

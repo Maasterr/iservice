@@ -18,7 +18,25 @@ namespace iservice5
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_users>("Select * from iservice_users where iservice_users_name = '"+login+"' and iservice_users_password='"+password+"'").ToList();
+                return db.Query<iservice_users>("Select * from dbo.iservice_users where iservice_users_name = '" + login+"' and iservice_users_password='"+password+"'").ToList();
+            }
+        }
+        public static List<iservice_company> CheckKey(String key)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_company>("Select * from iservice_company where iservice_company_key = '" + key+"'").ToList();
+            }
+        }
+        public static List<iservice_company> UpdateKey(String key)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                return db.Query<iservice_company>("Update iservice_company set iservice_company_key = '" + key+"' where iservice_company_id =1" ).ToList();
             }
         }
         public static List<iservice_users> GetUsers()
@@ -293,24 +311,24 @@ namespace iservice5
                 return db.Query<iservice_orders_payment_status>("SELECT * FROM iservice_orders_payment_status").ToList();
             }
         }
-        public static List<iservice_company> CompanySetData(int iservice_company_inside_id, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email)
+        public static List<iservice_company> CompanySetData(int iservice_company_key, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("UPDATE iservice_company SET iservice_company_name = N'" + iservice_company_name + "', iservice_company_country = N'" + iservice_company_country + "', iservice_company_city = N'" + iservice_company_city + "', iservice_company_street = N'" + iservice_company_street + "', iservice_company_zipcode = N'" + iservice_company_zipcode + "', iservice_company_phone = '" + iservice_company_phone + "', iservice_company_fax = '" + iservice_company_fax + "', iservice_company_website = N'" + iservice_company_website + "',iservice_company_email = N'" + iservice_company_email + "', iservice_company_vat_number = N'" + iservice_company_vat_number + "' WHERE iservice_company_inside_id = '" + iservice_company_inside_id+"'");           
+                db.Execute("UPDATE iservice_company SET iservice_company_name = N'" + iservice_company_name + "', iservice_company_country = N'" + iservice_company_country + "', iservice_company_city = N'" + iservice_company_city + "', iservice_company_street = N'" + iservice_company_street + "', iservice_company_zipcode = N'" + iservice_company_zipcode + "', iservice_company_phone = '" + iservice_company_phone + "', iservice_company_fax = '" + iservice_company_fax + "', iservice_company_website = N'" + iservice_company_website + "',iservice_company_email = N'" + iservice_company_email + "', iservice_company_vat_number = N'" + iservice_company_vat_number + "' WHERE iservice_company_key = '" + iservice_company_key+"'");           
                 return null;
             }
         } 
-        public static List<iservice_company> CompanyGetData(int iservice_company_inside_id)
+        public static List<iservice_company> CompanyGetData(int iservice_company_key)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
                
-                return db.Query<iservice_company>("select * from iservice_company WHERE iservice_company_inside_id = " + iservice_company_inside_id).ToList();
+                return db.Query<iservice_company>("select * from iservice_company WHERE iservice_company_key = " + iservice_company_key).ToList();
             }
         }
 

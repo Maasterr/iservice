@@ -425,7 +425,7 @@ namespace iservice5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (DataService.CompanySetData(GlobalVars.iservice_company_inside_id, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text) == null)
+            if (DataService.CompanySetData(GlobalVars.iservice_company_key, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text) == null)
             {
                 MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
                 string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
