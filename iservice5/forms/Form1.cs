@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +17,20 @@ namespace iservice5
     {
         public Form1()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
             InitializeComponent();
+            for(int i = 0; i <= 500; i++)
+            {
+                Thread.Sleep(5);
+            }
+            t.Abort();
+        }
+        public void StartForm()
+        {
+            forms.SplashScreen splashform = new forms.SplashScreen();
+            Application.Run(splashform);
+            //Application.Run(new forms.Splash());
         }
 
 
@@ -27,6 +42,7 @@ namespace iservice5
             tableLayoutPanelCompanySetting.Visible = false;
             panelCompanySetting.Visible = false;
             panel_timeline.Visible = false;
+            panelwarehouse.Visible = false;
             panel_setting_employee.Visible = false;
             panel_setting_orders.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
@@ -35,10 +51,17 @@ namespace iservice5
 
         private void btnTimeLine_Click(object sender, EventArgs e)
         {
-            TextStatus.Text = btnTimeLine.Text;
+            TextStatus.Text = btnService.Text;
+            panel_dashboard.Visible = false;
             panel4.Visible = false;
-            panelCompanySetting.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
+            panelCompanySetting.Visible = false;
+            panel_timeline.Visible = true;
+            panelwarehouse.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
         }
 
         private void btnClients_Click(object sender, EventArgs e)
@@ -70,16 +93,25 @@ namespace iservice5
             panel_setting_orders.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             panel_setting_import.Visible = false;
+            panelwarehouse.Visible = false;
             TextStatus.Text = btnDashboard.Text;
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-            warehouse newcustomer1 = new warehouse();
-            newcustomer1.Show();
+            //warehouse newcustomer1 = new warehouse();
+            //newcustomer1.Show();
+            TextStatus.Text = btnService.Text;
+            panel_dashboard.Visible = false;
             panel4.Visible = false;
-            panelCompanySetting.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
+            panelCompanySetting.Visible = false;
+            panel_timeline.Visible = false;
+            panelwarehouse.Visible = true;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
             TextStatus.Text = btnService.Text + " --> " + btnWarehouse.Text;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -92,6 +124,7 @@ namespace iservice5
             panel_setting_orders.Visible = false;
             panel_setting_import.Visible = false;
             panelCompanySetting.Visible = true;
+            panelwarehouse.Visible = false;
             tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
 
@@ -167,6 +200,21 @@ namespace iservice5
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Order panel
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
+            try
+            {
+               pictureBoxSettingLogo.Image = Image.FromFile(appPath);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            textBoxDocPath.Text = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_path;
+            GlobalVars.iservice_company_path = textBoxDocPath.Text;
+            //Order panel end
+
+            labelLicence.Text = "Licence " + GlobalVars.iservice_company_key;
             dataGridViewOrdersinProcess.DataSource = DataService.GetOrderStatusList();
             dataGridView_lastactivecars.DataSource = DataService.GetOrderStatusList();
             dataGridView_lastactivecustomers.DataSource = DataService.GetOrderStatusList();
@@ -181,7 +229,7 @@ namespace iservice5
             dataGridView_lastsolddetails.ClearSelection();
 
             labelEmployee.Text = GlobalVars.Employee;
-            
+
             textBoxSettingsName.Text = GlobalVars.iservice_company_name;
             textBoxSettingsCountry.Text = GlobalVars.iservice_company_country;
             textBoxSettingsCity.Text = GlobalVars.iservice_company_city;
@@ -193,9 +241,19 @@ namespace iservice5
             textBoxSettingsVAT.Text = GlobalVars.iservice_company_vat_number;
             textBoxSettingsWebsite.Text = GlobalVars.iservice_company_website;
 
-          //  panel1.Visible = false;
+            //  panel1.Visible = false;
+            panel_dashboard.Visible = true;
+            panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             panelCompanySetting.Visible = false;
-            panel4.Visible = true;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
+            panelwarehouse.Visible = false;
+            TextStatus.Text = btnDashboard.Text;
+
             dataGridViewClients.DataSource = DataService.GetAllCustomers();
             dataGridViewClients.ClearSelection();
             tableLayoutPanelCompanySetting.Visible = false;
@@ -205,15 +263,89 @@ namespace iservice5
 
 
 
+            dataGridViewTimeLine.Rows.Add("6.00-6.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("6.30-7.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("7.00-7.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("7.30-8.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("8.00-8.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("8.30-9.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("9.00-9.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("9.30-10.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("10.00-10.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("10.30-11.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("11.00-11.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("11.30-12.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("12.00-12.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("12.30-13.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("13.00-13.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("13.30-14.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("14.00-14.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("14.30-15.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("15.00-15.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("15.30-16.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("16.00-16.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("16.30-17.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("17.00-17.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("17.30-18.00", "", "", "");
+            dataGridViewTimeLine.Rows.Add("18.00-18.30", "", "", "");
+            dataGridViewTimeLine.Rows.Add("18.30-19.00", "", "", "");
+            // dataGridViewTimeLine.Rows.Add("19.00-19.30", "", "", "");
+            //dataGridViewTimeLine.Rows.Add("19.30-20.00", "", "", "");
 
+            dataGridViewTimeLine.Rows[0].Visible = false;
+            dataGridViewTimeLine.Rows[1].Visible = false;
+            dataGridViewTimeLine.Rows[2].Visible = false;
+            dataGridViewTimeLine.Rows[3].Visible = false;
+            for (int j = 1; j < dataGridViewTimeLine.Columns.Count; ++j)
+            {
+                if (DataService.TimelineGetDayByDateandStation("14",j.ToString()).Count > 0) { 
+                 
+                        dataGridViewTimeLine[j, 0].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_600_630;
+                        dataGridViewTimeLine[j, 1].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_630_700;
+                        dataGridViewTimeLine[j, 2].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_700_730;
+                        dataGridViewTimeLine[j, 3].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_730_800;
+                        dataGridViewTimeLine[j, 4].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_800_830;
+                        dataGridViewTimeLine[j, 5].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_830_900;
+                        dataGridViewTimeLine[j, 6].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_900_930;
+                        dataGridViewTimeLine[j, 7].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_930_1000;
+                        dataGridViewTimeLine[j, 8].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1000_1030;
+                        dataGridViewTimeLine[j, 9].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1030_1100;
+                        dataGridViewTimeLine[j, 10].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1100_1130;
+                        dataGridViewTimeLine[j, 11].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1130_1200;
+                        dataGridViewTimeLine[j, 12].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1200_1230;
+                        dataGridViewTimeLine[j, 13].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1230_1300;
+                        dataGridViewTimeLine[j, 14].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1300_1330;
+                        dataGridViewTimeLine[j, 15].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1330_1400;
+                        dataGridViewTimeLine[j, 16].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1400_1430;
+                        dataGridViewTimeLine[j, 17].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1430_1500;
+                        dataGridViewTimeLine[j, 18].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1500_1530;
+                        dataGridViewTimeLine[j, 19].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1530_1600;
+                        dataGridViewTimeLine[j, 20].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1600_1630;
+                        dataGridViewTimeLine[j, 21].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1630_1700;
+                        dataGridViewTimeLine[j, 22].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1700_1730;
+                        dataGridViewTimeLine[j, 23].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1730_1800;
+                        dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1800_1830;
+                        dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1830_1900;
+                    }          
+            }
+
+            for (int i = 0; i < DataService.ItemsDetailsGetData().Count; i++)
+            {
+                dataGridViewItemsDetails.Rows.Add(DataService.ItemsDetailsGetData()[i].iservice_items_id, DataService.ItemsDetailsGetData()[i].iservice_items_type, DataService.ItemsDetailsGetData()[i].iservice_items_category, DataService.ItemsDetailsGetData()[i].iservice_items_subcategory, DataService.ItemsDetailsGetData()[i].iservice_items_description, DataService.ItemsDetailsGetData()[i].iservice_items_qty, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsDetailsGetData()[i].iservice_items_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_price_brutto, "", DataService.ItemsDetailsGetData()[i].iservice_items_qty_type);
+            }
+            dataGridViewItemsDetails.RowHeadersVisible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog opnfd = new OpenFileDialog();
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;*.gif;*.png)|*.jpg;*.jpeg;*.gif;*.png;";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
+                pictureBoxSettingLogo.InitialImage = null;
+                pictureBoxSettingLogo.Image.Dispose();
+                pictureBoxSettingLogo.Image = null;
                 pictureBoxSettingLogo.Image = new Bitmap(opnfd.FileName);
 
             }
@@ -425,18 +557,38 @@ namespace iservice5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (DataService.CompanySetData(GlobalVars.iservice_company_inside_id, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text) == null)
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
+
+            if (DataService.CompanySetData(GlobalVars.iservice_company_key, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text, textBoxDocPath.Text) == null)
             {
-                MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
-                string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
-                pictureBoxSettingLogo.Image.Save(appPath, System.Drawing.Imaging.ImageFormat.Png);
-                label19.Text = "Saved";
+                 Bitmap bmp = new Bitmap(pictureBoxSettingLogo.Image);
+                pictureBoxSettingLogo.InitialImage = null;
+                pictureBoxSettingLogo.Image.Dispose();
+                pictureBoxSettingLogo.Image = null;
+                if (System.IO.File.Exists(appPath))
+                    System.IO.File.Delete(appPath);
+                bmp.Save(appPath, System.Drawing.Imaging.ImageFormat.Png);
+              
+                 MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
+
+                GlobalVars.iservice_company_path = textBoxDocPath.Text;
+
+               
             }
             else
             {
                 MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
 
-                label19.Text = "Error";
+               
+            }
+            //Thread.Sleep(2000);
+            try
+            {
+                pictureBoxSettingLogo.Image = Image.FromFile(appPath);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -702,6 +854,14 @@ namespace iservice5
 
         private void button_company_Click(object sender, EventArgs e)
         {
+            panel_dashboard.Visible = false;
+            panel4.Visible = false;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            panel_setting_import.Visible = false;
+            panelCompanySetting.Visible = true;
+            tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
 
         }
@@ -710,7 +870,6 @@ namespace iservice5
         {
             panel_dashboard.Visible = false;
             panel4.Visible = false;
-            tableLayoutPanelCompanySetting.Visible = false;
             panel_timeline.Visible = false;
             panel_setting_employee.Visible = true;
             panel_setting_orders.Visible = false;
@@ -725,7 +884,6 @@ namespace iservice5
         {
             panel_dashboard.Visible = false;
             panel4.Visible = false;
-            tableLayoutPanelCompanySetting.Visible = false;
             panel_timeline.Visible = false;
             panel_setting_employee.Visible = false;
             panel_setting_orders.Visible = true;
@@ -771,7 +929,6 @@ namespace iservice5
         {
             panel_dashboard.Visible = false;
             panel4.Visible = false;
-            tableLayoutPanelCompanySetting.Visible = false;
             panel_timeline.Visible = false;
             panel_setting_employee.Visible = false;
             panel_setting_orders.Visible = false;
@@ -787,6 +944,7 @@ namespace iservice5
             opnfd.Filter = "CSV File (*.csv)|*.csv;";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
+                label25.Text = opnfd.FileName;
                 String[] row = System.IO.File.ReadAllLines(opnfd.FileName);
                 String[] data_col = null;
                 int header = 0;
@@ -821,8 +979,13 @@ namespace iservice5
         private void button5_Click(object sender, EventArgs e)
         {
 
-            forms.Calendar newcustomer = new forms.Calendar();
-            newcustomer.Show();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                DataService.NewCustomer(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[6].Value), Convert.ToString(row.Cells[7].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value), "", Convert.ToString(row.Cells[10].Value), "", "", Convert.ToString(row.Cells[0].Value));
+                row.Cells[11].Value = "Imported";
+
+
+            }
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -830,6 +993,83 @@ namespace iservice5
             forms.Documents doc = new forms.Documents();
             doc.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "CSV File (*.csv)|*.csv;";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                label1.Text = opnfd.FileName;
+                String[] row = System.IO.File.ReadAllLines(opnfd.FileName);
+                String[] data_col = null;
+                int header = 0;
+                // String st = File.ReadAllText(opnfd.FileName);
+                foreach (string line in row)
+                {
+                    if (header == 1)
+                    {
+
+                        data_col = line.Split(';');
+                        Array.Resize(ref data_col, data_col.Length + 1);
+                        if (DataService.CheckCustomer(data_col[0], data_col[1], data_col[2]).Count > 0)
+                        {
+                            data_col[data_col.Length - 1] = "Exist";
+                        }
+                        else data_col[data_col.Length - 1] = "Not exist";
+                        // {
+                        //    fo
+                        // }
+                        // else
+                        //{
+
+
+                        dataGridView2.Rows.Add(data_col);
+                    }
+                    header = 1;
+                    // }
+                    //  MessageBox.Show(line);
+                }
+                // dataGridView1.DataSource = sr;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                //DataService.NewCar(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[6].Value), Convert.ToString(row.Cells[7].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[9].Value), "", Convert.ToString(row.Cells[10].Value), "", "", Convert.ToString(row.Cells[0].Value));
+                //row.Cells[11].Value = "Imported";
+
+
+            }
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            forms.About about = new forms.About();
+            about.Show();
+        }
+
+        private void Hello_Click(object sender, EventArgs e)
+        {
+            forms.Help help = new forms.Help();
+            help.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            using (var folderDialog = new FolderBrowserDialog())
+            {
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    textBoxDocPath.Text = folderDialog.SelectedPath;
+                }
+            }
+        }
+
+      
     }
 
    

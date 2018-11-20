@@ -222,8 +222,9 @@ namespace iservice5
         private int totaldetails, totalworks;
         private void OrderPage_Load(object sender, EventArgs e)
         {
+           
             //button6.Text = Status;
-            
+
             labelRegNumber.Text = GlobalVars.regnumber;
             labelClient.Text = GlobalVars.Client;
             comboBoxOrderStatus.DataSource = DataService.GetOrderStatusList();
@@ -232,7 +233,11 @@ namespace iservice5
             ComboBoxPaymentStatus.DataSource = DataService.GetOrderPaymentStatusList();
             ComboBoxPaymentStatus.ValueMember = "iservice_orders_payment_status_id";
             ComboBoxPaymentStatus.DisplayMember = "iservice_orders_payment_status_name";
-
+            if (ComboBoxPaymentStatus.SelectedIndex == 1)
+            {
+                tableLayoutPanel11.Visible = true;
+            }
+            else tableLayoutPanel11.Visible = false;
             if (Status == "Add")
             {
                 //this.Text = "New customer";
@@ -357,6 +362,11 @@ namespace iservice5
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ComboBoxPaymentStatus.SelectedIndex == 1){
+                tableLayoutPanel11.Visible = true;
+
+            }
+            else tableLayoutPanel11.Visible = false;
 
         }
     }
