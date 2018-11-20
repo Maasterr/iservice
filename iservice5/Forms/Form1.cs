@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,13 +19,18 @@ namespace iservice5
         {
             Thread t = new Thread(new ThreadStart(StartForm));
             t.Start();
-            Thread.Sleep(4000);
             InitializeComponent();
+            for(int i = 0; i <= 500; i++)
+            {
+                Thread.Sleep(5);
+            }
             t.Abort();
         }
         public void StartForm()
         {
-            Application.Run(new forms.Splash());
+            forms.SplashScreen splashform = new forms.SplashScreen();
+            Application.Run(splashform);
+            //Application.Run(new forms.Splash());
         }
 
 
@@ -194,6 +200,20 @@ namespace iservice5
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Order panel
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
+            try
+            {
+               pictureBoxSettingLogo.Image = Image.FromFile(appPath);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            textBoxDocPath.Text = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_path;
+            GlobalVars.iservice_company_path = textBoxDocPath.Text;
+            //Order panel end
+
             labelLicence.Text = "Licence " + GlobalVars.iservice_company_key;
             dataGridViewOrdersinProcess.DataSource = DataService.GetOrderStatusList();
             dataGridView_lastactivecars.DataSource = DataService.GetOrderStatusList();
@@ -222,8 +242,18 @@ namespace iservice5
             textBoxSettingsWebsite.Text = GlobalVars.iservice_company_website;
 
             //  panel1.Visible = false;
+            panel_dashboard.Visible = true;
+            panel4.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
             panelCompanySetting.Visible = false;
-            panel4.Visible = true;
+            panel_timeline.Visible = false;
+            panel_setting_employee.Visible = false;
+            panel_setting_orders.Visible = false;
+            tableLayoutPanelCompanySetting.Visible = false;
+            panel_setting_import.Visible = false;
+            panelwarehouse.Visible = false;
+            TextStatus.Text = btnDashboard.Text;
+
             dataGridViewClients.DataSource = DataService.GetAllCustomers();
             dataGridViewClients.ClearSelection();
             tableLayoutPanelCompanySetting.Visible = false;
@@ -308,10 +338,14 @@ namespace iservice5
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog opnfd = new OpenFileDialog();
             opnfd.Filter = "Image Files (*.jpg;*.jpeg;*.gif;*.png)|*.jpg;*.jpeg;*.gif;*.png;";
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
+                pictureBoxSettingLogo.InitialImage = null;
+                pictureBoxSettingLogo.Image.Dispose();
+                pictureBoxSettingLogo.Image = null;
                 pictureBoxSettingLogo.Image = new Bitmap(opnfd.FileName);
 
             }
@@ -523,18 +557,38 @@ namespace iservice5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (DataService.CompanySetData(GlobalVars.iservice_company_key, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text) == null)
+            string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
+
+            if (DataService.CompanySetData(GlobalVars.iservice_company_key, textBoxSettingsName.Text, textBoxSettingsCountry.Text, textBoxSettingsCity.Text, textBoxSettingsStreet.Text, textBoxSettingsZipCode.Text, textBoxSettingsPhone.Text, textBoxSettingsFax.Text, textBoxSettingsVAT.Text, textBoxSettingsWebsite.Text, textBoxSettingsEmail.Text, textBoxDocPath.Text) == null)
             {
-                MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
-                string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
-                pictureBoxSettingLogo.Image.Save(appPath, System.Drawing.Imaging.ImageFormat.Png);
-                label19.Text = "Saved";
+                 Bitmap bmp = new Bitmap(pictureBoxSettingLogo.Image);
+                pictureBoxSettingLogo.InitialImage = null;
+                pictureBoxSettingLogo.Image.Dispose();
+                pictureBoxSettingLogo.Image = null;
+                if (System.IO.File.Exists(appPath))
+                    System.IO.File.Delete(appPath);
+                bmp.Save(appPath, System.Drawing.Imaging.ImageFormat.Png);
+              
+                 MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
+
+                GlobalVars.iservice_company_path = textBoxDocPath.Text;
+
+               
             }
             else
             {
                 MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
 
-                label19.Text = "Error";
+               
+            }
+            //Thread.Sleep(2000);
+            try
+            {
+                pictureBoxSettingLogo.Image = Image.FromFile(appPath);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -1003,6 +1057,19 @@ namespace iservice5
             forms.Help help = new forms.Help();
             help.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            using (var folderDialog = new FolderBrowserDialog())
+            {
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    textBoxDocPath.Text = folderDialog.SelectedPath;
+                }
+            }
+        }
+
+      
     }
 
    

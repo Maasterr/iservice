@@ -23,6 +23,7 @@ namespace iservice5
             public string iservice_company_email { get; set; }
             public string iservice_company_website { get; set; }
             public string iservice_company_logo { get; set; }
+            public string iservice_company_path { get; set; }
             
 
        

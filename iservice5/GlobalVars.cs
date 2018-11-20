@@ -25,6 +25,7 @@ namespace iservice5
         public static String iservice_company_email = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_email;
         public static String iservice_company_vat_number = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_vat_number;
         public static String iservice_company_website = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_website;
+        public static String iservice_company_path = DataService.CompanyGetData(GlobalVars.iservice_company_key)[0].iservice_company_website;
 
         public static int selected_iservice_customers_id;
         public static String selected_iservice_customers_name;

@@ -320,13 +320,13 @@ namespace iservice5
                 return db.Query<iservice_orders_payment_status>("SELECT * FROM iservice_orders_payment_status").ToList();
             }
         }
-        public static List<iservice_company> CompanySetData(int iservice_company_key, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email)
+        public static List<iservice_company> CompanySetData(int iservice_company_key, string iservice_company_name, string iservice_company_country, string iservice_company_city, string iservice_company_street, string iservice_company_zipcode, string iservice_company_phone, string iservice_company_fax, string iservice_company_vat_number,string iservice_company_website, string iservice_company_email,string iservice_company_path)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("UPDATE iservice_company SET iservice_company_name = N'" + iservice_company_name + "', iservice_company_country = N'" + iservice_company_country + "', iservice_company_city = N'" + iservice_company_city + "', iservice_company_street = N'" + iservice_company_street + "', iservice_company_zipcode = N'" + iservice_company_zipcode + "', iservice_company_phone = '" + iservice_company_phone + "', iservice_company_fax = '" + iservice_company_fax + "', iservice_company_website = N'" + iservice_company_website + "',iservice_company_email = N'" + iservice_company_email + "', iservice_company_vat_number = N'" + iservice_company_vat_number + "' WHERE iservice_company_key = '" + iservice_company_key+"'");           
+                db.Execute("UPDATE iservice_company SET iservice_company_name = N'" + iservice_company_name + "', iservice_company_country = N'" + iservice_company_country + "', iservice_company_city = N'" + iservice_company_city + "', iservice_company_street = N'" + iservice_company_street + "', iservice_company_zipcode = N'" + iservice_company_zipcode + "', iservice_company_phone = '" + iservice_company_phone + "', iservice_company_fax = '" + iservice_company_fax + "', iservice_company_website = N'" + iservice_company_website + "',iservice_company_email = N'" + iservice_company_email + "', iservice_company_vat_number = N'" + iservice_company_vat_number + "', iservice_company_path = N'" + iservice_company_path + "' WHERE iservice_company_key = '" + iservice_company_key+"'");           
                 return null;
             }
         } 
