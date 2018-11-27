@@ -372,5 +372,20 @@ namespace iservice5
             }
         }
 
+
+        //iservice docs
+        public static List<iservice_docs> GetDocsByOrder(int order_number)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+
+                return db.Query<iservice_docs>("select * from iservice_documents WHERE iservice_documents_order_id= '" + order_number + "'").ToList() ?? null;
+            }
+        }
+
+        //end iservice docs
+
     }
 }

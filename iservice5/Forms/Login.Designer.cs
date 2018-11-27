@@ -81,7 +81,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::iservice5.Properties.Resources.Tick_Box_16px;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 107);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 105);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 24);
             this.pictureBox3.TabIndex = 58;
@@ -90,7 +90,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::iservice5.Properties.Resources.Error_16px;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 107);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 105);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 24);
             this.pictureBox2.TabIndex = 57;

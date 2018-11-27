@@ -25,10 +25,22 @@ namespace iservice5
             Status = status;
 
         }
+        String newinvocienumber;
         private void button3_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+           
+           newinvocienumber = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number + "/" + (DataService.GetDocsByOrder(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number).Count + 1);
+            DialogResult dialogResult = MessageBox.Show("It will create new invoice number " + newinvocienumber, "Invoice", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+          
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -118,8 +130,8 @@ namespace iservice5
             e.Graphics.DrawString(GlobalVars.iservice_company_country +"," + GlobalVars.iservice_company_city + "," + GlobalVars.iservice_company_street + "," + GlobalVars.iservice_company_zipcode, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 50));
             e.Graphics.DrawString(GlobalVars.iservice_company_phone + "," + GlobalVars.iservice_company_email, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 75));
             e.Graphics.DrawString(GlobalVars.iservice_company_website, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 100));
-            e.Graphics.DrawString("Invoice #" + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number+"/1", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 140));
-            e.Graphics.DrawString("04.11.2018", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 140));
+            e.Graphics.DrawString("Invoice #" + newinvocienumber, new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 140));
+            e.Graphics.DrawString(DateTime.Now.ToString("dd.MM.yyyy"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 140));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 155));
 
 
@@ -183,16 +195,24 @@ namespace iservice5
             e.Graphics.DrawString("Sum", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
             e.Graphics.DrawString(labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
-            height = height + 100;
-             e.Graphics.DrawString("Sum of Details: " + labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            height = height + 80;
+             e.Graphics.DrawString("Sum of Details: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+             e.Graphics.DrawString(labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
              height = height + 25;
-            e.Graphics.DrawString("Sum of Works: " + labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Sum of Works: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString(labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("Sum: "+ labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Sum: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("Paid: 0", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Discount: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("To pay: " + labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Paid:", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("0", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
+            height = height + 25;
+            e.Graphics.DrawString("To pay: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
 
 
