@@ -750,7 +750,7 @@
             this.dataGridViewOrders.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewOrders.RowTemplate.Height = 24;
             this.dataGridViewOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrders_CellDoubleClick);
+           // this.dataGridViewOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrders_CellDoubleClick);
             this.dataGridViewOrders.CurrentCellChanged += new System.EventHandler(this.dataGridViewOrders_CurrentCellChanged);
             this.dataGridViewOrders.Click += new System.EventHandler(this.dataGridViewOrders_Click);
             // 
@@ -818,7 +818,7 @@
             this.dataGridViewCars.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCars.RowTemplate.Height = 24;
             this.dataGridViewCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCars.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCars_CellDoubleClick);
+           // this.dataGridViewCars.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCars_CellDoubleClick);
             this.dataGridViewCars.CurrentCellChanged += new System.EventHandler(this.dataGridViewCars_CurrentCellChanged);
             this.dataGridViewCars.Click += new System.EventHandler(this.dataGridViewCars_Click);
             // 
@@ -997,7 +997,7 @@
             this.dataGridViewClients.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellDoubleClick);
+           // this.dataGridViewClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellDoubleClick);
             this.dataGridViewClients.CurrentCellChanged += new System.EventHandler(this.dataGridViewClients_CurrentCellChanged);
             this.dataGridViewClients.Click += new System.EventHandler(this.dataGridViewClients_Click);
             // 
