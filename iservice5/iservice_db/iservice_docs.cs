@@ -11,6 +11,7 @@ namespace iservice5
         public int iservice_documents_id { get; set; }
         public string iservice_documents_order_id { get; set; }
         public string iservice_documents_name { get; set; }
+        public string iservice_documents_paid { get; set; }
         public string iservice_documents_date { get; set; }
     }
 }

@@ -24,7 +24,9 @@ namespace iservice5
         public string iservice_orders_total_brutto { get; set; }
         public string iservice_orders_mileage { get; set; }
         public string iservice_users_name { get; set; }
-        
+        public string iservice_orders_discount { get; set; }
+        public string iservice_orders_discount_type { get; set; }
+       
 
 
     }

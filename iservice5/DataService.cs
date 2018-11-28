@@ -384,7 +384,16 @@ namespace iservice5
                 return db.Query<iservice_docs>("select * from iservice_documents WHERE iservice_documents_order_id= '" + order_number + "'").ToList() ?? null;
             }
         }
-
+        public static List<iservice_docs> NewDoc(int iservice_documents_order_id, String iservice_documents_name, String iservice_documents_paid, String iservice_documents_date)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString))
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                db.Execute("Insert into iservice_documents values (N'" + iservice_documents_order_id + "',N'" + iservice_documents_name + " ',N'" + iservice_documents_paid + " ',N'" + iservice_documents_date + "')");
+                return null;
+            }
+        }
         //end iservice docs
 
     }

@@ -20,10 +20,10 @@ namespace iservice5
             Thread t = new Thread(new ThreadStart(StartForm));
             t.Start();
             InitializeComponent();
-            for(int i = 0; i <= 500; i++)
-            {
-                Thread.Sleep(5);
-            }
+            //for(int i = 0; i <= 500; i++)
+            //{
+                Thread.Sleep(4000);
+            //}
             t.Abort();
         }
         public void StartForm()
@@ -169,7 +169,7 @@ namespace iservice5
         }
         private void button23_Click(object sender, EventArgs e)
         {
-            if (GlobalVars.Client != null)
+            if (labelCars.Text != "Please select car")
             {
                 NewCar newcar = new NewCar(this, "Edit");
                 newcar.Show();
@@ -189,8 +189,14 @@ namespace iservice5
         }
         private void button17_Click(object sender, EventArgs e)
         {
-            NewCustomer newcustomer = new NewCustomer(this, "Save");
-            newcustomer.Show();
+       
+            if (GlobalVars.Client != null)
+            {
+                NewCustomer newcustomer = new NewCustomer(this, "Save");
+                newcustomer.Show();
+            }
+            else
+                MessageBox.Show("Please select client", "Notification", MessageBoxButtons.OK);
 
         }
 
@@ -389,7 +395,7 @@ namespace iservice5
                 GlobalVars.selected_iservice_customers_company = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_company;
 
 
-
+               
             }
             else
                 labelCars.Text = "Please select client";
@@ -1069,7 +1075,32 @@ namespace iservice5
             }
         }
 
-      
+        private void dataGridViewClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GlobalVars.Client != null)
+            {
+                NewCustomer newcustomer = new NewCustomer(this, "Save");
+                newcustomer.Show();
+            }
+        }
+
+        private void dataGridViewCars_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GlobalVars.regnumber != null)
+            {
+                NewCar newcar = new NewCar(this, "Edit");
+                newcar.Show();
+            }
+        }
+
+        private void dataGridViewOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewOrders.SelectedRows.Count > 0)
+            {
+                OrderPage editorder = new OrderPage(this, "Edit");
+                editorder.Show();
+            }
+        }
     }
 
    
