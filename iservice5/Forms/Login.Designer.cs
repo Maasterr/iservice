@@ -231,6 +231,7 @@
             this.Controls.Add(this.metroTextBoxUsername);
             this.Controls.Add(this.pictureBox1);
             this.DisplayHeader = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
