@@ -169,7 +169,7 @@ namespace iservice5
         }
         private void button23_Click(object sender, EventArgs e)
         {
-            if (GlobalVars.Client != null)
+            if (labelCars.Text != null)
             {
                 NewCar newcar = new NewCar(this, "Edit");
                 newcar.Show();
@@ -189,9 +189,11 @@ namespace iservice5
         }
         private void button17_Click(object sender, EventArgs e)
         {
+            if (labelClients.Text != null)
+            {
             NewCustomer newcustomer = new NewCustomer(this, "Save");
-            newcustomer.Show();
-
+            newcustomer.Show();             
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -1069,7 +1071,32 @@ namespace iservice5
             }
         }
 
-      
+        private void dataGridViewCars_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (labelCars!= null)
+            {
+                NewCar newcar = new NewCar(this, "Edit");
+                newcar.Show();
+            }
+        }
+
+        private void dataGridViewClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (labelClients.Text != null)
+            {
+                NewCustomer newcustomer = new NewCustomer(this, "Save");
+                newcustomer.Show();
+            }
+        }
+
+        private void dataGridViewOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewOrders.SelectedRows.Count > 0)
+            {
+                OrderPage editorder = new OrderPage(this, "Edit");
+                editorder.Show();
+            }
+        }
     }
 
    

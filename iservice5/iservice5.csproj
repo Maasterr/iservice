@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon2.ico</ApplicationIcon>
+    <ApplicationIcon>icon5.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -332,6 +332,7 @@
     <Content Include="icon.ico" />
     <Content Include="icon2.ico" />
     <Content Include="icon3.ico" />
+    <Content Include="icon5.ico" />
     <Content Include="iservice.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

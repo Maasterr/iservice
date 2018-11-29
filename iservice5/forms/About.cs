@@ -20,6 +20,7 @@ namespace iservice5.forms
         private void About_Load(object sender, EventArgs e)
         {
             labellicence.Text = "Licence " + GlobalVars.iservice_company_key;
+            label1.Text = "iservice v" + Application.ProductVersion;
         }
 
         private void label1_Click(object sender, EventArgs e)
