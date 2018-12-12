@@ -17,13 +17,16 @@ namespace iService.forms
             InitializeComponent();
         }
         private readonly warehouse_details frm1;
+        private readonly Form1 frm2;
         private readonly String Status;
+       
         public NewDetailItem(warehouse_details frm, String status)
         {
             InitializeComponent();
             frm1 = frm;
             Status = status;
         }
+       
         private void NewDetailItem_Load(object sender, EventArgs e)
         {
 

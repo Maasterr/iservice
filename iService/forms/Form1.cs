@@ -1097,6 +1097,19 @@ namespace iService
                 editorder.Show();
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+           // forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Add");
+            //newitem.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+         //  forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Edit");
+           // newitem.Show();
+        }
     }
 
    
