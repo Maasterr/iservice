@@ -96,9 +96,23 @@ namespace iService
             panelwarehouse.Visible = false;
             TextStatus.Text = btnDashboard.Text;
         }
+        public void updatedetailsdata()
+        {
+            ItemsDetailsGetData = DataService.ItemsDetailsGetData();
+            dataGridViewItemsDetails.Rows.Clear();
+            for (int i = 0; i < ItemsDetailsGetData.Count; i++)
+            {
+                dataGridViewItemsDetails.Rows.Add(ItemsDetailsGetData[i].iservice_items_id, ItemsDetailsGetData[i].iservice_items_type, ItemsDetailsGetData[i].iservice_items_category, ItemsDetailsGetData[i].iservice_items_subcategory, ItemsDetailsGetData[i].iservice_items_description, ItemsDetailsGetData[i].iservice_items_qty, ItemsDetailsGetData[i].iservice_items_purchase_price_netto, ItemsDetailsGetData[i].iservice_items_purchase_price_brutto, ItemsDetailsGetData[i].iservice_items_price_netto, ItemsDetailsGetData[i].iservice_items_price_brutto, "", ItemsDetailsGetData[i].iservice_items_qty_type);
+            }
+            dataGridViewItemsDetails.ClearSelection();
+            labeltext.Text = "Выберите материал";
 
+        }
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
+           
+            
+            
             //warehouse newcustomer1 = new warehouse();
             //newcustomer1.Show();
             TextStatus.Text = btnService.Text;
@@ -112,18 +126,18 @@ namespace iService
             panel_setting_orders.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             panel_setting_import.Visible = false;
-            TextStatus.Text = btnService.Text + " --> " + btnWarehouse.Text;
+            TextStatus.Text = "Склад";
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            panelCompanySetting.Visible = true;
             panel_dashboard.Visible = false;
             panel4.Visible = false;
             tableLayoutPanelCompanySetting.Visible = false;
             panel_timeline.Visible = false;
             panel_setting_employee.Visible = false;
             panel_setting_orders.Visible = false;
-            panel_setting_import.Visible = false;
-            panelCompanySetting.Visible = true;
+            panel_setting_import.Visible = false;          
             panelwarehouse.Visible = false;
             tableLayoutPanelCompanySetting.Visible = true;
             TextStatus.Text = btnDashboard.Text + " --> " + button_company.Text;
@@ -147,7 +161,7 @@ namespace iService
                 GlobalVars.selected_iservice_orders_id = DataService.GetLastOrderNumber()[0].iservice_orders_id;
                 dataGridViewOrders.ClearSelection();
                 labelOrders.Text = "Please select order";
-                OrderPage orderpage = new OrderPage(this,"Add");
+                Заказ orderpage = new Заказ(this,"Add");
                 orderpage.Show();
 
             }
@@ -181,7 +195,7 @@ namespace iService
         {
             if (dataGridViewOrders.SelectedRows.Count > 0)
             {
-                OrderPage editorder = new OrderPage(this, "Edit");
+                Заказ editorder = new Заказ(this, "Edit");
                 editorder.Show();
             }
             else
@@ -200,8 +214,15 @@ namespace iService
         {
          
         }
+        private List<iservice_items> ItemsDetailsGetData = new List<iservice_items>();
         private void Form1_Load(object sender, EventArgs e)
         {
+            //warehouse
+            ItemsDetailsGetData = DataService.ItemsDetailsGetData();
+            for (int i = 0; i < ItemsDetailsGetData.Count; i++)
+            {
+                dataGridViewItemsDetails.Rows.Add(ItemsDetailsGetData[i].iservice_items_id, ItemsDetailsGetData[i].iservice_items_type, ItemsDetailsGetData[i].iservice_items_category, ItemsDetailsGetData[i].iservice_items_subcategory, ItemsDetailsGetData[i].iservice_items_description, ItemsDetailsGetData[i].iservice_items_qty, ItemsDetailsGetData[i].iservice_items_purchase_price_netto, ItemsDetailsGetData[i].iservice_items_purchase_price_brutto, ItemsDetailsGetData[i].iservice_items_price_netto, ItemsDetailsGetData[i].iservice_items_price_brutto, "", ItemsDetailsGetData[i].iservice_items_qty_type);
+            }
             //Order panel
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images\logo.png";
             try
@@ -263,7 +284,7 @@ namespace iService
 
 
 
-
+            /*
 
             dataGridViewTimeLine.Rows.Add("6.00-6.30", "", "", "");
             dataGridViewTimeLine.Rows.Add("6.30-7.00", "", "", "");
@@ -298,44 +319,45 @@ namespace iService
             dataGridViewTimeLine.Rows[1].Visible = false;
             dataGridViewTimeLine.Rows[2].Visible = false;
             dataGridViewTimeLine.Rows[3].Visible = false;
-            for (int j = 1; j < dataGridViewTimeLine.Columns.Count; ++j)
-            {
-                if (DataService.TimelineGetDayByDateandStation("14",j.ToString()).Count > 0) { 
-                 
-                        dataGridViewTimeLine[j, 0].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_600_630;
-                        dataGridViewTimeLine[j, 1].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_630_700;
-                        dataGridViewTimeLine[j, 2].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_700_730;
-                        dataGridViewTimeLine[j, 3].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_730_800;
-                        dataGridViewTimeLine[j, 4].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_800_830;
-                        dataGridViewTimeLine[j, 5].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_830_900;
-                        dataGridViewTimeLine[j, 6].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_900_930;
-                        dataGridViewTimeLine[j, 7].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_930_1000;
-                        dataGridViewTimeLine[j, 8].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1000_1030;
-                        dataGridViewTimeLine[j, 9].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1030_1100;
-                        dataGridViewTimeLine[j, 10].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1100_1130;
-                        dataGridViewTimeLine[j, 11].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1130_1200;
-                        dataGridViewTimeLine[j, 12].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1200_1230;
-                        dataGridViewTimeLine[j, 13].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1230_1300;
-                        dataGridViewTimeLine[j, 14].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1300_1330;
-                        dataGridViewTimeLine[j, 15].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1330_1400;
-                        dataGridViewTimeLine[j, 16].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1400_1430;
-                        dataGridViewTimeLine[j, 17].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1430_1500;
-                        dataGridViewTimeLine[j, 18].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1500_1530;
-                        dataGridViewTimeLine[j, 19].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1530_1600;
-                        dataGridViewTimeLine[j, 20].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1600_1630;
-                        dataGridViewTimeLine[j, 21].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1630_1700;
-                        dataGridViewTimeLine[j, 22].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1700_1730;
-                        dataGridViewTimeLine[j, 23].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1730_1800;
-                        dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1800_1830;
-                        dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1830_1900;
-                    }          
-            }
+             for (int j = 1; j < dataGridViewTimeLine.Columns.Count; ++j)
+             {
+                 if (DataService.TimelineGetDayByDateandStation("14",j.ToString()).Count > 0) { 
 
-            for (int i = 0; i < DataService.ItemsDetailsGetData().Count; i++)
-            {
-                dataGridViewItemsDetails.Rows.Add(DataService.ItemsDetailsGetData()[i].iservice_items_id, DataService.ItemsDetailsGetData()[i].iservice_items_type, DataService.ItemsDetailsGetData()[i].iservice_items_category, DataService.ItemsDetailsGetData()[i].iservice_items_subcategory, DataService.ItemsDetailsGetData()[i].iservice_items_description, DataService.ItemsDetailsGetData()[i].iservice_items_qty, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsDetailsGetData()[i].iservice_items_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_price_brutto, "", DataService.ItemsDetailsGetData()[i].iservice_items_qty_type);
-            }
-            dataGridViewItemsDetails.RowHeadersVisible = false;
+                         dataGridViewTimeLine[j, 0].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_600_630;
+                         dataGridViewTimeLine[j, 1].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_630_700;
+                         dataGridViewTimeLine[j, 2].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_700_730;
+                         dataGridViewTimeLine[j, 3].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_730_800;
+                         dataGridViewTimeLine[j, 4].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_800_830;
+                         dataGridViewTimeLine[j, 5].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_830_900;
+                         dataGridViewTimeLine[j, 6].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_900_930;
+                         dataGridViewTimeLine[j, 7].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_930_1000;
+                         dataGridViewTimeLine[j, 8].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1000_1030;
+                         dataGridViewTimeLine[j, 9].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1030_1100;
+                         dataGridViewTimeLine[j, 10].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1100_1130;
+                         dataGridViewTimeLine[j, 11].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1130_1200;
+                         dataGridViewTimeLine[j, 12].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1200_1230;
+                         dataGridViewTimeLine[j, 13].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1230_1300;
+                         dataGridViewTimeLine[j, 14].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1300_1330;
+                         dataGridViewTimeLine[j, 15].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1330_1400;
+                         dataGridViewTimeLine[j, 16].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1400_1430;
+                         dataGridViewTimeLine[j, 17].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1430_1500;
+                         dataGridViewTimeLine[j, 18].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1500_1530;
+                         dataGridViewTimeLine[j, 19].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1530_1600;
+                         dataGridViewTimeLine[j, 20].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1600_1630;
+                         dataGridViewTimeLine[j, 21].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1630_1700;
+                         dataGridViewTimeLine[j, 22].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1700_1730;
+                         dataGridViewTimeLine[j, 23].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1730_1800;
+                         dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1800_1830;
+                         dataGridViewTimeLine[j, 24].Value = DataService.TimelineGetDayByDateandStation("14",j.ToString())[0].iservice_timeline_1830_1900;
+                     }          
+             }
+
+             for (int i = 0; i < DataService.ItemsDetailsGetData().Count; i++)
+             {
+                 dataGridViewItemsDetails.Rows.Add(DataService.ItemsDetailsGetData()[i].iservice_items_id, DataService.ItemsDetailsGetData()[i].iservice_items_type, DataService.ItemsDetailsGetData()[i].iservice_items_category, DataService.ItemsDetailsGetData()[i].iservice_items_subcategory, DataService.ItemsDetailsGetData()[i].iservice_items_description, DataService.ItemsDetailsGetData()[i].iservice_items_qty, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_purchase_price_brutto, DataService.ItemsDetailsGetData()[i].iservice_items_price_netto, DataService.ItemsDetailsGetData()[i].iservice_items_price_brutto, "", DataService.ItemsDetailsGetData()[i].iservice_items_qty_type);
+             }
+             dataGridViewItemsDetails.RowHeadersVisible = false;
+                  */
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -373,7 +395,7 @@ namespace iService
             {   s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
                 labelClients.Text = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
               GlobalVars.Client = labelClients.Text;
-
+                /*
                 GlobalVars.selected_iservice_customers_id = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_id;
                 GlobalVars.selected_iservice_customers_name = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_name;
                 GlobalVars.selected_iservice_customers_surname = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_surname;
@@ -390,7 +412,22 @@ namespace iService
                 GlobalVars.selected_iservice_customers_employee = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_employee;
                 GlobalVars.selected_iservice_customers_company = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_company;
 
-
+    */
+                GlobalVars.selected_iservice_customers_id = Convert.ToInt32(dataGridViewClients.SelectedRows[0].Cells[0].Value);
+                GlobalVars.selected_iservice_customers_name = dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
+                GlobalVars.selected_iservice_customers_surname = dataGridViewClients.SelectedRows[0].Cells[3].Value.ToString();
+                GlobalVars.selected_iservice_customers_patronymic = dataGridViewClients.SelectedRows[0].Cells[4].Value.ToString();
+                GlobalVars.selected_iservice_customers_country = dataGridViewClients.SelectedRows[0].Cells[5].Value.ToString();
+                GlobalVars.selected_iservice_customers_city = dataGridViewClients.SelectedRows[0].Cells[6].Value.ToString();
+                GlobalVars.selected_iservice_customers_street = dataGridViewClients.SelectedRows[0].Cells[7].Value.ToString();
+                GlobalVars.selected_iservice_customers_zipcode = dataGridViewClients.SelectedRows[0].Cells[8].Value.ToString();
+                GlobalVars.selected_iservice_customers_telephone = dataGridViewClients.SelectedRows[0].Cells[9].Value.ToString();
+                GlobalVars.selected_iservice_customers_telephone_home = dataGridViewClients.SelectedRows[0].Cells[10].Value.ToString();
+                GlobalVars.selected_iservice_customers_date_of_birthday = dataGridViewClients.SelectedRows[0].Cells[11].Value.ToString();
+                GlobalVars.selected_iservice_customers_date_of_creation = dataGridViewClients.SelectedRows[0].Cells[13].Value.ToString();
+                GlobalVars.selected_iservice_customers_email = dataGridViewClients.SelectedRows[0].Cells[12].Value.ToString();
+                GlobalVars.selected_iservice_customers_employee = dataGridViewClients.SelectedRows[0].Cells[14].Value.ToString();
+                GlobalVars.selected_iservice_customers_company = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString();
 
             }
             else
@@ -412,7 +449,7 @@ namespace iService
                         GlobalVars.regnumber = labelCars.Text;
 
 
-
+                        /*
                         String s2 = dataGridViewCars.SelectedRows[0].Cells[0].Value.ToString();
 
                         if (s2 != null)
@@ -435,7 +472,7 @@ namespace iService
 
 
                         }
-
+                        */
 
                     }
                     else
@@ -496,13 +533,13 @@ namespace iService
                 try
                 {
                     dataGridViewOrders.DataSource = DataService.GetOrdersByCar(Int32.Parse(s2));
-
-                    if (dataGridViewOrders.SelectedRows.Count > 0)
+                    dataGridViewOrders.ClearSelection();
+                   /* if (dataGridViewOrders.SelectedRows.Count > 0)
                     {
                         labelOrders.Text = dataGridViewOrders.SelectedRows[0].Cells[3].Value.ToString();
                         GlobalVars.OrderNumber = labelOrders.Text;
                     }
-                    else
+                    else */
                         labelOrders.Text = "Please select order";
 
                 }
@@ -530,10 +567,10 @@ namespace iService
                         dataGridViewClients.FirstDisplayedScrollingRowIndex = dataGridViewClients.SelectedRows[0].Index;
 
 
-                        s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
+                        //s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
                         labelClients.Text = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
                         GlobalVars.Client = labelClients.Text;
-
+                        /*
                         GlobalVars.selected_iservice_customers_id = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_id;
                         GlobalVars.selected_iservice_customers_name = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_name;
                         GlobalVars.selected_iservice_customers_surname = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_surname;
@@ -549,6 +586,22 @@ namespace iService
                         GlobalVars.selected_iservice_customers_email = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_email;
                         GlobalVars.selected_iservice_customers_employee = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_employee;
                         GlobalVars.selected_iservice_customers_company = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_company;
+                        */
+                        GlobalVars.selected_iservice_customers_id = Convert.ToInt32(dataGridViewClients.SelectedRows[0].Cells[0].Value);
+                        GlobalVars.selected_iservice_customers_name = dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
+                        GlobalVars.selected_iservice_customers_surname = dataGridViewClients.SelectedRows[0].Cells[3].Value.ToString();
+                        GlobalVars.selected_iservice_customers_patronymic = dataGridViewClients.SelectedRows[0].Cells[4].Value.ToString();
+                        GlobalVars.selected_iservice_customers_country = dataGridViewClients.SelectedRows[0].Cells[5].Value.ToString();
+                        GlobalVars.selected_iservice_customers_city = dataGridViewClients.SelectedRows[0].Cells[6].Value.ToString();
+                        GlobalVars.selected_iservice_customers_street = dataGridViewClients.SelectedRows[0].Cells[7].Value.ToString();
+                        GlobalVars.selected_iservice_customers_zipcode = dataGridViewClients.SelectedRows[0].Cells[8].Value.ToString();
+                        GlobalVars.selected_iservice_customers_telephone = dataGridViewClients.SelectedRows[0].Cells[9].Value.ToString();
+                        GlobalVars.selected_iservice_customers_telephone_home = dataGridViewClients.SelectedRows[0].Cells[10].Value.ToString();
+                        GlobalVars.selected_iservice_customers_date_of_birthday = dataGridViewClients.SelectedRows[0].Cells[11].Value.ToString();
+                        GlobalVars.selected_iservice_customers_date_of_creation = dataGridViewClients.SelectedRows[0].Cells[13].Value.ToString();
+                        GlobalVars.selected_iservice_customers_email = dataGridViewClients.SelectedRows[0].Cells[12].Value.ToString();
+                        GlobalVars.selected_iservice_customers_employee = dataGridViewClients.SelectedRows[0].Cells[14].Value.ToString();
+                        GlobalVars.selected_iservice_customers_company = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString();
 
                     }
 
@@ -622,7 +675,7 @@ namespace iService
                         dataGridViewCars.Rows[row.Index].Selected = true;
                         dataGridViewCars.FirstDisplayedScrollingRowIndex = dataGridViewCars.SelectedRows[0].Index;
                
-                        s2 = dataGridViewCars.SelectedRows[0].Cells[0].Value.ToString();
+                        //s2 = dataGridViewCars.SelectedRows[0].Cells[0].Value.ToString();
                         labelCars.Text = dataGridViewCars.SelectedRows[0].Cells[2].Value.ToString();
                         GlobalVars.regnumber = labelCars.Text;
                         GlobalVars.selected_iservice_cars_id = Convert.ToInt32(dataGridViewCars.SelectedRows[0].Cells[0].Value);
@@ -654,7 +707,7 @@ namespace iService
                         s = dataGridViewClients.SelectedRows[0].Cells[0].Value.ToString();
                         labelClients.Text = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
                         GlobalVars.Client = labelClients.Text;
-
+                        /*
                         GlobalVars.selected_iservice_customers_id = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_id;
                         GlobalVars.selected_iservice_customers_name = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_name;
                         GlobalVars.selected_iservice_customers_surname = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_surname;
@@ -670,6 +723,22 @@ namespace iService
                         GlobalVars.selected_iservice_customers_email = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_email;
                         GlobalVars.selected_iservice_customers_employee = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_employee;
                         GlobalVars.selected_iservice_customers_company = DataService.GetCustomersById(Int32.Parse(s))[0].iservice_customers_company;
+                        */
+                        GlobalVars.selected_iservice_customers_id = Convert.ToInt32(dataGridViewClients.SelectedRows[0].Cells[0].Value);
+                        GlobalVars.selected_iservice_customers_name = dataGridViewClients.SelectedRows[0].Cells[2].Value.ToString();
+                        GlobalVars.selected_iservice_customers_surname = dataGridViewClients.SelectedRows[0].Cells[3].Value.ToString();
+                        GlobalVars.selected_iservice_customers_patronymic = dataGridViewClients.SelectedRows[0].Cells[4].Value.ToString();
+                        GlobalVars.selected_iservice_customers_country = dataGridViewClients.SelectedRows[0].Cells[5].Value.ToString();
+                        GlobalVars.selected_iservice_customers_city = dataGridViewClients.SelectedRows[0].Cells[6].Value.ToString();
+                        GlobalVars.selected_iservice_customers_street = dataGridViewClients.SelectedRows[0].Cells[7].Value.ToString();
+                        GlobalVars.selected_iservice_customers_zipcode = dataGridViewClients.SelectedRows[0].Cells[8].Value.ToString();
+                        GlobalVars.selected_iservice_customers_telephone = dataGridViewClients.SelectedRows[0].Cells[9].Value.ToString();
+                        GlobalVars.selected_iservice_customers_telephone_home = dataGridViewClients.SelectedRows[0].Cells[10].Value.ToString();
+                        GlobalVars.selected_iservice_customers_date_of_birthday = dataGridViewClients.SelectedRows[0].Cells[11].Value.ToString();
+                        GlobalVars.selected_iservice_customers_date_of_creation = dataGridViewClients.SelectedRows[0].Cells[13].Value.ToString();
+                        GlobalVars.selected_iservice_customers_email = dataGridViewClients.SelectedRows[0].Cells[12].Value.ToString();
+                        GlobalVars.selected_iservice_customers_employee = dataGridViewClients.SelectedRows[0].Cells[14].Value.ToString();
+                        GlobalVars.selected_iservice_customers_company = dataGridViewClients.SelectedRows[0].Cells[1].Value.ToString();
 
                     }
 
@@ -1093,7 +1162,7 @@ namespace iService
         {
             if (dataGridViewOrders.SelectedRows.Count > 0)
             {
-                OrderPage editorder = new OrderPage(this, "Edit");
+                Заказ editorder = new Заказ(this, "Edit");
                 editorder.Show();
             }
         }
@@ -1101,14 +1170,14 @@ namespace iService
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
-           // forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Add");
-            //newitem.Show();
+            forms.NewDetailItem newitem = new forms.NewDetailItem(null,this, "Add");
+            newitem.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-         //  forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Edit");
-           // newitem.Show();
+           forms.NewDetailItem newitem = new forms.NewDetailItem(null,this, "Edit");
+            newitem.Show();
         }
     }
 

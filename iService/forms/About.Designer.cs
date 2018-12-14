@@ -83,7 +83,7 @@
             this.Controls.Add(this.label1);
             this.Name = "About";
             this.Resizable = false;
-            this.Text = "About";
+            this.Text = "О программе";
             this.Load += new System.EventHandler(this.About_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace iService
 {
-    public partial class OrderPage : MetroFramework.Forms.MetroForm
+    public partial class Заказ : MetroFramework.Forms.MetroForm
     {
-        public OrderPage()
+        public Заказ()
         {
             InitializeComponent(); 
         }
         private readonly Form1 frm1;
         private readonly String Status;
-        public OrderPage(Form1 frm, String status)
+        public Заказ(Form1 frm, String status)
         {
             InitializeComponent();
             frm1 = frm;
@@ -35,7 +35,7 @@ namespace iService
             if (Status == "Add")
             {
                 if ((comboBoxOrderStatus.SelectedValue == null) || (ComboBoxPaymentStatus.SelectedValue == null))
-                    MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Обязательный поля пустые", "Уведомление", MessageBoxButtons.OK);
                 else if (DataService.UpdateOrder(GlobalVars.selected_iservice_orders_id, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                 {
                     //  for (int i = 0; i < DataService.GetOrderItems("Details", labelOrderNumber.Text).Count; i++)
@@ -67,7 +67,7 @@ namespace iService
                 else
                 {
                     this.Close();
-                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Попробуйте позже", "Ошибка", MessageBoxButtons.OK);
 
 
                 }
@@ -97,13 +97,13 @@ namespace iService
             else
             {
                 this.Close();
-                MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Попробуйте позже", "Ошибка", MessageBoxButtons.OK);
 
 
             }
             if (newinvoice == 1){
                 newinvocienumber = DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number + "/" + (DataService.GetDocsByOrder(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number).Count + 1);
-                DialogResult dialogResult = MessageBox.Show("It will create new invoice number " + newinvocienumber, "Invoice", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Сгенерируется новая счет-фактура для заказа №" + newinvocienumber, "Уведомление", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                    
@@ -128,7 +128,7 @@ namespace iService
             if (Status == "Add")
             {
                 if ((comboBoxOrderStatus.SelectedValue==null) || (ComboBoxPaymentStatus.SelectedValue == null))
-                    MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Обязательный поля пустые", "Уведомление", MessageBoxButtons.OK);
                 else if (DataService.UpdateOrder(GlobalVars.selected_iservice_orders_id, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), "", ComboBoxPaymentStatus.SelectedValue.ToString(), comboBoxOrderStatus.SelectedValue.ToString(), "", "", labelTotal.Text, textBoxMileage.Text) == null)
                 {
                   //  for (int i = 0; i < DataService.GetOrderItems("Details", labelOrderNumber.Text).Count; i++)
@@ -153,13 +153,13 @@ namespace iService
                     }
                     frm1.updateordersdata();
                     this.Close();
-                    MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Заказ успешно сохранен", "Уведомление", MessageBoxButtons.OK);
 
                 }
                 else
                 {
                     this.Close();
-                    MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Попробуйте позже", "Ошибка", MessageBoxButtons.OK);
 
 
                 }
@@ -182,13 +182,13 @@ namespace iService
                 }
                 frm1.updateordersdata();
                 this.Close();
-                MessageBox.Show("Succesfully saved", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Заказ успешно сохранен", "Уведомление", MessageBoxButtons.OK);
 
             }
             else
             {
                 this.Close();
-                MessageBox.Show("Please try again later", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Попробуйте позже", "Ошибка", MessageBoxButtons.OK);
 
 
             }
@@ -209,29 +209,29 @@ namespace iService
             e.Graphics.DrawString(GlobalVars.iservice_company_country +"," + GlobalVars.iservice_company_city + "," + GlobalVars.iservice_company_street + "," + GlobalVars.iservice_company_zipcode, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 50));
             e.Graphics.DrawString(GlobalVars.iservice_company_phone + "," + GlobalVars.iservice_company_email, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 75));
             e.Graphics.DrawString(GlobalVars.iservice_company_website, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 100));
-            e.Graphics.DrawString("Invoice #" + newinvocienumber, new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 140));
+            e.Graphics.DrawString("Счет-фактура #" + newinvocienumber, new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(25, 140));
             e.Graphics.DrawString(DateTime.Now.ToString("dd.MM.yyyy"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 140));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 155));
            
 
 
-            e.Graphics.DrawString("Order number: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 180));
-            e.Graphics.DrawString("Orders status: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 205));
-            e.Graphics.DrawString("Payment status: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_payment_status_name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 230));
-            e.Graphics.DrawString("Client: " + GlobalVars.Client, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 180));
-            e.Graphics.DrawString("Car: " + GlobalVars.regnumber, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 205));
-            e.Graphics.DrawString("Mileage: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 230));
-            e.Graphics.DrawString("Date of creation: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_date_of_creation, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 255));
+            e.Graphics.DrawString("Номер заказа: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 180));
+            e.Graphics.DrawString("Статус заказа: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_status_name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 205));
+            e.Graphics.DrawString("Оплата: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_payment_status_name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 230));
+            e.Graphics.DrawString("КЛиент: " + GlobalVars.Client, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 180));
+            e.Graphics.DrawString("Регистрационный номер: " + GlobalVars.regnumber, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 205));
+            e.Graphics.DrawString("Пробег: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_mileage, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 230));
+            e.Graphics.DrawString("Дата создания: " + DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_date_of_creation, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 255));
             
             if (DataService.GetOrderItems("Works", labelOrderNumber.Text).Count > 0) {
-                e.Graphics.DrawString("Works", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, 310));
+                e.Graphics.DrawString("Работы", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, 310));
                 e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 325));
                 e.Graphics.DrawString("#", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, 350));
-                e.Graphics.DrawString("Description", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, 350));
-                e.Graphics.DrawString("QTY", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, 350));
-                e.Graphics.DrawString("Price netto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 350));
-                e.Graphics.DrawString("Price brutto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, 350));
-                e.Graphics.DrawString("Total", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 350));
+                e.Graphics.DrawString("Описание", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, 350));
+                e.Graphics.DrawString("Количество", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, 350));
+                e.Graphics.DrawString("Сумма", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, 350));
+                e.Graphics.DrawString("Сумма с НДС", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, 350));
+                e.Graphics.DrawString("Итого", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 350));
 
                 for (int i = 0; i < DataService.GetOrderItems("Works", labelOrderNumber.Text).Count; i++)
                 {
@@ -245,22 +245,22 @@ namespace iService
 
                 }
                 height = height + 25;
-                e.Graphics.DrawString("Sum", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+                e.Graphics.DrawString("Итого", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
                 e.Graphics.DrawString(labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             }
             if (DataService.GetOrderItems("Details", labelOrderNumber.Text).Count > 0)
             {
                 height = height + 50;
-                e.Graphics.DrawString("Details", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, height));
+                e.Graphics.DrawString("Материалы", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(35, height));
                 height = height + 15;
                 e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
                 height = height + 25;
                 e.Graphics.DrawString("#", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(35, height));
-                e.Graphics.DrawString("Description", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
-                e.Graphics.DrawString("QTY", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
-                e.Graphics.DrawString("Price netto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
-                e.Graphics.DrawString("Price brutto", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
-                e.Graphics.DrawString("Total", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
+                e.Graphics.DrawString("Описание", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+                e.Graphics.DrawString("Количество", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(350, height));
+                e.Graphics.DrawString("Сумма", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(400, height));
+                e.Graphics.DrawString("Сумма с НДС", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+                e.Graphics.DrawString("Итого", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
                
               
@@ -278,26 +278,26 @@ namespace iService
                 }
             }
             height = height + 25;
-            e.Graphics.DrawString("Sum", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
+            e.Graphics.DrawString("Итого", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(75, height));
             e.Graphics.DrawString(labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
             height = height + 80;
-             e.Graphics.DrawString("Sum of Details: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+             e.Graphics.DrawString("Итого материлов: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
              e.Graphics.DrawString(labelItemDetailsTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
              height = height + 25;
-            e.Graphics.DrawString("Sum of Works: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Итого работы: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
             e.Graphics.DrawString(labelItemWorksTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("Sum: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Итого: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
             e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("Discount: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Скидка: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
             e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("Paid:", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("Оплачено:", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
             e.Graphics.DrawString("0", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
             height = height + 25;
-            e.Graphics.DrawString("To pay: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
+            e.Graphics.DrawString("К оплате: " , new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, height));
             e.Graphics.DrawString(labelTotal.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, height));
 
 
@@ -315,8 +315,8 @@ namespace iService
                 height = 30;
             }*/
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height - 25));
-            e.Graphics.DrawString("Employee: " + GlobalVars.Employee, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
-            e.Graphics.DrawString("Comments: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, height));
+            e.Graphics.DrawString("Работник: " + GlobalVars.Employee, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, height));
+            e.Graphics.DrawString("Комментарий: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(300, height));
 
 
         }
@@ -328,13 +328,13 @@ namespace iService
         private int totaldetails, totalworks;
         private void OrderPage_Load(object sender, EventArgs e)
         {
-            this.Text = "Order #" +DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number;
+            this.Text = "Заказ #" +DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number;
 
             int paid = 0;
-            for (int i = 0; i < DataService.GetDocsByOrder(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number).Count; ++i)
+           /* for (int i = 0; i < DataService.GetDocsByOrder(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_number).Count; ++i)
             {
                 paid += Convert.ToInt32(DataService.GetDocsByOrder(DataService.GetOrdersById(GlobalVars.selected_iservice_orders_id)[0].iservice_orders_id)[0].iservice_documents_paid);
-            }
+            }*/
             labelpaid.Text = paid.ToString();
             //button6.Text = Status;
 
@@ -393,10 +393,12 @@ namespace iService
                 if (DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_qty_type != "0")
                 totalworks = Convert.ToInt32(DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_price_brutto) * Convert.ToInt32(DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_orders_items_qty)/1000;
                 else totalworks = Convert.ToInt32(DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_price_brutto) * Convert.ToInt32(DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_orders_items_qty);
-
-
                 dataGridViewItemsWorks.Rows.Add(DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_id, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_type, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_category, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_subcategory, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_description, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_orders_items_qty, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_purchase_price_netto, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_purchase_price_brutto, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_price_netto, DataService.GetOrderItems("Works", labelOrderNumber.Text)[i].iservice_items_price_brutto, totalworks);
             }
+
+            dataGridViewItemsWorks.ClearSelection();
+            dataGridViewItemsDetails.ClearSelection();
+
             updateworkstotal();
             updatedetailstotal();
 

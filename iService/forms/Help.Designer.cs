@@ -37,11 +37,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 212);
+            this.label3.Location = new System.Drawing.Point(83, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 17);
+            this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "info@iserviceerp.com";
+            this.label3.Text = "info@iservice.com";
             // 
             // labellicence
             // 
@@ -83,7 +83,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Help";
             this.Resizable = false;
-            this.Text = "Help";
+            this.Text = "Помощь";
             this.Load += new System.EventHandler(this.Help_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -520,6 +520,15 @@
         C9Fcn4WOe6Lru+jvWuzxPObWWrZnrTX/Cw7PGH7RmzFcAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="labelEmployee.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 0</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 0</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 36</value>
+  </data>
   <data name="btnWarehouse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAfZJREFUWEft
@@ -563,15 +572,6 @@
         HptOK7g6reDGdGxMTokyIKzJzsq9qv8Q8t9Y1hPXyVIeJRXx7QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="labelEmployee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 0</value>
-  </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 0</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 36</value>
-  </data>
   <data name="button_search_orders.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 2</value>
   </data>
@@ -596,18 +596,6 @@
   <data name="textBox_search_cars.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 23</value>
   </data>
-  <data name="labelClients.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 25</value>
-  </data>
-  <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 35</value>
-  </data>
-  <data name="button18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 35</value>
-  </data>
-  <data name="button18.Text" xml:space="preserve">
-    <value> Новое авто</value>
-  </data>
   <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 2</value>
   </data>
@@ -616,6 +604,18 @@
   </data>
   <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 23</value>
+  </data>
+  <data name="labelClients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 35</value>
+  </data>
+  <data name="button18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 35</value>
+  </data>
+  <data name="button18.Text" xml:space="preserve">
+    <value> Новое авто</value>
   </data>
   <data name="pictureBoxNewClient.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

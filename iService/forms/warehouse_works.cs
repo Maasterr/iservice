@@ -26,8 +26,8 @@ namespace iService
             }
             dataGridViewItemsWorks.RowHeadersVisible = false;
         }
-        private readonly OrderPage frm1;
-        public warehouse_works(OrderPage frm)
+        private readonly Заказ frm1;
+        public warehouse_works(Заказ frm)
         {
             InitializeComponent();
             frm1 = frm;

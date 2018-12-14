@@ -55,20 +55,20 @@
             // 
             this.textBoxDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxDesc, 2);
-            this.textBoxDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxDesc.Location = new System.Drawing.Point(137, 6);
+            this.textBoxDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDesc.Location = new System.Drawing.Point(156, 6);
             this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(217, 22);
+            this.textBoxDesc.Size = new System.Drawing.Size(249, 22);
             this.textBoxDesc.TabIndex = 0;
             // 
             // textBoxPriceBrutto
             // 
             this.textBoxPriceBrutto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxPriceBrutto, 2);
-            this.textBoxPriceBrutto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxPriceBrutto.Location = new System.Drawing.Point(137, 181);
+            this.textBoxPriceBrutto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPriceBrutto.Location = new System.Drawing.Point(156, 181);
             this.textBoxPriceBrutto.Name = "textBoxPriceBrutto";
-            this.textBoxPriceBrutto.Size = new System.Drawing.Size(217, 22);
+            this.textBoxPriceBrutto.Size = new System.Drawing.Size(249, 22);
             this.textBoxPriceBrutto.TabIndex = 4;
             // 
             // label1
@@ -78,11 +78,11 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(43, 0);
+            this.label1.Location = new System.Drawing.Point(67, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 35);
+            this.label1.Size = new System.Drawing.Size(83, 35);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Description*:";
+            this.label1.Text = "Описание*:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
@@ -92,21 +92,21 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(41, 175);
+            this.label5.Location = new System.Drawing.Point(53, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 35);
+            this.label5.Size = new System.Drawing.Size(97, 35);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Price brutto*:";
+            this.label5.Text = "Цена с НДС*:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxPricePNetto
             // 
             this.textBoxPricePNetto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxPricePNetto, 2);
-            this.textBoxPricePNetto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxPricePNetto.Location = new System.Drawing.Point(137, 76);
+            this.textBoxPricePNetto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPricePNetto.Location = new System.Drawing.Point(156, 76);
             this.textBoxPricePNetto.Name = "textBoxPricePNetto";
-            this.textBoxPricePNetto.Size = new System.Drawing.Size(217, 22);
+            this.textBoxPricePNetto.Size = new System.Drawing.Size(249, 22);
             this.textBoxPricePNetto.TabIndex = 1;
             // 
             // label4
@@ -116,11 +116,11 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(38, 70);
+            this.label4.Location = new System.Drawing.Point(47, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 35);
+            this.label4.Size = new System.Drawing.Size(103, 35);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Price P netto:";
+            this.label4.Text = "Цена закупки:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -130,11 +130,11 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(33, 105);
+            this.label2.Location = new System.Drawing.Point(6, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 35);
+            this.label2.Size = new System.Drawing.Size(144, 35);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Price P brutto:";
+            this.label2.Text = "Цена закупки с НДС";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -144,38 +144,38 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(51, 140);
+            this.label3.Location = new System.Drawing.Point(98, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 35);
+            this.label3.Size = new System.Drawing.Size(52, 35);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Price netto:";
+            this.label3.Text = "Цена*:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxPriceNetto
             // 
             this.textBoxPriceNetto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxPriceNetto, 2);
-            this.textBoxPriceNetto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxPriceNetto.Location = new System.Drawing.Point(137, 146);
+            this.textBoxPriceNetto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPriceNetto.Location = new System.Drawing.Point(156, 146);
             this.textBoxPriceNetto.Name = "textBoxPriceNetto";
-            this.textBoxPriceNetto.Size = new System.Drawing.Size(217, 22);
+            this.textBoxPriceNetto.Size = new System.Drawing.Size(249, 22);
             this.textBoxPriceNetto.TabIndex = 3;
             // 
             // textBoxPricePBrutto
             // 
             this.textBoxPricePBrutto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxPricePBrutto, 2);
-            this.textBoxPricePBrutto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxPricePBrutto.Location = new System.Drawing.Point(137, 111);
+            this.textBoxPricePBrutto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPricePBrutto.Location = new System.Drawing.Point(156, 111);
             this.textBoxPricePBrutto.Name = "textBoxPricePBrutto";
-            this.textBoxPricePBrutto.Size = new System.Drawing.Size(217, 22);
+            this.textBoxPricePBrutto.Size = new System.Drawing.Size(249, 22);
             this.textBoxPricePBrutto.TabIndex = 2;
             // 
             // textBoxqty
             // 
             this.textBoxqty.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.textBoxqty.Location = new System.Drawing.Point(137, 41);
+            this.textBoxqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxqty.Location = new System.Drawing.Point(156, 41);
             this.textBoxqty.Name = "textBoxqty";
             this.textBoxqty.Size = new System.Drawing.Size(90, 22);
             this.textBoxqty.TabIndex = 13;
@@ -187,24 +187,25 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(90, 35);
+            this.label6.Location = new System.Drawing.Point(60, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 35);
+            this.label6.Size = new System.Drawing.Size(90, 35);
             this.label6.TabIndex = 14;
-            this.label6.Text = "QTY:";
+            this.label6.Text = "Количество:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBoxqtytype
             // 
             this.comboBoxqtytype.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboBoxqtytype.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxqtytype.FormattingEnabled = true;
             this.comboBoxqtytype.Items.AddRange(new object[] {
-            "QTY",
-            "L",
-            "KG"});
-            this.comboBoxqtytype.Location = new System.Drawing.Point(265, 40);
+            "Штуки",
+            "Литры",
+            "Килограмы"});
+            this.comboBoxqtytype.Location = new System.Drawing.Point(286, 40);
             this.comboBoxqtytype.Name = "comboBoxqtytype";
-            this.comboBoxqtytype.Size = new System.Drawing.Size(89, 24);
+            this.comboBoxqtytype.Size = new System.Drawing.Size(119, 24);
             this.comboBoxqtytype.TabIndex = 15;
             // 
             // labelDate
@@ -269,7 +270,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.54721F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.45098F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.014F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxDesc, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBoxPriceBrutto, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -295,7 +296,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(385, 251);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 251);
             this.tableLayoutPanel1.TabIndex = 54;
             // 
             // button3
@@ -306,7 +307,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(172, 322);
+            this.button3.Location = new System.Drawing.Point(221, 322);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 34);
             this.button3.TabIndex = 53;
@@ -323,7 +324,7 @@
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAdd.Image = global::iService.Properties.Resources.Add_File_18px;
             this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAdd.Location = new System.Drawing.Point(279, 322);
+            this.btnAdd.Location = new System.Drawing.Point(328, 322);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 34);
             this.btnAdd.TabIndex = 52;
@@ -337,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 370);
+            this.ClientSize = new System.Drawing.Size(479, 370);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.labelEmployee);

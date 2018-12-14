@@ -43,8 +43,8 @@ namespace iService
             dataGridViewItemsDetails.AllowUserToAddRows = false;
             */
         }
-        private readonly OrderPage frm1;
-        public warehouse_details(OrderPage frm)
+        private readonly Заказ frm1;
+        public warehouse_details(Заказ frm)
         {
             InitializeComponent();
             frm1 = frm;
@@ -111,13 +111,13 @@ namespace iService
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
-            forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Add");
+            forms.NewDetailItem newitem = new forms.NewDetailItem(this,null, "Add");
             newitem.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            forms.NewDetailItem newitem = new forms.NewDetailItem(this, "Edit");
+            forms.NewDetailItem newitem = new forms.NewDetailItem(this,null, "Edit");
             newitem.Show();
         }
     }

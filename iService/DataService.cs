@@ -84,7 +84,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_customers values (N'" + iservice_customers_name + "',N'" + iservice_customers_surname + "',N'" + iservice_customers_patronymic + " ',N'" + iservice_customers_country + " ',N'" + iservice_customers_city + " ',N'" + iservice_customers_street + " ',N'" + iservice_customers_zipcode + " ','" + iservice_customers_telephone + " ',' " + iservice_customers_telephone_home + " ','" + iservice_customers_date_of_birthday + " ','" + iservice_customers_email + " ','" + iservice_customers_date_of_creation + " ',N'" + iservice_customers_employee + " ',N'" + iservice_customers_company + " ')");
+                db.Execute("Insert into iservice_customers values (Default,N'" + iservice_customers_name + "',N'" + iservice_customers_surname + "',N'" + iservice_customers_patronymic + " ',N'" + iservice_customers_country + " ',N'" + iservice_customers_city + " ',N'" + iservice_customers_street + " ',N'" + iservice_customers_zipcode + " ','" + iservice_customers_telephone + " ',' " + iservice_customers_telephone_home + " ','" + iservice_customers_date_of_birthday + " ','" + iservice_customers_email + " ','" + iservice_customers_date_of_creation + " ',N'" + iservice_customers_employee + " ',N'" + iservice_customers_company + " ')");
                 return null;
             }
         }
@@ -104,7 +104,12 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                return db.Query<iservice_customers>("SELECT * FROM  iservice_customers WHERE(iservice_customers_id LIKE '%' + N'" + word + "' + '%') OR(iservice_customers_company LIKE '%' + N'" + word + "' + '%') OR (iservice_customers_name LIKE '%' + N'" + word + "' + '%') OR (iservice_customers_surname LIKE '%' + N'" + word + "' +'%') OR (iservice_customers_telephone LIKE '%' + N'" + word + "' + '%') OR (iservice_customers_email LIKE '%' + N'" + word + "' + '%')").ToList();
+                //return db.Query<iservice_customers>("SELECT * FROM  iservice_customers WHERE(iservice_customers_id LIKE '%' + '" + word + "' + '%') OR(iservice_customers_company LIKE '%' + '" + word + "' + '%') OR (iservice_customers_name LIKE '%' + '" + word + "' + '%') OR (iservice_customers_surname LIKE '%' + '" + word + "' +'%') OR (iservice_customers_telephone LIKE '%' + '" + word + "' + '%') OR (iservice_customers_email LIKE '%' + '" + word + "' + '%')").ToList();
+
+                if (word !="")
+                return db.Query<iservice_customers>("SELECT * FROM  iservice_customers WHERE(iservice_customers_id LIKE %" + word + "%) OR(iservice_customers_company LIKE %" + word + "%) OR (iservice_customers_name LIKE %" + word + "%) OR (iservice_customers_surname LIKE %" + word + "%) OR (iservice_customers_telephone LIKE %" + word + "%) OR (iservice_customers_email LIKE %" + word + "%)").ToList();
+               else return db.Query<iservice_customers>("SELECT * FROM  iservice_customers").ToList();
+
             }
         }
 
@@ -126,7 +131,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_cars values (N'" + iservice_cars_customers_id + "',N'" + iservice_cars_reg_number + "',N'" + iservice_cars_vin + " ',N'" + iservice_cars_brand + " ',N'" + iservice_cars_model + " ',N'" + iservice_cars_year + " ',N'" + iservice_cars_color + " ',N'" + iservice_cars_date_of_creation + " ',N'" + iservice_cars_employee + " ')");
+                db.Execute("Insert into iservice_cars values (Default,N'" + iservice_cars_customers_id + "',N'" + iservice_cars_reg_number + "',N'" + iservice_cars_vin + " ',N'" + iservice_cars_brand + " ',N'" + iservice_cars_model + " ',N'" + iservice_cars_year + " ',N'" + iservice_cars_color + " ',N'" + iservice_cars_date_of_creation + " ',N'" + iservice_cars_employee + " ')");
                 return null;
             }
         }
@@ -156,7 +161,9 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
+                if (word !="")
                 return db.Query<iservice_cars>("SELECT * FROM iservice_cars WHERE(iservice_cars_reg_number LIKE '%' + N'" + word + "' + '%') OR  (iservice_cars_vin_number LIKE '%' + N'" + word + "' + '%')").ToList();
+                else return db.Query<iservice_cars>("SELECT * FROM iservice_cars").ToList();
             }
         }
 
@@ -176,7 +183,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_orders values (N'" + iservice_orders_cars_id + "',N'" + iservice_orders_user_id + "',(Select MAX(iservice_orders_number)+1 from iservice_orders), N'" + iservice_orders_status_of_payment + " ',N'" + iservice_orders_status_of_work + " ',N'" + iservice_orders_date_of_creation + " ',N'" + iservice_orders_date_of_last_update + " ',N'" + iservice_orders_expiry_date + " ',N'" + iservice_orders_prepayment + "',N'" + iservice_orders_total_netto + "',N'" + iservice_orders_total_brutto + "',N'" + iservice_orders_mileage + "')");
+                db.Execute("Insert into iservice_orders values (Default,N'" + iservice_orders_cars_id + "',N'" + iservice_orders_user_id + "',(Select MAX(iservice_orders_number)+1 from iservice_orders), N'" + iservice_orders_status_of_payment + " ',N'" + iservice_orders_status_of_work + " ',N'" + iservice_orders_date_of_creation + " ',N'" + iservice_orders_date_of_last_update + " ',N'" + iservice_orders_expiry_date + " ',N'" + iservice_orders_prepayment + "',N'" + iservice_orders_total_netto + "',N'" + iservice_orders_total_brutto + "',N'" + iservice_orders_mileage + "')");
                 return null;
             }
         }
@@ -186,7 +193,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_orders_items values (N'" + iservice_orders_items_orders_number + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_qty + "',N'" + iservice_orders_items_price_netto + " ',N'" + iservice_orders_items_price_brutto + " ')");
+                db.Execute("Insert into iservice_orders_items values (Default,N'" + iservice_orders_items_orders_number + "',N'" + iservice_orders_item_id + "',N'" + iservice_orders_items_qty + "',N'" + iservice_orders_items_price_netto + " ',N'" + iservice_orders_items_price_brutto + " ')");
                 return null;
             }
         }
@@ -226,7 +233,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_items values (N'" + iservice_items_type + "',N'" + iservice_items_category + "',N'" + iservice_items_subcategory + " ',N'" + iservice_items_description + " ',N'" + iservice_items_purchase_price_netto + " ',N'" + iservice_items_purchase_price_brutto + " ',N'" + iservice_items_price_netto + "',N'" + iservice_items_price_brutto + "',N'" + iservice_items_employee + "',N'" + iservice_items_date_of_creation + "',N'" + iservice_items_last_update + "',N'" + iservice_items_qty + "',N'" + iservice_items_qty_type + "')");
+                db.Execute("Insert into iservice_items values (Default,N'" + iservice_items_type + "',N'" + iservice_items_category + "',N'" + iservice_items_subcategory + " ',N'" + iservice_items_description + " ',N'" + iservice_items_purchase_price_netto + " ',N'" + iservice_items_purchase_price_brutto + " ',N'" + iservice_items_price_netto + "',N'" + iservice_items_price_brutto + "',N'" + iservice_items_employee + "',N'" + iservice_items_date_of_creation + "',N'" + iservice_items_last_update + "',N'" + iservice_items_qty + "',N'" + iservice_items_qty_type + "')");
                 return null;
             }
         }
@@ -393,7 +400,7 @@ namespace iService
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                db.Execute("Insert into iservice_documents values (N'" + iservice_documents_order_id + "',N'" + iservice_documents_name + " ',N'" + iservice_documents_paid + " ',N'" + iservice_documents_date + "')");
+                db.Execute("Insert into iservice_documents values (Default,'" + iservice_documents_order_id + "','" + iservice_documents_name + " ','" + iservice_documents_paid + " ','" + iservice_documents_date + "')");
                 return null;
             }
         }

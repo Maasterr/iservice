@@ -20,10 +20,12 @@ namespace iService.forms
         private readonly Form1 frm2;
         private readonly String Status;
        
-        public NewDetailItem(warehouse_details frm, String status)
+        public NewDetailItem(warehouse_details frm, Form1 frmm, String status)
         {
             InitializeComponent();
+            if (frm!=null)
             frm1 = frm;
+            else frm2 = frmm;
             Status = status;
         }
        
@@ -33,9 +35,9 @@ namespace iService.forms
             btnAdd.Text = Status;
             if (Status == "Add")
             {
-                this.Text = "New detail";
+                this.Text = "Новая запчасть или материал";
                 labelEmployee.Text = GlobalVars.Employee;
-                labelDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm");
+                labelDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             else
             {
@@ -58,11 +60,14 @@ namespace iService.forms
             {
                 if ((textBoxDesc.Text == "") || (textBoxPriceNetto.Text == "") || (textBoxPriceBrutto.Text == "") || (textBoxqty.Text == ""))
                     MessageBox.Show("Required fields is empty", "Notification", MessageBoxButtons.OK);
-                else if (DataService.NewItem("Details", 1, 1, textBoxDesc.Text, textBoxPricePNetto.Text, textBoxPricePBrutto.Text, textBoxPriceNetto.Text, textBoxPriceBrutto.Text, GlobalVars.Employee, DateTime.Now.ToString("yyyy-MM-dd hh:mm"), DateTime.Now.ToString("yyyy-MM-dd hh:mm"), textBoxqty.Text, comboBoxqtytype.SelectedIndex.ToString()) == null)
+                else if (DataService.NewItem("Details", 1, 1, textBoxDesc.Text, textBoxPricePNetto.Text, textBoxPricePBrutto.Text, textBoxPriceNetto.Text, textBoxPriceBrutto.Text, GlobalVars.Employee, DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd"), textBoxqty.Text, comboBoxqtytype.SelectedIndex.ToString()) == null)
                 {
-                    frm1.updatedetailsdata();
+                    if (frm1 != null)
+                        frm1.updatedetailsdata();
+                    else
+                        frm2.updatedetailsdata();
                     this.Close();
-                    MessageBox.Show("Succesfully added" + comboBoxqtytype.SelectedIndex.ToString(), "Notification", MessageBoxButtons.OK);
+                    MessageBox.Show("Succesfully added", "Notification", MessageBoxButtons.OK);
                 }
                 else
                 {
